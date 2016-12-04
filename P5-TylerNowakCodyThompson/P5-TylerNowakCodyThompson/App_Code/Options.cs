@@ -12,7 +12,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
-namespace P5_TylerNowak_CodyThompson
+namespace P5_TylerNowakCodyThompson
 {
     // Stores static methods used to perform options 0-4
     class Options
