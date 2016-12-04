@@ -11,7 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P4_TylerNowak_CodyThompson
+namespace P5_TylerNowakCodyThompson
 {
     // Stores information about a tornado event
     class TornadoEvent : Event

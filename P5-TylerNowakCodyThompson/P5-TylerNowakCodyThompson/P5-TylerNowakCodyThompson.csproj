@@ -142,13 +142,13 @@
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\Event.cs" />
-    <Content Include="App_Code\EventList.cs" />
-    <Content Include="App_Code\HailEvent.cs" />
-    <Content Include="App_Code\Options.cs" />
-    <Content Include="App_Code\Statistics.cs" />
-    <Content Include="App_Code\TornadoEvent.cs" />
-    <Content Include="App_Code\WindEvent.cs" />
+    <Compile Include="App_Code\Event.cs" />
+    <Compile Include="App_Code\EventList.cs" />
+    <Compile Include="App_Code\HailEvent.cs" />
+    <Compile Include="App_Code\Options.cs" />
+    <Compile Include="App_Code\Statistics.cs" />
+    <Compile Include="App_Code\TornadoEvent.cs" />
+    <Compile Include="App_Code\WindEvent.cs" />
     <Compile Include="Add.aspx.cs">
       <DependentUpon>Add.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
