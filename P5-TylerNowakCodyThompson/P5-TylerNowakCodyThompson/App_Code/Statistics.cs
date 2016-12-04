@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P5_TylerNowak_CodyThompson
+namespace P4_TylerNowak_CodyThompson
 {
     class Statistics
     {
