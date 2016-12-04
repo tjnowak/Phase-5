@@ -12,7 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace P5_TylerNowakCodyThompson
+namespace P5_TylerNowak_CodyThompson
 {
     // Stores information about a list of weather events
     class EventList

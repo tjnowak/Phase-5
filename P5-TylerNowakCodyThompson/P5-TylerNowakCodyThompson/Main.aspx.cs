@@ -9,7 +9,7 @@ namespace P5_TylerNowakCodyThompson
 {
     public partial class Main : System.Web.UI.Page
     {
-        EventList
+        EventList list;
  
         protected void Page_Load(object sender, EventArgs e)
         {
