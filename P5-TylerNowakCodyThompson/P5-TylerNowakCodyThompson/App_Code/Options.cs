@@ -17,481 +17,466 @@ namespace P5_TylerNowakCodyThompson
     // Stores static methods used to perform options 0-4
     class Options
     {
-        private const int NUM_FIELDS = 51;                         // # of fields in the input file
-        private const string FILE = "2015StormDetails.csv";        // input file
-
         // Read in data from a file, load it into Event objects, and store them in an EventList.
         public static void ReadData(EventList list)
         {
-
-            StreamReader fileReader = new StreamReader(FILE);    // used to read in chars from a file
-
-            string eventString;                                  // string of all fields for an event
-            string[] fields = new string[NUM_FIELDS];            // array of field strings for an event
-            Event anEvent;                                       // holds a storm event
-            int intValue;                                        // to hold converted string
-            double doubleValue;                                  // to hold converted string
-            string amount;                                       // to hold a dollar amount
-            char[] checkChars = { 'K' };                         // chars to check if in a string 
-            ArgumentException excep = null;                      // to hold a thrown exception
-
-            // Clear stored data in list
-            list.ClearList();
-
-            // Get and discard header line of the input file
-            if (!(fileReader.EndOfStream))
-                fileReader.ReadLine();
-            else
+            using (DBviaEFEntities MyTables = new DBviaEFEntities())
             {
-                Console.WriteLine("File is empty!");              // if input file is empty
-                return;                                           // data load was unsuccessful
-            }
 
-            // Check if file only has field titles
-            if ((fileReader.EndOfStream))
-            {
-                Console.WriteLine("File doesn't have any storm events!");
-                return;                                             // return if errors
-            }
+                string eventString;                                  // string of all fields for an event
+                string[] fields = new string[NUM_FIELDS];            // array of field strings for an event
+                Event anEvent;                                       // holds a storm event
+                int intValue;                                        // to hold converted string
+                double doubleValue;                                  // to hold converted string
+                string amount;                                       // to hold a dollar amount
+                char[] checkChars = { 'K' };                         // chars to check if in a string 
+                ArgumentException excep = null;                      // to hold a thrown exception
 
-            // Read in each line (event) of the input file
-            while (!(fileReader.EndOfStream))
-            {
-                // Store a line of the input file as an event
-                eventString = fileReader.ReadLine();
-                // Store each field separately as a string in an array
-                fields = eventString.Split(',');
+                // Clear stored data in event list
+                list.ClearList();
 
-                // Create a new object of type Event or a derived type
-                if (fields[12].ToUpper() == "HAIL")
-                    anEvent = new HailEvent();
-                else if (fields[12].ToUpper() == "TORNADO")
-                    anEvent = new TornadoEvent();
-                else if (fields[12].ToUpper() == "THUNDERSTORM WIND" ||
-                         fields[12].ToUpper() == "MARINE THUNDERSTORM WIND" ||
-                         fields[12].ToUpper() == "MARINE STRONG WIND" ||
-                         fields[12].ToUpper() == "MARINE HIGH WIND" ||
-                         fields[12].ToUpper() == "STRONG WIND")
-                    anEvent = new WindEvent();
-                else
-                    anEvent = new Event();
+                // Pull in all events from the DB
+                var eventListDB = from e in MyTables.WeatherEvents
+                                  select e;
 
-                // Populate anEvent properties
-                for (int index = 0; index < NUM_FIELDS; index++)
+                foreach (var e in eventListDB)
                 {
-                    switch (index)
-                    {
-                        case 0:
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    // Set BeginYear
-                                    anEvent.dateTime.BeginYear = Convert.ToInt32(fields[index]) / 100;
-                                    // Set BeginMonth
-                                    anEvent.dateTime.BeginMonth = Convert.ToInt32(fields[index]) % 100;
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 1:
-                            // Set BeginDay
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.dateTime.BeginDay = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 2:
-                            // Set BeginTime
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.dateTime.BeginTime = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 3:
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    // Set EndYear
-                                    anEvent.dateTime.EndYear = Convert.ToInt32(fields[index]) / 100;
-                                    // Set EndMonth
-                                    anEvent.dateTime.EndMonth = Convert.ToInt32(fields[index]) % 100;
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 4:
-                            // Set EndDay
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.dateTime.EndDay = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 5:
-                            // Set EndTime
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.dateTime.EndTime = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 8:
-                            // Set State
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.State = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 12:
-                            // Set EventType
-                            if (fields[index] != "")
-                            {
-                                if (!(anEvent is HailEvent) &&    // hail & tornado are auto set
-                                    !(anEvent is TornadoEvent))
-                                {
-                                    try
-                                    {
-                                        anEvent.EventType = fields[index];
-                                    }
-                                    catch (ArgumentException e) { excep = e; }
-                                }
-                            }
-                            break;
-                        case 15:
-                            // Set County
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.County = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 18:
-                            // Set Timezone
-                            try
-                            {
-                                if (fields[index].Length >= 3)
-                                    if (Char.IsLetter(fields[index], 0) &&
-                                        Char.IsLetter(fields[index], 1) &&
-                                        Char.IsLetter(fields[index], 2))
-                                        if ((fields[index].Length >= 4) &&
-                                            Char.IsLetter(fields[index], 3))
-                                            anEvent.dateTime.Timezone =
-                                                // Use first 4 chars if all letters
-                                                new string(fields[index].Take(4).ToArray());
-                                        else anEvent.dateTime.Timezone =
-                                                // Use first 3 chars if all letters
-                                                new string(fields[index].Take(3).ToArray());
-                            }
-                            catch (ArgumentException e) { excep = e; }
-                            break;
-                        case 20:
-                            // Set Injuries
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.Injuries = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 21:
-                            // Set Injuries (add indirect injuries)
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.Injuries = anEvent.Injuries +
-                                                       Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 22:
-                            // Set Deaths
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.Deaths = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 23:
-                            // Set Deaths (add indirect deaths)
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.Deaths = anEvent.Deaths +
-                                                     Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 24:
-                            // Set PropertyDamage
-                            if (fields[index] != "")
-                            {
-                                try
-                                {                                     // get rid of 'K' at end
-                                    amount = fields[index].TrimEnd(checkChars);
-                                    anEvent.PropertyDamage = Convert.ToDecimal(amount) * 1000M;
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 25:
-                            // Set CropDamage
-                            if (fields[index] != "")
-                            {
-                                try
-                                {                                    // get rid of 'K' at end
-                                    amount = fields[index].TrimEnd(checkChars);
-                                    anEvent.CropDamage = Convert.ToDecimal(amount) * 1000M;
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 27:
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    // Set Windspeed if possible
-                                    if (anEvent is WindEvent)
-                                    {
-                                        Int32.TryParse(fields[index], out intValue);
-                                        ((WindEvent)anEvent).Windspeed = intValue;
-                                    }
-                                    // Set HailSize if possible
-                                    if (anEvent is HailEvent)
-                                    {
-                                        Double.TryParse(fields[index], out doubleValue);
-                                        ((HailEvent)anEvent).HailSize = doubleValue;
-                                    }
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 31:
-                            // Set TornadoType
-                            if (fields[index] != "")
-                            {
-                                if (anEvent is TornadoEvent)
-                                {
-                                    try
-                                    {
-                                        ((TornadoEvent)anEvent).TornadoType = fields[index];
-                                    }
-                                    catch (ArgumentException e) { excep = e; }
-                                }
-                            }
-                            break;
-                        case 32:
-                            // Set TornadoLength
-                            if (fields[index] != "")
-                            {
-                                if (anEvent is TornadoEvent)
-                                {
-                                    try
-                                    {
-                                        ((TornadoEvent)anEvent).TornadoLength =
-                                            Convert.ToDouble(fields[index]);
-                                    }
-                                    catch (ArgumentException e) { excep = e; }
-                                }
-                            }
-                            break;
-                        case 33:
-                            // Set TornadoWidth
-                            if (fields[index] != "")
-                            {
-                                if (anEvent is TornadoEvent)
-                                {
-                                    try
-                                    {
-                                        ((TornadoEvent)anEvent).TornadoWidth =
-                                            Convert.ToDouble(fields[index]);
-                                    }
-                                    catch (ArgumentException e) { excep = e; }
-                                }
-                            }
-                            break;
-                        case 38:
-                            // Set BeginRange
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.BeginRange = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 39:
-                            // Set BeginAzimuth
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.BeginAzimuth = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 40:
-                            // Set BeginLocation
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.BeginLocation = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 41:
-                            // Set EndRange
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.EndRange = Convert.ToInt32(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 42:
-                            // Set EndAzimuth
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.EndAzimuth = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 43:
-                            // Set EndLocation
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.EndLocation = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 44:
-                            // Set BeginLat
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.BeginLat = Convert.ToDouble(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 45:
-                            // Set BeginLong
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.BeginLong = Convert.ToDouble(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 46:
-                            // Set EndLat
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.EndLat = Convert.ToDouble(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 47:
-                            // Set EndLong
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.location.EndLong = Convert.ToDouble(fields[index]);
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 48:
-                            // Set EpisodeDesc
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.EpisodeDesc = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        case 49:
-                            // Set EventDesc
-                            if (fields[index] != "")
-                            {
-                                try
-                                {
-                                    anEvent.EventDesc = fields[index];
-                                }
-                                catch (ArgumentException e) { excep = e; }
-                            }
-                            break;
-                        default:
-                            // Ignore input file fields that are not used
-                            break;
-                    }
+                    // Create a new object of type Event or a derived type
+                    if (e.EVENT_TYPE.ToUpper() == "HAIL")
+                        anEvent = new HailEvent();
+                    else if (e.EVENT_TYPE.ToUpper() == "TORNADO")
+                        anEvent = new TornadoEvent();
+                    else if (e.EVENT_TYPE.ToUpper() == "THUNDERSTORM WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "MARINE THUNDERSTORM WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "MARINE STRONG WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "MARINE HIGH WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "STRONG WIND")
+                        anEvent = new WindEvent();
+                    else
+                        anEvent = new Event();
 
-                    // Check if there were errors
-                    if (excep != null)
-                    {
-                        Console.WriteLine("Could not set property {0} to {1}",
-                                          index, fields[index]);
-                        Console.WriteLine(excep.Message + "\n");
-                        return;         // if there were errors
-                    }
+                    // Set BeginYear and BeginMonth
+                    if (e.BEGIN_YEARMONTH != "") ;
                 }
-                // Store anEvent in list
-                list.AddEvent(anEvent);
+
+                   
+
+                    // Populate anEvent properties
+                    for (int index = 0; index < NUM_FIELDS; index++)
+                    {
+                        switch (index)
+                        {
+                            case 0:
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        // Set BeginYear
+                                        anEvent.dateTime.BeginYear = Convert.ToInt32(fields[index]) / 100;
+                                        // Set BeginMonth
+                                        anEvent.dateTime.BeginMonth = Convert.ToInt32(fields[index]) % 100;
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 1:
+                                // Set BeginDay
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.dateTime.BeginDay = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 2:
+                                // Set BeginTime
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.dateTime.BeginTime = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 3:
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        // Set EndYear
+                                        anEvent.dateTime.EndYear = Convert.ToInt32(fields[index]) / 100;
+                                        // Set EndMonth
+                                        anEvent.dateTime.EndMonth = Convert.ToInt32(fields[index]) % 100;
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 4:
+                                // Set EndDay
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.dateTime.EndDay = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 5:
+                                // Set EndTime
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.dateTime.EndTime = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 8:
+                                // Set State
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.State = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 12:
+                                // Set EventType
+                                if (fields[index] != "")
+                                {
+                                    if (!(anEvent is HailEvent) &&    // hail & tornado are auto set
+                                        !(anEvent is TornadoEvent))
+                                    {
+                                        try
+                                        {
+                                            anEvent.EventType = fields[index];
+                                        }
+                                        catch (ArgumentException e) { excep = e; }
+                                    }
+                                }
+                                break;
+                            case 15:
+                                // Set County
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.County = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 18:
+                                // Set Timezone
+                                try
+                                {
+                                    if (fields[index].Length >= 3)
+                                        if (Char.IsLetter(fields[index], 0) &&
+                                            Char.IsLetter(fields[index], 1) &&
+                                            Char.IsLetter(fields[index], 2))
+                                            if ((fields[index].Length >= 4) &&
+                                                Char.IsLetter(fields[index], 3))
+                                                anEvent.dateTime.Timezone =
+                                                    // Use first 4 chars if all letters
+                                                    new string(fields[index].Take(4).ToArray());
+                                            else anEvent.dateTime.Timezone =
+                                                    // Use first 3 chars if all letters
+                                                    new string(fields[index].Take(3).ToArray());
+                                }
+                                catch (ArgumentException e) { excep = e; }
+                                break;
+                            case 20:
+                                // Set Injuries
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.Injuries = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 21:
+                                // Set Injuries (add indirect injuries)
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.Injuries = anEvent.Injuries +
+                                                           Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 22:
+                                // Set Deaths
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.Deaths = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 23:
+                                // Set Deaths (add indirect deaths)
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.Deaths = anEvent.Deaths +
+                                                         Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 24:
+                                // Set PropertyDamage
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {                                     // get rid of 'K' at end
+                                        amount = fields[index].TrimEnd(checkChars);
+                                        anEvent.PropertyDamage = Convert.ToDecimal(amount) * 1000M;
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 25:
+                                // Set CropDamage
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {                                    // get rid of 'K' at end
+                                        amount = fields[index].TrimEnd(checkChars);
+                                        anEvent.CropDamage = Convert.ToDecimal(amount) * 1000M;
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 27:
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        // Set Windspeed if possible
+                                        if (anEvent is WindEvent)
+                                        {
+                                            Int32.TryParse(fields[index], out intValue);
+                                            ((WindEvent)anEvent).Windspeed = intValue;
+                                        }
+                                        // Set HailSize if possible
+                                        if (anEvent is HailEvent)
+                                        {
+                                            Double.TryParse(fields[index], out doubleValue);
+                                            ((HailEvent)anEvent).HailSize = doubleValue;
+                                        }
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 31:
+                                // Set TornadoType
+                                if (fields[index] != "")
+                                {
+                                    if (anEvent is TornadoEvent)
+                                    {
+                                        try
+                                        {
+                                            ((TornadoEvent)anEvent).TornadoType = fields[index];
+                                        }
+                                        catch (ArgumentException e) { excep = e; }
+                                    }
+                                }
+                                break;
+                            case 32:
+                                // Set TornadoLength
+                                if (fields[index] != "")
+                                {
+                                    if (anEvent is TornadoEvent)
+                                    {
+                                        try
+                                        {
+                                            ((TornadoEvent)anEvent).TornadoLength =
+                                                Convert.ToDouble(fields[index]);
+                                        }
+                                        catch (ArgumentException e) { excep = e; }
+                                    }
+                                }
+                                break;
+                            case 33:
+                                // Set TornadoWidth
+                                if (fields[index] != "")
+                                {
+                                    if (anEvent is TornadoEvent)
+                                    {
+                                        try
+                                        {
+                                            ((TornadoEvent)anEvent).TornadoWidth =
+                                                Convert.ToDouble(fields[index]);
+                                        }
+                                        catch (ArgumentException e) { excep = e; }
+                                    }
+                                }
+                                break;
+                            case 38:
+                                // Set BeginRange
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.BeginRange = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 39:
+                                // Set BeginAzimuth
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.BeginAzimuth = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 40:
+                                // Set BeginLocation
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.BeginLocation = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 41:
+                                // Set EndRange
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.EndRange = Convert.ToInt32(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 42:
+                                // Set EndAzimuth
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.EndAzimuth = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 43:
+                                // Set EndLocation
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.EndLocation = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 44:
+                                // Set BeginLat
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.BeginLat = Convert.ToDouble(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 45:
+                                // Set BeginLong
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.BeginLong = Convert.ToDouble(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 46:
+                                // Set EndLat
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.EndLat = Convert.ToDouble(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 47:
+                                // Set EndLong
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.location.EndLong = Convert.ToDouble(fields[index]);
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 48:
+                                // Set EpisodeDesc
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.EpisodeDesc = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            case 49:
+                                // Set EventDesc
+                                if (fields[index] != "")
+                                {
+                                    try
+                                    {
+                                        anEvent.EventDesc = fields[index];
+                                    }
+                                    catch (ArgumentException e) { excep = e; }
+                                }
+                                break;
+                            default:
+                                // Ignore input file fields that are not used
+                                break;
+                        }
+
+                        // Check if there were errors
+                        if (excep != null)
+                        {
+                            Console.WriteLine("Could not set property {0} to {1}",
+                                              index, fields[index]);
+                            Console.WriteLine(excep.Message + "\n");
+                            return;         // if there were errors
+                        }
+                    }
+                    // Store anEvent in list
+                    list.AddEvent(anEvent);
+                }
             }
-            fileReader.Close();
         }
 
         // Add a new event to an EventList object through user input

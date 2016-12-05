@@ -9,13 +9,16 @@ namespace P5_TylerNowakCodyThompson
 {
     public partial class Main : System.Web.UI.Page
     {
+        EventList theList;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            // Check if new user or not
-            if (Session["beenHereBefore"] == null)
-                Label1.Text = "Hello, please select an option below.";
-            else
-                Label1.Text = "Welcome back, please select another option.";
+            // load in DB for a new user
+            if (Session["theList"] == null)
+            {
+
+
+            }    
         }
 
 
