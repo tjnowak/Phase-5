@@ -14,7 +14,7 @@
     
     </div>
         <br />
-        <asp:Label ID="Label1" runat="server"></asp:Label>
+        <asp:Label ID="Label1" runat="server">Please select an option below.</asp:Label>
         <br />
         <br />
         <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
