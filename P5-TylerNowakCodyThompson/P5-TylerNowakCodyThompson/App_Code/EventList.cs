@@ -1,7 +1,7 @@
 ﻿/**********************************************************************************************************
  Tyler Nowak & Cody Thompson
  C490
- Phase 4
+ Phase 5
  
  This class stores a collection of inclement weather events.
  *********************************************************************************************************/
@@ -503,6 +503,392 @@ namespace P5_TylerNowakCodyThompson
                 default:
                     // Error if property entered is not a real property
                     throw new ArgumentException("Property to search is invalid!\n\n");
+            }
+        }
+
+        // Read in data from the database, load it into Event objects, and store them in stormList.
+        public void ReadData()
+        {
+            Event anEvent;                                       // holds a storm event
+            int intValue;                                        // to hold converted string
+            double doubleValue;                                  // to hold converted string
+            string amount;                                       // to hold a dollar amount
+            char[] checkChars = { 'K' };                         // chars to check if in a string
+
+            // Clear stored data in event list
+            ClearList();
+
+            using (DBviaEFEntities MyTables = new DBviaEFEntities())
+            {
+                // Pull in all events from the DB
+                var eventListDB = from e in MyTables.WeatherEvents
+                                  select e;
+
+                foreach (var e in eventListDB)
+                {
+                    // Create a new object of type Event or a derived type
+                    if (e.EVENT_TYPE.ToUpper() == "HAIL")
+                        anEvent = new HailEvent();
+                    else if (e.EVENT_TYPE.ToUpper() == "TORNADO")
+                        anEvent = new TornadoEvent();
+                    else if (e.EVENT_TYPE.ToUpper() == "THUNDERSTORM WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "MARINE THUNDERSTORM WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "MARINE STRONG WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "MARINE HIGH WIND" ||
+                             e.EVENT_TYPE.ToUpper() == "STRONG WIND")
+                        anEvent = new WindEvent();
+                    else
+                        anEvent = new Event();
+
+                    if (e.BEGIN_YEARMONTH != "")
+                    {
+                        try
+                        {
+                            // Set BeginYear
+                            anEvent.dateTime.BeginYear = Convert.ToInt32(e.BEGIN_YEARMONTH) / 100;
+                            // Set BeginMonth
+                            anEvent.dateTime.BeginMonth = Convert.ToInt32(e.BEGIN_YEARMONTH) % 100;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set BeginDay
+                    if (e.BEGIN_DAY != "")
+                    {
+                        try
+                        {
+                            anEvent.dateTime.BeginDay = Convert.ToInt32(e.BEGIN_DAY);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set BeginTime
+                    if (e.BEGIN_TIME != "")
+                    {
+                        try
+                        {
+                            anEvent.dateTime.BeginTime = Convert.ToInt32(e.BEGIN_TIME);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    if (e.END_YEARMONTH != "")
+                    {
+                        try
+                        {
+                            // Set EndYear
+                            anEvent.dateTime.EndYear = Convert.ToInt32(e.END_YEARMONTH) / 100;
+                            // Set EndMonth
+                            anEvent.dateTime.EndMonth = Convert.ToInt32(e.END_YEARMONTH) % 100;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EndDay
+                    if (e.END_DAY != "")
+                    {
+                        try
+                        {
+                            anEvent.dateTime.EndDay = Convert.ToInt32(e.END_DAY);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EndTime
+                    if (e.END_TIME != "")
+                    {
+                        try
+                        {
+                            anEvent.dateTime.EndTime = Convert.ToInt32(e.END_TIME);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set State
+                    if (e.STATE != "")
+                    {
+                        try
+                        {
+                            anEvent.location.State = e.STATE;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EventType
+                    if (e.EVENT_TYPE != "")
+                    {
+                        if (!(anEvent is HailEvent) &&    // hail & tornado are auto set
+                            !(anEvent is TornadoEvent))
+                        {
+                            try
+                            {
+                                anEvent.EventType = e.EVENT_TYPE;
+                            }
+                            catch (ArgumentException ex) { throw; }
+                        }
+                    }
+
+                    // Set County
+                    if (e.CZ_NAME != "")
+                    {
+                        try
+                        {
+                            anEvent.location.County = e.CZ_NAME;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set Timezone
+                    try
+                    {
+                        if (e.CZ_TIMEZONE.Length >= 3)
+                            if (Char.IsLetter(e.CZ_TIMEZONE, 0) &&
+                                Char.IsLetter(e.CZ_TIMEZONE, 1) &&
+                                Char.IsLetter(e.CZ_TIMEZONE, 2))
+                                if ((e.CZ_TIMEZONE.Length >= 4) &&
+                                    Char.IsLetter(e.CZ_TIMEZONE, 3))
+                                    anEvent.dateTime.Timezone =
+                                        // Use first 4 chars if all letters
+                                        new string(e.CZ_TIMEZONE.Take(4).ToArray());
+                                else anEvent.dateTime.Timezone =
+                                        // Use first 3 chars if all letters
+                                        new string(e.CZ_TIMEZONE.Take(3).ToArray());
+                    }
+                    catch (ArgumentException ex) { throw; }
+
+                    // Set Injuries
+                    if (e.INJURIES_DIRECT != "")
+                    {
+                        try
+                        {
+                            anEvent.Injuries = Convert.ToInt32(e.INJURIES_DIRECT);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set Injuries (add indirect injuries)
+                    if (e.INJURIES_INDIRECT != "")
+                    {
+                        try
+                        {
+                            anEvent.Injuries = anEvent.Injuries +
+                                               Convert.ToInt32(e.INJURIES_INDIRECT);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set Deaths
+                    if (e.DEATHS_DIRECT != "")
+                    {
+                        try
+                        {
+                            anEvent.Deaths = Convert.ToInt32(e.DEATHS_DIRECT);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set Deaths (add indirect deaths)
+                    if (e.DEATHS_INDIRECT != "")
+                    {
+                        try
+                        {
+                            anEvent.Deaths = anEvent.Deaths +
+                                             Convert.ToInt32(e.DEATHS_INDIRECT);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set PropertyDamage
+                    if (e.DAMAGE_PROPERTY != "")
+                    {
+                        try
+                        {                                     // get rid of 'K' or 'M' at end
+                            amount = e.DAMAGE_PROPERTY.TrimEnd(checkChars);
+                            if (e.DAMAGE_PROPERTY.ToUpper()[e.DAMAGE_PROPERTY.Length - 1] == 'K')
+                                anEvent.PropertyDamage = Convert.ToDecimal(amount) * 1000M;
+                            else
+                                anEvent.PropertyDamage = Convert.ToDecimal(amount) * 1000000M;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set CropDamage
+                    if (e.DAMAGE_CROPS != "")
+                    {
+                        try
+                        {                                    // get rid of 'K' or 'M' at end
+                            amount = e.DAMAGE_CROPS.TrimEnd(checkChars);
+                            if (e.DAMAGE_CROPS.ToUpper()[e.DAMAGE_CROPS.Length - 1] == 'K')
+                                anEvent.CropDamage = Convert.ToDecimal(amount) * 1000M;
+                            else
+                                anEvent.CropDamage = Convert.ToDecimal(amount) * 1000000M;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    if (e.MAGNITUDE != "")
+                    {
+                        try
+                        {
+                            // Set Windspeed if possible
+                            if (anEvent is WindEvent)
+                            {
+                                Int32.TryParse(e.MAGNITUDE, out intValue);
+                                ((WindEvent)anEvent).Windspeed = intValue;
+                            }
+                            // Set HailSize if possible
+                            if (anEvent is HailEvent)
+                            {
+                                Double.TryParse(e.MAGNITUDE, out doubleValue);
+                                ((HailEvent)anEvent).HailSize = doubleValue;
+                            }
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set TornadoType
+                    if (e.TOR_F_SCALE != "")
+                    {
+                        if (anEvent is TornadoEvent)
+                        {
+                            try
+                            {
+                                ((TornadoEvent)anEvent).TornadoType = e.TOR_F_SCALE;
+                            }
+                            catch (ArgumentException ex) { throw; }
+                        }
+                    }
+
+                    // Set TornadoLength
+                    if (e.TOR_LENGTH != "")
+                    {
+                        if (anEvent is TornadoEvent)
+                        {
+                            try
+                            {
+                                ((TornadoEvent)anEvent).TornadoLength =
+                                    Convert.ToDouble(e.TOR_LENGTH);
+                            }
+                            catch (ArgumentException ex) { throw; }
+                        }
+                    }
+
+                    // Set TornadoWidth
+                    if (e.TOR_WIDTH != "")
+                    {
+                        if (anEvent is TornadoEvent)
+                        {
+                            try
+                            {
+                                ((TornadoEvent)anEvent).TornadoWidth =
+                                    Convert.ToDouble(e.TOR_WIDTH);
+                            }
+                            catch (ArgumentException ex) { throw; }
+                        }
+                    }
+
+                    // Set BeginRange
+                    if (e.BEGIN_RANGE != "")
+                    {
+                        try
+                        {
+                            anEvent.location.BeginRange = Convert.ToInt32(e.BEGIN_RANGE);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set BeginAzimuth
+                    if (e.BEGIN_AZIMUTH != "")
+                    {
+                        try
+                        {
+                            anEvent.location.BeginAzimuth = e.BEGIN_AZIMUTH;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set BeginLocation
+                    if (e.BEGIN_LOCATION != "")
+                    {
+                        try
+                        {
+                            anEvent.location.BeginLocation = e.BEGIN_LOCATION;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EndRange
+                    if (e.END_RANGE != "")
+                    {
+                        try
+                        {
+                            anEvent.location.EndRange = Convert.ToInt32(e.END_RANGE);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EndAzimuth
+                    if (e.END_AZIMUTH != "")
+                    {
+                        try
+                        {
+                            anEvent.location.EndAzimuth = e.END_AZIMUTH;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EndLocation
+                    if (e.END_LOCATION != "")
+                    {
+                        try
+                        {
+                            anEvent.location.EndLocation = e.END_LOCATION;
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set BeginLat
+                    if (e.BEGIN_LAT != "")
+                    {
+                        try
+                        {
+                            anEvent.location.BeginLat = Convert.ToDouble(e.BEGIN_LAT);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set BeginLong
+                    if (e.BEGIN_LON != "")
+                    {
+                        try
+                        {
+                            anEvent.location.BeginLong = Convert.ToDouble(e.BEGIN_LON);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EndLat
+                    if (e.END_LAT != "")
+                    {
+                        try
+                        {
+                            anEvent.location.EndLat = Convert.ToDouble(e.END_LAT);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+
+                    // Set EndLong
+                    if (e.END_LON != "")
+                    {
+                        try
+                        {
+                            anEvent.location.EndLong = Convert.ToDouble(e.END_LON);
+                        }
+                        catch (ArgumentException ex) { throw; }
+                    }
+                    // Store anEvent in list
+                    AddEvent(anEvent);
+                }
             }
         }
 
