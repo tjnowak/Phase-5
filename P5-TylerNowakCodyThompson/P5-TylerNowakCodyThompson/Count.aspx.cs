@@ -15,5 +15,10 @@ namespace P5_TylerNowakCodyThompson
         {
             theList = (EventList)Session["theList"];
         }
+
+        protected void ButtonClick1(object sender, System.EventArgs e)
+        {
+            Label1.Text = "success";
+        }
     }
 }
