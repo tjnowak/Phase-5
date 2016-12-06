@@ -74,8 +74,6 @@
         <asp:DropDownList ID="DropDownList1" runat="server" style="height: 22px">
             <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
             <asp:ListItem Value="EVENT TYPE">Event Type</asp:ListItem>
-            <asp:ListItem Value="EPISODE DESCRIPTION">Episode Description</asp:ListItem>
-            <asp:ListItem Value="EVENT DESCRIPTION">Event Description</asp:ListItem>
             <asp:ListItem Value="TORNADO TYPE">Tornado Type</asp:ListItem>
             <asp:ListItem Value="STATE">State</asp:ListItem>
             <asp:ListItem Value="COUNTY">County</asp:ListItem>

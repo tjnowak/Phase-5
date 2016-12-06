@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Diagnostics;
 
 namespace P5_TylerNowakCodyThompson
 {
@@ -12,13 +13,13 @@ namespace P5_TylerNowakCodyThompson
         EventList theList;
 
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {  
             // load in DB for a new user
             if (Session["theList"] == null)
             {
-
-
-            }    
+                theList.ReadData();
+                Session["theList"] = theList;
+            } 
         }
 
 
@@ -29,27 +30,21 @@ namespace P5_TylerNowakCodyThompson
             {
                 case 0:
                     Response.Redirect("~/Add.aspx");
-                    Session["beenHereBefore"] = 1;     // user is no longer new
                     break;
                 case 1:
                     Response.Redirect("~/Modify.aspx");
-                    Session["beenHereBefore"] = 1;
                     break;
                 case 2:
                     Response.Redirect("~/Search.aspx");
-                    Session["beenHereBefore"] = 1;
                     break;
                 case 3:
                     Response.Redirect("~/Count.aspx");
-                    Session["beenHereBefore"] = 1;
                     break;
                 case 4:
                     Response.Redirect("~/Statistics.aspx");
-                    Session["beenHereBefore"] = 1;
                     break;
                 default:
                     Label2.Text = "Please Pick an option";
-                    Session["beenHereBefore"] = 1;
                     break;
             }
 
@@ -67,5 +62,6 @@ namespace P5_TylerNowakCodyThompson
         {
 
         }
+
     }
 }
