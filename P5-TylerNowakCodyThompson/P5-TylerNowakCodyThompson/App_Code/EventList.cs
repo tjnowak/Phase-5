@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace P5_TylerNowakCodyThompson
 {
@@ -513,7 +514,8 @@ namespace P5_TylerNowakCodyThompson
             int intValue;                                        // to hold converted string
             double doubleValue;                                  // to hold converted string
             string amount;                                       // to hold a dollar amount
-            char[] checkChars = { 'K' };                         // chars to check if in a string
+            char[] checkChars = { 'K', 'k',                      // chars to check if in a string
+                                  'M', 'm' };                    
 
             // Clear stored data in event list
             ClearList();
@@ -624,7 +626,7 @@ namespace P5_TylerNowakCodyThompson
                             {
                                 anEvent.EventType = e.EVENT_TYPE;
                             }
-                            catch (ArgumentException ex) { throw; }
+                            catch (ArgumentException ex) {throw; }
                         }
                     }
 
@@ -864,7 +866,7 @@ namespace P5_TylerNowakCodyThompson
                         {
                             anEvent.location.BeginLong = Convert.ToDouble(e.BEGIN_LON);
                         }
-                        catch (ArgumentException ex) { throw; }
+                        catch (ArgumentException ex) {throw; }
                     }
 
                     // Set EndLat
@@ -874,7 +876,7 @@ namespace P5_TylerNowakCodyThompson
                         {
                             anEvent.location.EndLat = Convert.ToDouble(e.END_LAT);
                         }
-                        catch (ArgumentException ex) { throw; }
+                        catch (ArgumentException ex) {throw; }
                     }
 
                     // Set EndLong

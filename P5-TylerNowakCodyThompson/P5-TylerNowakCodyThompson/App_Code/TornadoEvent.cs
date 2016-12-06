@@ -17,7 +17,8 @@ namespace P5_TylerNowakCodyThompson
     class TornadoEvent : Event
     {
         private static readonly List<string> TORNADO_TYPES =      // list of all types of tornados
-            new List<string> { "EF0", "EF1", "EF2", "EF3", "EF4", "EF5" };
+            new List<string> { "EF0", "EF1", "EF2", "EF3", "EF4", "EF5",
+                               "F0", "F1", "F2", "F3", "F4", "F5"};
 
         private string tornadoType;             // f-scale type indicating tornado severity 
         private double tornadoLength;           // length of tornado segment in miles

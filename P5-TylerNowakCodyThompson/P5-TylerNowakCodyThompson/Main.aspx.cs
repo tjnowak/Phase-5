@@ -10,13 +10,13 @@ namespace P5_TylerNowakCodyThompson
 {
     public partial class Main : System.Web.UI.Page
     {
-        EventList theList;
+        EventList theList = new EventList();
 
         protected void Page_Load(object sender, EventArgs e)
-        {  
+        {         
             // load in DB for a new user
             if (Session["theList"] == null)
-            {
+            {                
                 theList.ReadData();
                 Session["theList"] = theList;
             } 
