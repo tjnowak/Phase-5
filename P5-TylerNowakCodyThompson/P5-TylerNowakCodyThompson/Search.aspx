@@ -72,7 +72,7 @@
             <ContentTemplate>
                 <asp:Label ID="FieldNameLabel" runat="server" Text="Choose the field name you want to search:"></asp:Label>
                 &nbsp;
-                <asp:DropDownList ID="Other_PropertyDropDown" runat="server" OnSelectedIndexChanged="Other_PropertyDropDown_SelectedIndexChanged" style="height: 22px">
+                <asp:DropDownList ID="PropertyDropDown" runat="server" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" style="height: 22px">
                     <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
                     <asp:ListItem Value="EVENT TYPE">Event Type</asp:ListItem>
                     <asp:ListItem Value="STATE">State</asp:ListItem>
@@ -84,98 +84,6 @@
                     <asp:ListItem Value="TIME ZONE">Time Zone</asp:ListItem>
                     <asp:ListItem Value="INJURIES">Injuries</asp:ListItem>
                     <asp:ListItem Value="FATALITIES">Fatalities</asp:ListItem>
-                    <asp:ListItem Value="START RANGE">Start Range</asp:ListItem>
-                    <asp:ListItem Value="END RANGE">End Range</asp:ListItem>
-                    <asp:ListItem Value="START YEAR">Start Year</asp:ListItem>
-                    <asp:ListItem Value="START MONTH">Start Month</asp:ListItem>
-                    <asp:ListItem Value="START DAY">Start Day</asp:ListItem>
-                    <asp:ListItem Value="START TIME">Start Time</asp:ListItem>
-                    <asp:ListItem Value="END YEAR">End Year</asp:ListItem>
-                    <asp:ListItem Value="END MONTH">End Month</asp:ListItem>
-                    <asp:ListItem Value="END DAY">End Day</asp:ListItem>
-                    <asp:ListItem Value="END TIME">End Time</asp:ListItem>
-                    <asp:ListItem Value="START LATITUDE">Start Latitude</asp:ListItem>
-                    <asp:ListItem Value="START LONGITUDE">Start Longitude</asp:ListItem>
-                    <asp:ListItem Value="END LATITUDE">End Latitude</asp:ListItem>
-                    <asp:ListItem Value="END LONGITUDE">End Longitude</asp:ListItem>
-                    <asp:ListItem Value="PROPERTY DAMAGE">Property Damage</asp:ListItem>
-                    <asp:ListItem Value="CROP DAMAGE">Crop Damage</asp:ListItem>
-                </asp:DropDownList>
-                <asp:DropDownList ID="Tornado_PropertyDropDown" runat="server" OnSelectedIndexChanged="Tornado_PropertyDropDown_SelectedIndexChanged" style="height: 22px">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
-                    <asp:ListItem Value="EVENT TYPE">Event Type</asp:ListItem>
-                    <asp:ListItem Value="TORNADO TYPE">Tornado Type</asp:ListItem>
-                    <asp:ListItem Value="STATE">State</asp:ListItem>
-                    <asp:ListItem Value="COUNTY">County</asp:ListItem>
-                    <asp:ListItem Value="START AZIMUTH">Start Azimuth</asp:ListItem>
-                    <asp:ListItem Value="START LOCATION">Start Location</asp:ListItem>
-                    <asp:ListItem Value="END AZIMUTH">End Azimuth</asp:ListItem>
-                    <asp:ListItem Value="END LOCATION">End Location</asp:ListItem>
-                    <asp:ListItem Value="TIME ZONE">Time Zone</asp:ListItem>
-                    <asp:ListItem Value="INJURIES">Injuries</asp:ListItem>
-                    <asp:ListItem Value="FATALITIES">Fatalities</asp:ListItem>
-                    <asp:ListItem Value="START RANGE">Start Range</asp:ListItem>
-                    <asp:ListItem Value="END RANGE">End Range</asp:ListItem>
-                    <asp:ListItem Value="START YEAR">Start Year</asp:ListItem>
-                    <asp:ListItem Value="START MONTH">Start Month</asp:ListItem>
-                    <asp:ListItem Value="START DAY">Start Day</asp:ListItem>
-                    <asp:ListItem Value="START TIME">Start Time</asp:ListItem>
-                    <asp:ListItem Value="END YEAR">End Year</asp:ListItem>
-                    <asp:ListItem Value="END MONTH">End Month</asp:ListItem>
-                    <asp:ListItem Value="END DAY">End Day</asp:ListItem>
-                    <asp:ListItem Value="END TIME">End Time</asp:ListItem>
-                    <asp:ListItem Value="TORNADO LENGTH">Tornado Length</asp:ListItem>
-                    <asp:ListItem Value="TORNADO WIDTH">Tornado Width</asp:ListItem>
-                    <asp:ListItem Value="START LATITUDE">Start Latitude</asp:ListItem>
-                    <asp:ListItem Value="START LONGITUDE">Start Longitude</asp:ListItem>
-                    <asp:ListItem Value="END LATITUDE">End Latitude</asp:ListItem>
-                    <asp:ListItem Value="END LONGITUDE">End Longitude</asp:ListItem>
-                    <asp:ListItem Value="PROPERTY DAMAGE">Property Damage</asp:ListItem>
-                    <asp:ListItem Value="CROP DAMAGE">Crop Damage</asp:ListItem>
-                </asp:DropDownList>
-                <asp:DropDownList ID="Wind_PropertyDropDown" runat="server" OnSelectedIndexChanged="Wind_PropertyDropDown_SelectedIndexChanged" style="height: 22px">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
-                    <asp:ListItem Value="EVENT TYPE">Event Type</asp:ListItem>
-                    <asp:ListItem Value="STATE">State</asp:ListItem>
-                    <asp:ListItem Value="COUNTY">County</asp:ListItem>
-                    <asp:ListItem Value="START AZIMUTH">Start Azimuth</asp:ListItem>
-                    <asp:ListItem Value="START LOCATION">Start Location</asp:ListItem>
-                    <asp:ListItem Value="END AZIMUTH">End Azimuth</asp:ListItem>
-                    <asp:ListItem Value="END LOCATION">End Location</asp:ListItem>
-                    <asp:ListItem Value="TIME ZONE">Time Zone</asp:ListItem>
-                    <asp:ListItem Value="INJURIES">Injuries</asp:ListItem>
-                    <asp:ListItem Value="FATALITIES">Fatalities</asp:ListItem>
-                    <asp:ListItem Value="WIND SPEED">Wind Speed</asp:ListItem>
-                    <asp:ListItem Value="START RANGE">Start Range</asp:ListItem>
-                    <asp:ListItem Value="END RANGE">End Range</asp:ListItem>
-                    <asp:ListItem Value="START YEAR">Start Year</asp:ListItem>
-                    <asp:ListItem Value="START MONTH">Start Month</asp:ListItem>
-                    <asp:ListItem Value="START DAY">Start Day</asp:ListItem>
-                    <asp:ListItem Value="START TIME">Start Time</asp:ListItem>
-                    <asp:ListItem Value="END YEAR">End Year</asp:ListItem>
-                    <asp:ListItem Value="END MONTH">End Month</asp:ListItem>
-                    <asp:ListItem Value="END DAY">End Day</asp:ListItem>
-                    <asp:ListItem Value="END TIME">End Time</asp:ListItem>
-                    <asp:ListItem Value="START LATITUDE">Start Latitude</asp:ListItem>
-                    <asp:ListItem Value="START LONGITUDE">Start Longitude</asp:ListItem>
-                    <asp:ListItem Value="END LATITUDE">End Latitude</asp:ListItem>
-                    <asp:ListItem Value="END LONGITUDE">End Longitude</asp:ListItem>
-                    <asp:ListItem Value="PROPERTY DAMAGE">Property Damage</asp:ListItem>
-                    <asp:ListItem Value="CROP DAMAGE">Crop Damage</asp:ListItem>
-                </asp:DropDownList>
-                <asp:DropDownList ID="Hail_PropertyDropDown" runat="server" OnSelectedIndexChanged="Hail_PropertyDropDown_SelectedIndexChanged" style="height: 22px">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
-                    <asp:ListItem Value="EVENT TYPE">Event Type</asp:ListItem>
-                    <asp:ListItem Value="STATE">State</asp:ListItem>
-                    <asp:ListItem Value="COUNTY">County</asp:ListItem>
-                    <asp:ListItem Value="START AZIMUTH">Start Azimuth</asp:ListItem>
-                    <asp:ListItem Value="START LOCATION">Start Location</asp:ListItem>
-                    <asp:ListItem Value="END AZIMUTH">End Azimuth</asp:ListItem>
-                    <asp:ListItem Value="END LOCATION">End Location</asp:ListItem>
-                    <asp:ListItem Value="TIME ZONE">Time Zone</asp:ListItem>
-                    <asp:ListItem Value="INJURIES">Injuries</asp:ListItem>
-                    <asp:ListItem Value="FATALITIES">Fatalities</asp:ListItem>
-                    <asp:ListItem Value="HAIL SIZE">Hail Size</asp:ListItem>
                     <asp:ListItem Value="START RANGE">Start Range</asp:ListItem>
                     <asp:ListItem Value="END RANGE">End Range</asp:ListItem>
                     <asp:ListItem Value="START YEAR">Start Year</asp:ListItem>
@@ -201,8 +109,13 @@
         <br />
     
     </div>
-&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;<asp:UpdatePanel ID="ValueUpdatePanel" runat="server">
+            <ContentTemplate>
+                <asp:Label ID="ValueQuestionLabel" runat="server"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="ValueTextBox" runat="server"></asp:TextBox>
+            </ContentTemplate>
+        </asp:UpdatePanel>
         <br />
         <br />
         <br />

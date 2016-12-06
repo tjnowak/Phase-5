@@ -76,40 +76,40 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label FieldNameLabel;
         
         /// <summary>
-        /// Other_PropertyDropDown control.
+        /// PropertyDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Other_PropertyDropDown;
+        protected global::System.Web.UI.WebControls.DropDownList PropertyDropDown;
         
         /// <summary>
-        /// Tornado_PropertyDropDown control.
+        /// ValueUpdatePanel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Tornado_PropertyDropDown;
+        protected global::System.Web.UI.UpdatePanel ValueUpdatePanel;
         
         /// <summary>
-        /// Wind_PropertyDropDown control.
+        /// ValueQuestionLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Wind_PropertyDropDown;
+        protected global::System.Web.UI.WebControls.Label ValueQuestionLabel;
         
         /// <summary>
-        /// Hail_PropertyDropDown control.
+        /// ValueTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList Hail_PropertyDropDown;
+        protected global::System.Web.UI.WebControls.TextBox ValueTextBox;
         
         /// <summary>
         /// MainMenuButton control.
