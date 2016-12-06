@@ -22,7 +22,7 @@ namespace P5_TylerNowakCodyThompson
 
         protected void StormTypeDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
-           if (StormTypeDropDown.SelectedValue == "TORNADO")
+            if (StormTypeDropDown.SelectedValue == "TORNADO")
             {
                 // Only show TornadoEvent property list
                 Tornado_PropertyDropDown.Visible = true;
@@ -30,7 +30,7 @@ namespace P5_TylerNowakCodyThompson
                 Hail_PropertyDropDown.Visible = false;
                 Wind_PropertyDropDown.Visible = false;
             }
-           else if (StormTypeDropDown.SelectedValue == "HAIL")
+            else if (StormTypeDropDown.SelectedValue == "HAIL")
             {
                 // Only show HailEvent property list
                 Hail_PropertyDropDown.Visible = true;
@@ -38,18 +38,18 @@ namespace P5_TylerNowakCodyThompson
                 Tornado_PropertyDropDown.Visible = false;
                 Wind_PropertyDropDown.Visible = false;
             }
-           else if (StormTypeDropDown.SelectedValue == "THUNDERSTORM WIND" ||
-                    StormTypeDropDown.SelectedValue == "MARINE THUNDERSTORM WIND" ||
-                    StormTypeDropDown.SelectedValue == "MARINE STRONG WIND" ||
-                    StormTypeDropDown.SelectedValue == "MARINE HIGH WIND" ||
-                    StormTypeDropDown.SelectedValue == "STRONG WIND")
+            else if (StormTypeDropDown.SelectedValue == "THUNDERSTORM WIND" ||
+                     StormTypeDropDown.SelectedValue == "MARINE THUNDERSTORM WIND" ||
+                     StormTypeDropDown.SelectedValue == "MARINE STRONG WIND" ||
+                     StormTypeDropDown.SelectedValue == "MARINE HIGH WIND" ||
+                     StormTypeDropDown.SelectedValue == "STRONG WIND")
             {
                 // Only show WindEvent property list
                 Wind_PropertyDropDown.Visible = true;
                 Other_PropertyDropDown.Visible = false;
                 Hail_PropertyDropDown.Visible = false;
                 Tornado_PropertyDropDown.Visible = false;
-            }      
+            }
         }
 
         protected void MainMenuButton_Click(object sender, EventArgs e)

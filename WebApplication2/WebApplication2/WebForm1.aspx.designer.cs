@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace P5_TylerNowakCodyThompson {
+namespace WebApplication2 {
     
     
-    public partial class Search {
+    public partial class WebForm1 {
         
         /// <summary>
         /// form1 control.
