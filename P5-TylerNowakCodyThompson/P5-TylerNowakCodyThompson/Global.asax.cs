@@ -18,7 +18,11 @@ namespace P5_TylerNowakCodyThompson
 
         protected void Session_Start(object sender, EventArgs e)
         {
-            
+            EventList theList = new EventList();
+
+            // Load database into an EventList and store as a session variable
+            theList.ReadData();
+            Session["theList"] = theList;
         }
 
         protected void Application_BeginRequest(object sender, EventArgs e)

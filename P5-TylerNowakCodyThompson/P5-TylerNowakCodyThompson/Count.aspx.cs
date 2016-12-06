@@ -14,11 +14,12 @@ namespace P5_TylerNowakCodyThompson
         protected void Page_Load(object sender, EventArgs e)
         {
             theList = (EventList)Session["theList"];
+            TheCountLabel.Text = Convert.ToString(theList.Count());
         }
 
-        protected void ButtonClick1(object sender, System.EventArgs e)
+        protected void MainMenuButton_Click(object sender, EventArgs e)
         {
-            Label1.Text = "success";
+            Response.Redirect("~/Main.aspx");
         }
     }
 }
