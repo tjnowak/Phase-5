@@ -10,9 +10,7 @@ namespace P5_TylerNowakCodyThompson
     public partial class Search : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
-        {
-            //ScriptManager1.RegisterAsyncPostBackControl(StormTypeDropDown);
-
+        { 
             // Show generic property list
             Other_PropertyDropDown.Visible = true;
             Tornado_PropertyDropDown.Visible = false;
