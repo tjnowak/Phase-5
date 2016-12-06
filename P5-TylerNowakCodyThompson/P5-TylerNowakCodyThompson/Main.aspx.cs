@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Diagnostics;
 
 namespace P5_TylerNowakCodyThompson
 {
@@ -12,13 +13,13 @@ namespace P5_TylerNowakCodyThompson
         EventList theList;
 
         protected void Page_Load(object sender, EventArgs e)
-        {
+        {  
             // load in DB for a new user
             if (Session["theList"] == null)
             {
                 theList.ReadData();
                 Session["theList"] = theList;
-            }    
+            } 
         }
 
 
@@ -61,5 +62,6 @@ namespace P5_TylerNowakCodyThompson
         {
 
         }
+
     }
 }
