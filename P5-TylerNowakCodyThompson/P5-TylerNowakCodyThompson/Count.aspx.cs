@@ -13,5 +13,10 @@ namespace P5_TylerNowakCodyThompson
         {
 
         }
+
+        protected void ButtonClick1(object sender, System.EventArgs e)
+        {
+            Label1.Text = "success";
+        }
     }
 }
