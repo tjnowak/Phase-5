@@ -9,9 +9,11 @@ namespace P5_TylerNowakCodyThompson
 {
     public partial class Count : System.Web.UI.Page
     {
+        EventList theList = new EventList();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            theList = (EventList)Session["theList"];
         }
     }
 }
