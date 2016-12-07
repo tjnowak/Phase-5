@@ -109,17 +109,246 @@
         <br />
     
     </div>
-&nbsp;<asp:UpdatePanel ID="ValueUpdatePanel" runat="server">
+        <asp:UpdatePanel ID="ValueUpdatePanel" runat="server">
             <ContentTemplate>
-                <asp:Label ID="Question1Label" runat="server"></asp:Label>
+                <asp:Label ID="TornadoTypeQLabel" runat="server" Visible="False">Choose the tornado type you are searching for:</asp:Label>
                 &nbsp;
-                <asp:TextBox ID="Value1TextBox" runat="server"></asp:TextBox>
-                &nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:DropDownList ID="TornadoTypeDropDown" runat="server" OnSelectedIndexChanged="TornadoTypeDropDown_SelectedIndexChanged" Visible="False">
+                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem>EF0</asp:ListItem>
+                    <asp:ListItem>EF1</asp:ListItem>
+                    <asp:ListItem>EF2</asp:ListItem>
+                    <asp:ListItem>EF3</asp:ListItem>
+                    <asp:ListItem>EF4</asp:ListItem>
+                    <asp:ListItem>EF5</asp:ListItem>
+                </asp:DropDownList>
                 <br />
                 <br />
-                <asp:Label ID="Value2QuestionLabel" runat="server"></asp:Label>
+                <asp:Label ID="StateQLabel" runat="server" Visible="False">Choose the state you are searching for:</asp:Label>
                 &nbsp;
-                <asp:TextBox ID="Value2TextBox" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="StateDropDown" runat="server" Visible="False">
+                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem Value="ALABAMA">Alabama</asp:ListItem>
+                    <asp:ListItem Value="ALASKA">Alaska</asp:ListItem>
+                    <asp:ListItem Value="ARIZONA">Arizona</asp:ListItem>
+                    <asp:ListItem Value="ARKANSAS">Arkansas</asp:ListItem>
+                    <asp:ListItem Value="CALIFORNIA">California</asp:ListItem>
+                    <asp:ListItem Value="COLORADO">Colorado</asp:ListItem>
+                    <asp:ListItem Value="CONNECTICUT">Connecticut</asp:ListItem>
+                    <asp:ListItem Value="DELAWARE">Delaware</asp:ListItem>
+                    <asp:ListItem Value="DISTRICT OF COLUMBIA">District of Columbia</asp:ListItem>
+                    <asp:ListItem Value="FLORIDA">Florida</asp:ListItem>
+                    <asp:ListItem Value="GEORGIA">Georgia</asp:ListItem>
+                    <asp:ListItem Value="GUAM">Guam</asp:ListItem>
+                    <asp:ListItem Value="HAWAII">Hawaii</asp:ListItem>
+                    <asp:ListItem Value="IDAHO">Idaho</asp:ListItem>
+                    <asp:ListItem Value="ILLINOIS">Illinois</asp:ListItem>
+                    <asp:ListItem Value="INDIANA">Indiana</asp:ListItem>
+                    <asp:ListItem Value="IOWA">Iowa</asp:ListItem>
+                    <asp:ListItem Value="KANSAS">Kansas</asp:ListItem>
+                    <asp:ListItem Value="KENTUCKY">Kentucky</asp:ListItem>
+                    <asp:ListItem Value="LOUISIANA">Louisiana</asp:ListItem>
+                    <asp:ListItem Value="MAINE">Maine</asp:ListItem>
+                    <asp:ListItem Value="MARYLAND">Maryland</asp:ListItem>
+                    <asp:ListItem Value="MASSACHUSETTS">Massachusetts</asp:ListItem>
+                    <asp:ListItem Value="MICHIGAN">Michigan</asp:ListItem>
+                    <asp:ListItem Value="MINNESOTA">Minnesota</asp:ListItem>
+                    <asp:ListItem Value="MISSISSIPPI">Mississippi</asp:ListItem>
+                    <asp:ListItem Value="MISSOURI">Missouri</asp:ListItem>
+                    <asp:ListItem Value="MONTANA">Montana</asp:ListItem>
+                    <asp:ListItem Value="NEBRASKA">Nebraska</asp:ListItem>
+                    <asp:ListItem Value="NEVADA">Nevada</asp:ListItem>
+                    <asp:ListItem Value="NEW HAMPSHIRE">New Hampshire</asp:ListItem>
+                    <asp:ListItem Value="NEW JERSEY">New Jersey</asp:ListItem>
+                    <asp:ListItem Value="NEW MEXICO">New Mexico</asp:ListItem>
+                    <asp:ListItem Value="NEW YORK">New York</asp:ListItem>
+                    <asp:ListItem Value="NORTH CAROLINA">North Carolina</asp:ListItem>
+                    <asp:ListItem Value="NORTH DAKOTA">North Dakota</asp:ListItem>
+                    <asp:ListItem Value="OHIO">Ohio</asp:ListItem>
+                    <asp:ListItem Value="OKLAHOMA">Oklahoma</asp:ListItem>
+                    <asp:ListItem Value="OREGON">Oregon</asp:ListItem>
+                    <asp:ListItem Value="PENNSYLVANIA">Pennsylvania</asp:ListItem>
+                    <asp:ListItem Value="PUERTO RICO">Puerto Rico</asp:ListItem>
+                    <asp:ListItem Value="RHODE ISLAND">Rhode Island</asp:ListItem>
+                    <asp:ListItem Value="SOUTH CAROLINA">South Carolina</asp:ListItem>
+                    <asp:ListItem Value="SOUTH DAKOTA">South Dakota</asp:ListItem>
+                    <asp:ListItem Value="TENNESSEE">Tennessee</asp:ListItem>
+                    <asp:ListItem Value="TEXAS">Texas</asp:ListItem>
+                    <asp:ListItem Value="UTAH">Utah</asp:ListItem>
+                    <asp:ListItem Value="VERMONT">Vermont</asp:ListItem>
+                    <asp:ListItem Value="VIRGIN ISLANDS">Virgin Islands</asp:ListItem>
+                    <asp:ListItem Value="VIRGINIA">Virginia</asp:ListItem>
+                    <asp:ListItem Value="WASHINGTON">Washington</asp:ListItem>
+                    <asp:ListItem Value="WEST VIRGINIA">West Virginia</asp:ListItem>
+                    <asp:ListItem Value="WISCONSIN">Wisconsin</asp:ListItem>
+                    <asp:ListItem Value="WYOMING">Wyoming</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Label ID="CountyQLabel" runat="server" Text="Enter the full county name you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="CountyTextBox" runat="server" Visible="False" Width="193px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="StartAzimuthQlabel" runat="server" Text="Choose the starting azimuth (Compass direction) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:DropDownList ID="StartAzimuthDropDown" runat="server" Visible="False">
+                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem>E</asp:ListItem>
+                    <asp:ListItem>ENE</asp:ListItem>
+                    <asp:ListItem>ESE</asp:ListItem>
+                    <asp:ListItem>N</asp:ListItem>
+                    <asp:ListItem>NE</asp:ListItem>
+                    <asp:ListItem>NNE</asp:ListItem>
+                    <asp:ListItem>NNW</asp:ListItem>
+                    <asp:ListItem>NW</asp:ListItem>
+                    <asp:ListItem>S</asp:ListItem>
+                    <asp:ListItem>SE</asp:ListItem>
+                    <asp:ListItem>SSE</asp:ListItem>
+                    <asp:ListItem>SSW</asp:ListItem>
+                    <asp:ListItem>SW</asp:ListItem>
+                    <asp:ListItem>W</asp:ListItem>
+                    <asp:ListItem>WNW</asp:ListItem>
+                    <asp:ListItem>WSW</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Label ID="StartLocationQlabel" runat="server" Text="Enter the full start location name (nearest city) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="StartLocationTextBox" runat="server" OnTextChanged="StartLocationTextBox_TextChanged" Visible="False" Width="197px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="EndAzimuthQLabel" runat="server" Text="Choose the ending azimuth (Compass direction) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:DropDownList ID="EndAzimuthDropDown" runat="server" Visible="False">
+                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem>E</asp:ListItem>
+                    <asp:ListItem>ENE</asp:ListItem>
+                    <asp:ListItem>ESE</asp:ListItem>
+                    <asp:ListItem>N</asp:ListItem>
+                    <asp:ListItem>NE</asp:ListItem>
+                    <asp:ListItem>NNE</asp:ListItem>
+                    <asp:ListItem>NNW</asp:ListItem>
+                    <asp:ListItem>NW</asp:ListItem>
+                    <asp:ListItem>S</asp:ListItem>
+                    <asp:ListItem>SE</asp:ListItem>
+                    <asp:ListItem>SSE</asp:ListItem>
+                    <asp:ListItem>SSW</asp:ListItem>
+                    <asp:ListItem>SW</asp:ListItem>
+                    <asp:ListItem>W</asp:ListItem>
+                    <asp:ListItem>WNW</asp:ListItem>
+                    <asp:ListItem>WSW</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Label ID="EndLocationQLabel" runat="server" Text="Enter the full end location name (nearest city) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="EndLocationTextBox" runat="server" OnTextChanged="StartLocationTextBox_TextChanged" Visible="False" Width="197px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="TimeZoneQLabel" runat="server" Text="Choose the time zone you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:DropDownList ID="TimeZoneDropDown" runat="server" Visible="False">
+                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem>AKST</asp:ListItem>
+                    <asp:ListItem>AKDT</asp:ListItem>
+                    <asp:ListItem>AST</asp:ListItem>
+                    <asp:ListItem>CST</asp:ListItem>
+                    <asp:ListItem>CDT</asp:ListItem>
+                    <asp:ListItem>EST</asp:ListItem>
+                    <asp:ListItem>EDT</asp:ListItem>
+                    <asp:ListItem>GST</asp:ListItem>
+                    <asp:ListItem>HST</asp:ListItem>
+                    <asp:ListItem>HDT</asp:ListItem>
+                    <asp:ListItem>MST</asp:ListItem>
+                    <asp:ListItem>MDT</asp:ListItem>
+                    <asp:ListItem>PST</asp:ListItem>
+                    <asp:ListItem>PDT</asp:ListItem>
+                    <asp:ListItem>SST</asp:ListItem>
+                    <asp:ListItem>ChST</asp:ListItem>
+                    <asp:ListItem>HAST</asp:ListItem>
+                    <asp:ListItem>HADT</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <br />
+                <asp:Label ID="InjuriesQ1Label" runat="server" Text="Enter the lower bound (integer) on number of injuries you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerInjuriesTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="InjuriesQ2Label" runat="server" Text="Enter the upper bound (integer) on number of injuries you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperInjuriesTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="FatalitiesQ1Label" runat="server" Text="Enter the lower bound (integer) on the number of fatalities you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerFatalitiesTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="FatalitiesQ2Label" runat="server" Text="Enter the upper bound (integer) on the number of fatalities you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperFatalitiesTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="WindSpeedQ1Label" runat="server" Text="Enter the lower bound (integer) on the wind speeds (measured in knots) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerWindSpeedsTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="WindSpeedQ2Label" runat="server" Text="Enter the upper bound (integer) on the wind speeds (measured in knots) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperWindSpeedsTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="HailSizeQ1Label" runat="server" Text="Enter the lower bound (number in inches) on the hail sizes you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerHailSizeTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="HailSizeQ2Label" runat="server" Text="Enter the upper bound (number in inches) on the hail sizes you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperHailSizeTextBox" runat="server" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="StartRangeQ1Label" runat="server" Text="Enter the lower bound of event start ranges (miles from nearest city as integer) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerStartRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="StartRangeQ2Label" runat="server" Text="Enter the upper bound of event start ranges (miles from nearest city as integer) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperStartRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="EndRangeQ1Label" runat="server" Text="Enter the lower bound of event end ranges (miles from nearest city as integer) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerEndRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="EndRangeQ2Label" runat="server" Text="Enter the upper bound of event end ranges (miles from nearest city as integer) you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperEndRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="StartYearQ1Label" runat="server" Text="Enter the lower bound (as integer) on the event start years you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerStartYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="StartYearQ2Label" runat="server" Text="Enter the upper bound (as integer) on the event start years you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperStartYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="StartMonthQ1Label" runat="server" Text="Enter the lower bound (as integer, 1-12) on the event start months you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
+                <br />
+                <br />
+                <asp:Label ID="StartMonthQ2Label" runat="server" Text="Enter the upper bound (as integer, 1-12) on the event start months you are searching for:" Visible="False"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="UpperStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Visible="False" Width="97px"></asp:TextBox>
             </ContentTemplate>
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="PropertyDropDown" />
@@ -129,9 +358,7 @@
         <br />
         <br />
         <br />
-        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="CompareValidator"></asp:CompareValidator>
         <br />
-        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"></asp:CustomValidator>
         <br />
         <asp:Button ID="MainMenuButton" runat="server" OnClick="MainMenuButton_Click" Text="Main Menu" />
     </form>

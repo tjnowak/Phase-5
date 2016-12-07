@@ -96,172 +96,176 @@ namespace P5_TylerNowakCodyThompson
             switch (PropertyDropDown.SelectedValue)
             {
                 case "TORNADO TYPE":
-                    Question1Label.Text = "Please enter the tornado type (EF0 through EF5) you" +
-                                               " are searching for.";
+                    TornadoTypeQLabel.Visible = true;
+                    TornadoTypeDropDown.Visible = true;
                     break;
                 case "STATE":
-                    Question1Label.Text = "Please enter the full name of the state you are" +
-                                               " searching for.";
+                    StateQLabel.Visible = true;
+                    StateDropDown.Visible = true;
                     break;
                 case "COUNTY":
-                    Question1Label.Text = "Please enter the full county name you are searching for.";
+                    CountyQLabel.Visible = true;
+                    CountyTextBox.Visible = true;
                     break;
                 case "START AZIMUTH":
-                    Question1Label.Text = "Please enter the starting azimuth (Compass direction," +
-                                               " Ex: SW) you are searching for. ";
+                    StartAzimuthQlabel.Visible = true;
+                    StartAzimuthDropDown.Visible = true;
                     break;
                 case "START LOCATION":
-                    Question1Label.Text = "Please enter the full start location name (nearest city)" +
-                                               " you are searching for.";
+                    StartLocationQlabel.Visible = true;
+                    StartLocationTextBox.Visible = true;
                     break;
                 case "END AZIMUTH":
-                    Question1Label.Text = "Please enter the ending azimuth (Compass direction, Ex: SW)" +
-                                               " you are searching for .";
+                    EndAzimuthQLabel.Visible = true;
+                    EndAzimuthDropDown.Visible = true;
                     break;
                 case "END LOCATION":
-                    Question1Label.Text = "Please enter the full end location name (nearest city)" +
-                                               " you are searching for.";
+                    EndLocationQLabel.Visible = true;
+                    EndLocationTextBox.Visible = true;
                     break;
                 case "TIME ZONE":
-                    Question1Label.Text = "Please enter the time zone (Ex: est) you are searching for.";
+                    TimeZoneQLabel.Visible = true;
+                    TimeZoneDropDown.Visible = true;
                     break;
                 case "INJURIES":
-                    Question1Label.Text = "Please enter the lower bound (integer) on the range of the" +
-                                               " number of injuries you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (integer) on the range of the" +
-                                               " number of injuries you are searching for.";
+                    InjuriesQ1Label.Visible = true;
+                    InjuriesQ2Label.Visible = true;
+                    LowerInjuriesTextBox.Visible = true;
+                    UpperInjuriesTextBox.Visible = true;
                     break;
                 case "FATALITIES":
-                    Question1Label.Text = "Please enter the lower bound (integer) on the range of the" +
-                                               " number of fatalities you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (integer) on the range of the" +
-                                               " number of fatalities you are searching for.";
+                    FatalitiesQ1Label.Visible = true;
+                    FatalitiesQ2Label.Visible = true;
+                    LowerFatalitiesTextBox.Visible = true;
+                    UpperFatalitiesTextBox.Visible = true;
                     break;
                 case "WIND SPEED":
-                    Question1Label.Text = "Please enter the lower bound (integer) on the range of wind" +
-                                               " speeds (measured in knots) you are searching for. ";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (integer) on the range of" +
-                                               " wind speeds (measured in knots) you are searching for.";
+                    WindSpeedQ1Label.Visible = true;
+                    WindSpeedQ2Label.Visible = true;
+                    LowerWindSpeedsTextBox.Visible = true;
+                    UpperWindSpeedsTextBox.Visible = true;
                     break;
                 case "HAIL SIZE":
-                    Question1Label.Text = "Please enter the lower bound (number in inches) on the range" +
-                                               " of hail sizes you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (number in inches) on the" +
-                                               " range of hail sizes you are searching for.";
+                    HailSizeQ1Label.Visible = true;
+                    HailSizeQ2Label.Visible = true;
+                    LowerHailSizeTextBox.Visible = true;
+                    UpperHailSizeTextBox.Visible = true;
                     break;
                 case "START RANGE":
-                    Question1Label.Text = "Please enter the lower bound of event start ranges" +
-                                               " (miles from nearest city as integer) you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound of event start ranges" +
-                                               " (miles from nearest city as integer) you are searching for.";
+                    StartRangeQ1Label.Visible = true;
+                    StartRangeQ2Label.Visible = true;
+                    LowerStartRangeTextBox.Visible = true;
+                    UpperStartRangeTextBox.Visible = true;
                     break;
                 case "END RANGE":
-                    Question1Label.Text = "Please enter the lower bound of event end ranges" +
-                                               " (miles from nearest city as integer) you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound of event end ranges" +
-                                               " (miles from nearest city as integer) you are searching for.";
+                    EndRangeQ1Label.Visible = true;
+                    EndRangeQ2Label.Visible = true;
+                    LowerEndRangeTextBox.Visible = true;
+                    UpperEndRangeTextBox.Visible = true;
                     break;
                 case "START YEAR":
-                    Question1Label.Text = "Please enter the lower bound (as integer) on the range of" +
-                                               " event start years you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as integer) on the range of" +
-                                               " event start years you are searching for.";
+                    StartYearQ1Label.Visible = true;
+                    StartYearQ2Label.Visible = true;
+                    LowerStartYearTextBox.Visible = true;
+                    UpperStartYearTextBox.Visible = true;
                     break;
                 case "START MONTH":
-                    Question1Label.Text = "Please enter the lower bound (as integer, 1-12) on the range of" +
-                                               " event start months you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as integer, 1 - 12) on the range of" +
-                                               " event start months you are searching for.";
+                    StartMonthQ1Label.Visible = true;
+                    StartMonthQ2Label.Visible = true;
+                    LowerStartMonthTextBox.Visible = true;
+                    UpperStartMonthTextBox.Visible = true;
                     break;
                 case "START DAY":
-                    Question1Label.Text = "Please enter the lower bound (as integer, day of month) on the" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (as integer, day of month) on the" +
                                                " range of event start days you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as integer, day of month) on" +
+                    StateQLabel.Text = "Please enter the upper bound (as integer, day of month) on" +
                                                " the range of event start days you are searching for.";
                     break;
                 case "START TIME":
-                    Question1Label.Text = "Please enter the lower bound (24 hour time with no ':', EX" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (24 hour time with no ':', EX" +
                                                " : 1425) on the range of event start times you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (24 hour time with no ':' EX " +
+                    StateQLabel.Text = "Please enter the upper bound (24 hour time with no ':' EX " +
                                                " : 1456) on the range of event start times you are searching for.";
                     break;
                 case "END YEAR":
-                    Question1Label.Text = "Please enter the lower bound (as integer) on the range of" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (as integer) on the range of" +
                                                " event end years you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as integer) on the range of" +
+                    StateQLabel.Text = "Please enter the upper bound (as integer) on the range of" +
                                                " event end years you are searching for.";
                     break;
                 case "END MONTH":
-                    Question1Label.Text = "Please enter the lower bound (as integer, 1-12) on the range" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (as integer, 1-12) on the range" +
                                                " of event end months you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as integer, 1 - 12) on the" +
+                    StateQLabel.Text = "Please enter the upper bound (as integer, 1 - 12) on the" +
                                                " range of event end months you are searching for.";
                     break;
                 case "END DAY":
-                    Question1Label.Text = "Please enter the lower bound (as integer, day of the month) on" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (as integer, day of the month) on" +
                                                " the range of event end days you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as integer, day of the month)" +
+                    StateQLabel.Text = "Please enter the upper bound (as integer, day of the month)" +
                                                " on the range of event end days you are searching for.";
                     break;
                 case "END TIME":
-                    Question1Label.Text = "Please enter the lower bound (24 hour time with no ':'," +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (24 hour time with no ':'," +
                                                " EX: 1043) on the range of event end times you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (24 hour time with no ':'," +
+                    StateQLabel.Text = "Please enter the upper bound (24 hour time with no ':'," +
                                                " EX: 1115) on the range of event end times you are searching for.";
                     break;
                 case "TORNADO LENGTH":
-                    Question1Label.Text = "Please enter the lower bound (how far in miles) on the" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (how far in miles) on the" +
                                                " range of tornado lengths (distance traveled) you are" +
                                                " searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (how far in miles) on" +
+                    StateQLabel.Text = "Please enter the upper bound (how far in miles) on" +
                                                " the range of tornado lengths (distance traveled) you " +
                                                " are searching for.";
                     break;
                 case "TORNADO WIDTH":
-                    Question1Label.Text = "Please enter the lower bound (yards) on the range of" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (yards) on the range of" +
                                                "tornado widths (diameter accross) you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (yards)on the range of" +
+                    StateQLabel.Text = "Please enter the upper bound (yards)on the range of" +
                                                " tornado widths (diameter accross) you are searching for.";
                     break;
                 case "START LATITUDE":
-                    Question1Label.Text = "Please enter the lower bound (-90 to 90) on the range of" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (-90 to 90) on the range of" +
                                                " event start latitudes you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (-90 to 90) on the range of" +
+                    StateQLabel.Text = "Please enter the upper bound (-90 to 90) on the range of" +
                                                " event start latitudes you are searching for.";
                     break;
                 case "START LONGITUDE":
-                    Question1Label.Text = "Please enter the lower bound (-180 to 180) on the range of" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (-180 to 180) on the range of" +
                                                " event start longitudes you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (-180 to 180) on the range " +
+                    StateQLabel.Text = "Please enter the upper bound (-180 to 180) on the range " +
                                                " of event start longitudes you are searching for.";
                     break;
                 case "END LATITUDE":
-                    Question1Label.Text = "Please enter the lower bound (-90 to 90) on the range of event" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (-90 to 90) on the range of event" +
                                                " end latitudes you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (-90 to 90) on the range of" +
+                    StateQLabel.Text = "Please enter the upper bound (-90 to 90) on the range of" +
                                                " event end latitudes you are searching for.";
                     break;
                 case "END LONGITUDE":
-                    Question1Label.Text = "Please enter the lower bound (-180 to 180) on the range" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (-180 to 180) on the range" +
                                                " of event end longitudes you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (-180 to 180) on the range" +
+                    StateQLabel.Text = "Please enter the upper bound (-180 to 180) on the range" +
                                                " of event end longitudes you are searching for.";
                     break;
                 case "PROPERTY DAMAGE":
-                    Question1Label.Text = "Please enter the lower bound (as a number without '$')" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (as a number without '$')" +
                                                " on the range of property damage you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as a number without '$')" +
+                    StateQLabel.Text = "Please enter the upper bound (as a number without '$')" +
                                                " on the range of property damage you are searching for.";
                     break;
                 case "CROP DAMAGE":
-                    Question1Label.Text = "Please enter the lower bound (as a number without '$')" +
+                    TornadoTypeQLabel.Text = "Please enter the lower bound (as a number without '$')" +
                                                " on the range of crop damage you are searching for.";
-                    Value2QuestionLabel.Text = "Please enter the upper bound (as a number without '$')" +
+                    StateQLabel.Text = "Please enter the upper bound (as a number without '$')" +
                                                " on the range of crop damage you are searching for.";
                     break;
                 default:
                     throw new ArgumentException("Property to search is invalid!");
             }
         }
+
+       
     }
 }
