@@ -141,6 +141,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Search.aspx" />
+    <Content Include="TopThree.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -218,6 +219,13 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopThree.aspx.cs">
+      <DependentUpon>TopThree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopThree.aspx.designer.cs">
+      <DependentUpon>TopThree.aspx</DependentUpon>
     </Compile>
     <Compile Include="WeatherEvent.cs">
       <DependentUpon>DBviaEF.tt</DependentUpon>

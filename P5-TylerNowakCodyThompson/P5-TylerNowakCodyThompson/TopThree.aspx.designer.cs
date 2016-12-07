@@ -10,7 +10,7 @@
 namespace P5_TylerNowakCodyThompson {
     
     
-    public partial class DisplayStatistics {
+    public partial class TopThree {
         
         /// <summary>
         /// form1 control.
@@ -31,30 +31,57 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// StatsOptionsRBList control.
+        /// StormTypeDropDown1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList StatsOptionsRBList;
+        protected global::System.Web.UI.WebControls.DropDownList StormTypeDropDown1;
         
         /// <summary>
-        /// NoneSelected control.
+        /// CalculateTopThree control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label NoneSelected;
+        protected global::System.Web.UI.WebControls.Button CalculateTopThree;
         
         /// <summary>
-        /// DisplatStatsButton control.
+        /// Label2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button DisplatStatsButton;
+        protected global::System.Web.UI.WebControls.Label Label2;
+        
+        /// <summary>
+        /// DisplayResults control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ListBox DisplayResults;
+        
+        /// <summary>
+        /// Label3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label3;
+        
+        /// <summary>
+        /// TryAgain control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button TryAgain;
     }
 }

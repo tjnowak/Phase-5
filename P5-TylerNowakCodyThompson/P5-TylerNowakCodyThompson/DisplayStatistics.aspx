@@ -11,6 +11,19 @@
     <div>
     
     </div>
+        <asp:Label ID="Label1" runat="server" Text="Please select an option below:"></asp:Label>
+        <br />
+        <asp:RadioButtonList ID="StatsOptionsRBList" runat="server">
+            <asp:ListItem>Calculate top three most destructive storms</asp:ListItem>
+            <asp:ListItem>Determine overall fatalities in a state due to a type of storm</asp:ListItem>
+            <asp:ListItem>Determine average tornado damage by state</asp:ListItem>
+            <asp:ListItem>Go back to main menu</asp:ListItem>
+        </asp:RadioButtonList>
+        <br />
+        <asp:Label ID="NoneSelected" runat="server" Text="Please select an option" Visible="False"></asp:Label>
+        <br />
+        <asp:Button ID="DisplatStatsButton" runat="server" OnClick="Button1_Click" Text="Go" />
+        <br />
     </form>
 </body>
 </html>
