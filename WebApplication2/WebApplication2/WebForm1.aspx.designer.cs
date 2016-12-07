@@ -7,10 +7,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace P5_TylerNowakCodyThompson {
+namespace WebApplication2 {
     
     
-    public partial class Search {
+    public partial class WebForm1 {
         
         /// <summary>
         /// form1 control.
@@ -76,58 +76,40 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label FieldNameLabel;
         
         /// <summary>
-        /// PropertyDropDown control.
+        /// Other_PropertyDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList PropertyDropDown;
+        protected global::System.Web.UI.WebControls.DropDownList Other_PropertyDropDown;
         
         /// <summary>
-        /// ValueUpdatePanel control.
+        /// Tornado_PropertyDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel ValueUpdatePanel;
+        protected global::System.Web.UI.WebControls.DropDownList Tornado_PropertyDropDown;
         
         /// <summary>
-        /// Value1QuestionLabel control.
+        /// Wind_PropertyDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Value1QuestionLabel;
+        protected global::System.Web.UI.WebControls.DropDownList Wind_PropertyDropDown;
         
         /// <summary>
-        /// Value1TextBox control.
+        /// Hail_PropertyDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Value1TextBox;
-        
-        /// <summary>
-        /// Value2QuestionLabel control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Value2QuestionLabel;
-        
-        /// <summary>
-        /// Value2TextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Value2TextBox;
+        protected global::System.Web.UI.WebControls.DropDownList Hail_PropertyDropDown;
         
         /// <summary>
         /// MainMenuButton control.

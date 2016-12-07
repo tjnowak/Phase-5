@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Error.aspx.cs" Inherits="WebApplication1.Error" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="WebForm1.aspx.cs" Inherits="WebApplication2.WebForm1" %>
 
 <!DOCTYPE html>
 
@@ -9,8 +9,6 @@
 <body>
     <form id="form1" runat="server">
     <div>
-    
-        <asp:Label ID="Label1" runat="server" Text="oops"></asp:Label>
     
     </div>
     </form>
