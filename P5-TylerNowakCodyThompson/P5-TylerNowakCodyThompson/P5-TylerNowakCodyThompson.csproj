@@ -118,6 +118,7 @@
     </Content>
     <Content Include="DisplayStatistics.aspx" />
     <Content Include="ErrorRedirect.aspx" />
+    <Content Include="Fatalities.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Main.aspx" />
     <Content Include="Modify.aspx" />
@@ -194,6 +195,13 @@
     </Compile>
     <Compile Include="ErrorRedirect.aspx.designer.cs">
       <DependentUpon>ErrorRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Fatalities.aspx.cs">
+      <DependentUpon>Fatalities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fatalities.aspx.designer.cs">
+      <DependentUpon>Fatalities.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
