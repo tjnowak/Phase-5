@@ -10,23 +10,14 @@ namespace P5_TylerNowakCodyThompson
 {
     public partial class Main : System.Web.UI.Page
     {
-        EventList theList;
-
         protected void Page_Load(object sender, EventArgs e)
-        {  
-            // load in DB for a new user
-            if (Session["theList"] == null)
-            {
-                theList.ReadData();
-                Session["theList"] = theList;
-            } 
+        {
+
         }
 
-
-
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void SelectButton_Click(object sender, EventArgs e)
         {
-            switch (RadioButtonList1.SelectedIndex)
+            switch (ChoicesRadioButtonList.SelectedIndex)
             {
                 case 0:
                     Response.Redirect("~/Add.aspx");
@@ -44,21 +35,12 @@ namespace P5_TylerNowakCodyThompson
                     Response.Redirect("~/Statistics.aspx");
                     break;
                 default:
-                    Label2.Text = "Please Pick an option";
+                    NoAnswerLabel.Text = "Please pick an option";
                     break;
             }
-
-
-
-            /*using (tjnowak_1583911Entities MyTables = new tjnowak_1583911Entities())
-            {
-                var items = from i in MyTables.All_Events
-                            select i;
-
-            }*/
         }
 
-        protected void RadioButtonList1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void ChoicesRadioButtonList_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

@@ -10,14 +10,14 @@
     <form id="form1" runat="server">
     <div>
     
-        <asp:Label ID="Label3" runat="server" Font-Size="XX-Large" Text="Inclement Weather Events"></asp:Label>
+        <asp:Label ID="TitleLabel" runat="server" Font-Size="XX-Large" Text="Inclement Weather Events"></asp:Label>
     
     </div>
         <br />
-        <asp:Label ID="Label1" runat="server">Please select an option below.</asp:Label>
+        <asp:Label ID="InstructionsLabel" runat="server">Please select an option below.</asp:Label>
         <br />
         <br />
-        <asp:RadioButtonList ID="RadioButtonList1" runat="server" OnSelectedIndexChanged="RadioButtonList1_SelectedIndexChanged">
+        <asp:RadioButtonList ID="ChoicesRadioButtonList" runat="server" OnSelectedIndexChanged="ChoicesRadioButtonList_SelectedIndexChanged">
             <asp:ListItem>Add an event</asp:ListItem>
             <asp:ListItem>Modify an event</asp:ListItem>
             <asp:ListItem>Search for events</asp:ListItem>
@@ -27,10 +27,10 @@
         <br />
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Select " />
+        <asp:Button ID="SelectButton" runat="server" OnClick="SelectButton_Click" Text="Select " />
         <br />
         <br />
-        <asp:Label ID="Label2" runat="server"></asp:Label>
+        <asp:Label ID="NoAnswerLabel" runat="server" ForeColor="Red"></asp:Label>
     </form>
 </body>
 </html>

@@ -608,12 +608,6 @@ namespace P5_TylerNowakCodyThompson
                 }          
         }
 
-        // Display the number of events in an EventList object
-        public static void Count(EventList list)
-        {
-            Console.WriteLine("\nThe number of events currently stored is: {0}", list.Count() + "\n");
-        }
-
         // Display storm event statistics to the user
         public static void DisplayStatistics(EventList list)
         {

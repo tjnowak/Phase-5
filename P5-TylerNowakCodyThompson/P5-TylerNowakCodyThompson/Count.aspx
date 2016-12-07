@@ -11,10 +11,16 @@
     <div>
     
     </div>
-        <asp:Label ID="Label3" runat="server" Text="Label"></asp:Label>
+        <asp:Label ID="TitleLabel" runat="server" Text="Weather Event Count" Font-Size="XX-Large"></asp:Label>
         <br />
         <br />
-        <asp:Button ID="Button1" runat="server" Text="Button" OnClick="Button1_Click" />
+        <asp:Label ID="EventCountLabel" runat="server" Text="The number of events currently stored is:"></asp:Label>
+&nbsp;
+        <asp:Label ID="TheCountLabel" runat="server" Text="Label"></asp:Label>
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="MainMenuButton" runat="server" Text="Main Menu" OnClick="MainMenuButton_Click" />
         <br />
     </form>
 </body>
