@@ -72,7 +72,7 @@
             <ContentTemplate>
                 <asp:Label ID="FieldNameLabel" runat="server" Text="Choose the field name you want to search:"></asp:Label>
                 &nbsp;
-                <asp:DropDownList ID="PropertyDropDown" runat="server" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" style="height: 22px">
+                <asp:DropDownList ID="PropertyDropDown" runat="server" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" style="height: 22px" AutoPostBack="True">
                     <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
                     <asp:ListItem Value="EVENT TYPE">Event Type</asp:ListItem>
                     <asp:ListItem Value="STATE">State</asp:ListItem>
@@ -111,10 +111,19 @@
     </div>
 &nbsp;<asp:UpdatePanel ID="ValueUpdatePanel" runat="server">
             <ContentTemplate>
-                <asp:Label ID="ValueQuestionLabel" runat="server"></asp:Label>
+                <asp:Label ID="Value1QuestionLabel" runat="server"></asp:Label>
                 &nbsp;
-                <asp:TextBox ID="ValueTextBox" runat="server"></asp:TextBox>
+                <asp:TextBox ID="Value1TextBox" runat="server"></asp:TextBox>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <br />
+                <br />
+                <asp:Label ID="Value2QuestionLabel" runat="server"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="Value2TextBox" runat="server"></asp:TextBox>
             </ContentTemplate>
+            <Triggers>
+                <asp:AsyncPostBackTrigger ControlID="PropertyDropDown" />
+            </Triggers>
         </asp:UpdatePanel>
         <br />
         <br />
