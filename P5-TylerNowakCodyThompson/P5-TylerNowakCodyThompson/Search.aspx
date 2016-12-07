@@ -111,7 +111,7 @@
     </div>
 &nbsp;<asp:UpdatePanel ID="ValueUpdatePanel" runat="server">
             <ContentTemplate>
-                <asp:Label ID="Value1QuestionLabel" runat="server"></asp:Label>
+                <asp:Label ID="Question1Label" runat="server"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="Value1TextBox" runat="server"></asp:TextBox>
                 &nbsp;&nbsp;&nbsp;&nbsp;
@@ -129,7 +129,9 @@
         <br />
         <br />
         <br />
+        <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="CompareValidator"></asp:CompareValidator>
         <br />
+        <asp:CustomValidator ID="CustomValidator1" runat="server" ErrorMessage="CustomValidator"></asp:CustomValidator>
         <br />
         <asp:Button ID="MainMenuButton" runat="server" OnClick="MainMenuButton_Click" Text="Main Menu" />
     </form>

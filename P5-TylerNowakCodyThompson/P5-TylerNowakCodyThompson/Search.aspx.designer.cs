@@ -94,13 +94,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.UpdatePanel ValueUpdatePanel;
         
         /// <summary>
-        /// Value1QuestionLabel control.
+        /// Question1Label control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Value1QuestionLabel;
+        protected global::System.Web.UI.WebControls.Label Question1Label;
         
         /// <summary>
         /// Value1TextBox control.
@@ -128,6 +128,24 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox Value2TextBox;
+        
+        /// <summary>
+        /// CompareValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator CompareValidator1;
+        
+        /// <summary>
+        /// CustomValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator CustomValidator1;
         
         /// <summary>
         /// MainMenuButton control.
