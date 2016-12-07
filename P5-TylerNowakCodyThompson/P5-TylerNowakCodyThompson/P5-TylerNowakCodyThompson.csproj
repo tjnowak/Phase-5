@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Add.aspx" />
+    <Content Include="AvgTorDamg.aspx" />
     <Content Include="Count.aspx" />
     <Content Include="DBviaEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -159,6 +160,13 @@
     </Compile>
     <Compile Include="Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AvgTorDamg.aspx.cs">
+      <DependentUpon>AvgTorDamg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvgTorDamg.aspx.designer.cs">
+      <DependentUpon>AvgTorDamg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Count.aspx.cs">
       <DependentUpon>Count.aspx</DependentUpon>
