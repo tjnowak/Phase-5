@@ -11,6 +11,10 @@
     <div>
     
     </div>
+        <asp:Button ID="TopThreeToMain" runat="server" OnClick="FatalToMain_Click" Text="Go Back To Main Menu" />
+&nbsp;
+        <asp:Button ID="TopThreeToStats" runat="server" OnClick="FatalToStats_Click" Text="Go Back To Statistics Options" />
+        <br />
         <br />
         <asp:Label ID="Label1" runat="server" Text="Please select a storm type below for the top three most damaging storms you would like to see:"></asp:Label>
         <br />

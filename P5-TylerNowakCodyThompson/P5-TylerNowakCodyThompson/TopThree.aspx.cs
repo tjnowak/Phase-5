@@ -60,5 +60,15 @@ namespace P5_TylerNowakCodyThompson
             Label3.Visible = false;
             TryAgain.Visible = false;
         }
+
+        protected void FatalToMain_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Main.aspx");
+        }
+
+        protected void FatalToStats_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/DisplayStatistics.aspx");
+        }
     }
 }

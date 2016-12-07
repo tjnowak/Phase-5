@@ -32,7 +32,7 @@ namespace P5_TylerNowakCodyThompson
                     Response.Redirect("~/Count.aspx");
                     break;
                 case 4:
-                    Response.Redirect("~/Statistics.aspx");
+                    Response.Redirect("~/DisplayStatistics.aspx");
                     break;
                 default:
                     NoAnswerLabel.Text = "Please pick an option";
