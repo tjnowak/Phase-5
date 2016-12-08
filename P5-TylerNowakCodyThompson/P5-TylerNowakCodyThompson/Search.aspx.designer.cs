@@ -49,6 +49,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.DropDownList StormTypeDropDown;
         
         /// <summary>
+        /// StormTypeCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator StormTypeCompareValidator;
+        
+        /// <summary>
         /// ScriptManager1 control.
         /// </summary>
         /// <remarks>
@@ -83,6 +92,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList PropertyDropDown;
+        
+        /// <summary>
+        /// PropertyCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator PropertyCompareValidator;
         
         /// <summary>
         /// ValueUpdatePanel control.
@@ -1138,6 +1156,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperInjuriesRangeValidator;
         
         /// <summary>
+        /// UpperInjuriesCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperInjuriesCompareValidator;
+        
+        /// <summary>
         /// FatalitiesQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1172,6 +1199,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator UpperFatalitiesRangeValidator;
+        
+        /// <summary>
+        /// UpperFatalitiesCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperFatalitiesCompareValidator;
         
         /// <summary>
         /// WindSpeedQ2Label control.
@@ -1210,6 +1246,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperWindSpeedRangeValidator;
         
         /// <summary>
+        /// UpperWindSpeedCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperWindSpeedCompareValidator;
+        
+        /// <summary>
         /// HailSizeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1244,6 +1289,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator UpperHailSizeRangeValidator;
+        
+        /// <summary>
+        /// UpperHailSizeCompareValidator0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperHailSizeCompareValidator0;
         
         /// <summary>
         /// StartRangeQ2Label control.
@@ -1282,6 +1336,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperStartRangeValidator;
         
         /// <summary>
+        /// UpperStartRangeCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperStartRangeCompareValidator;
+        
+        /// <summary>
         /// EndRangeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1316,6 +1379,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator UpperEndRangeValidator;
+        
+        /// <summary>
+        /// UpperEndRangeCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperEndRangeCompareValidator;
         
         /// <summary>
         /// StartYearQ2Label control.
@@ -1354,6 +1426,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperStartYearValidator;
         
         /// <summary>
+        /// UpperStartYearCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperStartYearCompareValidator;
+        
+        /// <summary>
         /// StartMonthQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1388,6 +1469,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator UpperStartMonthValidator;
+        
+        /// <summary>
+        /// UpperStartMonthCompareValidator0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperStartMonthCompareValidator0;
         
         /// <summary>
         /// StartDayQ2Label control.
@@ -1426,6 +1516,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperStartDayValidator;
         
         /// <summary>
+        /// UpperStartDayCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperStartDayCompareValidator;
+        
+        /// <summary>
         /// StartTimeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1460,6 +1559,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator UpperStartTimeValidator;
+        
+        /// <summary>
+        /// UpperStartTimeCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperStartTimeCompareValidator;
         
         /// <summary>
         /// EndYearQ2Label control.
@@ -1498,6 +1606,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperEndYearValidator;
         
         /// <summary>
+        /// UpperEndYearCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperEndYearCompareValidator;
+        
+        /// <summary>
         /// EndMonthQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1532,6 +1649,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator UpperEndMonthValidator;
+        
+        /// <summary>
+        /// UpperEndMonthCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperEndMonthCompareValidator;
         
         /// <summary>
         /// EndDayQ2Label control.
@@ -1570,6 +1696,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperEndDayValidator;
         
         /// <summary>
+        /// UpperEndDayCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperEndDayCompareValidator;
+        
+        /// <summary>
         /// EndTimeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1604,6 +1739,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RangeValidator UpperEndTimeValidator;
+        
+        /// <summary>
+        /// UpperEndTimeCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator UpperEndTimeCompareValidator;
         
         /// <summary>
         /// TornadoLengthQ2Label control.

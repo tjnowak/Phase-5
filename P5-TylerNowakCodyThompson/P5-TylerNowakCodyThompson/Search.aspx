@@ -16,7 +16,7 @@
         <asp:Label ID="StormTypeLabel" runat="server" Text="Choose a storm type to search for:"></asp:Label>
 &nbsp;
         <asp:DropDownList ID="StormTypeDropDown" runat="server" OnSelectedIndexChanged="StormTypeDropDown_SelectedIndexChanged" AutoPostBack="True">
-            <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+            <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
             <asp:ListItem Value="ASTRONOMICAL LOW TIDE">Astronomical Low Tide</asp:ListItem>
             <asp:ListItem Value="AVALANCHE">Avalanche</asp:ListItem>
             <asp:ListItem Value="BLIZZARD">Blizzard</asp:ListItem>
@@ -66,6 +66,7 @@
             <asp:ListItem Value="WINTER STORM">Winter Storm</asp:ListItem>
             <asp:ListItem Value="WINTER WEATHER">Winter Weather</asp:ListItem>
         </asp:DropDownList>
+        <asp:CompareValidator ID="StormTypeCompareValidator" runat="server" ControlToValidate="StormTypeDropDown" ErrorMessage="* Pick One" ForeColor="Red" Operator="NotEqual" ValueToCompare="&quot;PICK ONE&quot;"></asp:CompareValidator>
         <asp:ScriptManager ID="ScriptManager1" runat="server">
         </asp:ScriptManager>
         <asp:UpdatePanel ID="PropertyUpdatePanel" runat="server">
@@ -100,6 +101,7 @@
                     <asp:ListItem Value="PROPERTY DAMAGE">Property Damage</asp:ListItem>
                     <asp:ListItem Value="CROP DAMAGE">Crop Damage</asp:ListItem>
                 </asp:DropDownList>
+                <asp:CompareValidator ID="PropertyCompareValidator" runat="server" ControlToValidate="PropertyDropDown" ErrorMessage="* Pick One" ForeColor="Red" Operator="NotEqual" ValueToCompare="&quot;PICK ONE&quot;"></asp:CompareValidator>
             </ContentTemplate>
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="StormTypeDropDown" />
@@ -404,74 +406,88 @@
                 <asp:TextBox ID="UpperInjuriesTextBox" runat="server" Width="97px" OnTextChanged="UpperInjuriesTextBox_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperInjuriesRequiredFieldValidator" runat="server" ControlToValidate="UpperInjuriesTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperInjuriesRangeValidator" runat="server" ControlToValidate="UpperInjuriesTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperInjuriesCompareValidator" runat="server" ControlToCompare="LowerInjuriesTextBox" ControlToValidate="UpperInjuriesTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="FatalitiesQ2Label" runat="server" Text="Enter the upper bound (integer) on the number of fatalities you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperFatalitiesTextBox" runat="server" Width="97px" OnTextChanged="UpperFatalitiesTextBox_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperFatalitiesRequiredFieldValidator" runat="server" ControlToValidate="UpperFatalitiesTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperFatalitiesRangeValidator" runat="server" ControlToValidate="UpperFatalitiesTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperFatalitiesCompareValidator" runat="server" ControlToCompare="LowerFatalitiesTextBox" ControlToValidate="UpperFatalitiesTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="WindSpeedQ2Label" runat="server" Text="Enter the upper bound (integer) on the wind speeds (measured in knots) you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperWindSpeedsTextBox" runat="server" Width="97px" OnTextChanged="UpperWindSpeedsTextBox_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperWindSpeedsRequiredFieldValidator" runat="server" ControlToValidate="UpperWindSpeedsTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperWindSpeedRangeValidator" runat="server" ControlToValidate="UpperWindSpeedsTextBox" ErrorMessage="* Must be int &gt; =0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperWindSpeedCompareValidator" runat="server" ControlToCompare="LowerWindSpeedsTextBox" ControlToValidate="UpperWindSpeedsTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="HailSizeQ2Label" runat="server" Text="Enter the upper bound (number in inches) on the hail sizes you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperHailSizeTextBox" runat="server" Width="97px" OnTextChanged="UpperHailSizeTextBox_TextChanged"></asp:TextBox>
                 &nbsp;<asp:RequiredFieldValidator ID="UpperHailSizeRequiredFieldValidator" runat="server" ControlToValidate="UpperHailSizeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperHailSizeRangeValidator" runat="server" ControlToValidate="UpperHailSizeTextBox" ErrorMessage="* Must be double &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Double"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperHailSizeCompareValidator0" runat="server" ControlToCompare="LowerHailSizeTextBox" ControlToValidate="UpperHailSizeTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="StartRangeQ2Label" runat="server" Text="Enter the upper bound of event start ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="UpperStartRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartRangeRequiredFieldValidator" runat="server" ControlToValidate="UpperStartRangeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperStartRangeValidator" runat="server" ControlToValidate="UpperStartRangeTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperStartRangeCompareValidator" runat="server" ControlToCompare="LowerStartRangeTextBox" ControlToValidate="UpperStartRangeTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="EndRangeQ2Label" runat="server" Text="Enter the upper bound of event end ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="UpperEndRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndRangeRequiredFieldValidator" runat="server" ControlToValidate="UpperEndRangeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperEndRangeValidator" runat="server" ControlToValidate="UpperEndRangeTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperEndRangeCompareValidator" runat="server" ControlToCompare="LowerEndRangeTextBox" ControlToValidate="UpperEndRangeTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="StartYearQ2Label" runat="server" Text="Enter the upper bound (as integer) on the event start years you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="UpperStartYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartYearRequiredFieldValidator" runat="server" ControlToValidate="UpperStartYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperStartYearValidator" runat="server" ControlToValidate="UpperStartYearTextBox" ErrorMessage="* Must be int 1951-2016" ForeColor="Red" MaximumValue="2016" MinimumValue="1951" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperStartYearCompareValidator" runat="server" ControlToCompare="LowerStartYearTextBox" ControlToValidate="UpperStartYearTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="StartMonthQ2Label" runat="server" Text="Enter the upper bound (as integer, 1-12) on the event start months you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartMonthRequiredFieldValidator" runat="server" ControlToValidate="UpperStartMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperStartMonthValidator" runat="server" ControlToValidate="UpperStartMonthTextBox" ErrorMessage="* Must be int 1-12" ForeColor="Red" MaximumValue="12" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperStartMonthCompareValidator0" runat="server" ControlToCompare="LowerStartMonthTextBox" ControlToValidate="UpperStartMonthTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="StartDayQ2Label" runat="server" Text="Enter the upper bound (as integer, day of month) on the event start days you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperStartDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartDayRequiredFieldValidator" runat="server" ControlToValidate="UpperStartDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperStartDayValidator" runat="server" ControlToValidate="UpperStartDayTextBox" ErrorMessage="* Must be int 1-31" ForeColor="Red" MaximumValue="31" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperStartDayCompareValidator" runat="server" ControlToCompare="LowerStartDayTextBox" ControlToValidate="UpperStartDayTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="StartTimeQ2Label" runat="server" Text="Enter the upper bound (24 hour time with no ':', Ex: 1425) on the event start times you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartTimeRequiredFieldValidator" runat="server" ControlToValidate="UpperStartTimeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperStartTimeValidator" runat="server" ControlToValidate="UpperStartTimeTextBox" ErrorMessage="* Must be int 0-2359" ForeColor="Red" MaximumValue="2359" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperStartTimeCompareValidator" runat="server" ControlToCompare="LowerStartTimeTextBox" ControlToValidate="UpperStartTimeTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="EndYearQ2Label" runat="server" Text="Enter the upper bound (as integer) on the event end years you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndYearRequiredFieldValidator" runat="server" ControlToValidate="UpperEndYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperEndYearValidator" runat="server" ControlToValidate="UpperEndYearTextBox" ErrorMessage="* Must be int 1951-2016" ForeColor="Red" MaximumValue="2016" MinimumValue="1951" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperEndYearCompareValidator" runat="server" ControlToCompare="LowerEndYearTextBox" ControlToValidate="UpperEndYearTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="EndMonthQ2Label" runat="server" BorderStyle="None" Text="Enter the upper bound (as integer, 1-12) on the event end months you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndMonthRequiredFieldValidator" runat="server" ControlToValidate="UpperEndMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperEndMonthValidator" runat="server" ControlToValidate="UpperEndMonthTextBox" ErrorMessage="* Must be int 1-12" ForeColor="Red" MaximumValue="12" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperEndMonthCompareValidator" runat="server" ControlToCompare="LowerEndMonthTextBox" ControlToValidate="UpperEndMonthTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="EndDayQ2Label" runat="server" Text="Enter the upper bound (as integer, day of month) on the event end days you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndDayRequiredFieldValidator" runat="server" ControlToValidate="UpperEndDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperEndDayValidator" runat="server" ControlToValidate="UpperEndDayTextBox" ErrorMessage="* Must be int 1-31" ForeColor="Red" MaximumValue="31" MinimumValue="1" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperEndDayCompareValidator" runat="server" ControlToCompare="LowerEndDayTextBox" ControlToValidate="UpperEndDayTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="EndTimeQ2Label" runat="server" Text="Enter the upper bound (24 hour time with no ':', Ex: 1425) on the event end times you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndTimeRequiredFieldValidator" runat="server" ControlToValidate="UpperEndTimeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="UpperEndTimeValidator" runat="server" ControlToValidate="UpperEndTimeTextBox" ErrorMessage="* Must be int 0-2359" ForeColor="Red" MaximumValue="2359" MinimumValue="0" Type="Integer"></asp:RangeValidator>
+                <asp:CompareValidator ID="UpperEndTimeCompareValidator" runat="server" ControlToCompare="LowerEndTimeTextBox" ControlToValidate="UpperEndTimeTextBox" ErrorMessage="*Upper bound must be &gt; lower bound" ForeColor="Red" Operator="GreaterThan"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="TornadoLengthQ2Label" runat="server" Text="Enter the upper bound (how far in miles) of tornado lengths (distance traveled) you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperTornadoLengthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
