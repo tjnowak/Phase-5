@@ -466,11 +466,11 @@ namespace P5_TylerNowakCodyThompson
                                    TornadoTypeDropDown.SelectedValue, results);
                     break;
                 case "STATE":
-                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue, 
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    StateDropDown.SelectedValue, results);
                     break;
                 case "COUNTY":
-                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue, 
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    CountyTextBox.Text, results);
                     break;
                 case "START AZIMUTH":
@@ -610,5 +610,16 @@ namespace P5_TylerNowakCodyThompson
             }
 
             // Display results
+            ResultsListBox.Items.Clear();
+            if (results.Count() == 0)
+                ResultsListBox.Items.Add("The search returned no results.");
+            else
+                for (int index = 0; index < results.Count(); index++)
+                {
+                    ResultsListBox.Items.Add("*****************************************" +
+                                             "*****************************************\n");
+                    ResultsListBox.Items.Add(results.GetEventFromList(index).ToString());
+                }
+        }
     }
 }

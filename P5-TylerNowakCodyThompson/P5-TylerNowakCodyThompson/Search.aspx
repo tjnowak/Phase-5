@@ -430,7 +430,6 @@
         <br />
         <br />
         <br />
-        <br />
         <asp:Button ID="MainMenuButton" runat="server" OnClick="MainMenuButton_Click" Text="Main Menu" />
         <asp:Button ID="SearchButton" runat="server" OnClick="SearchButton_Click" Text="Search" />
     </form>

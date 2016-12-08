@@ -587,14 +587,14 @@ namespace P5_TylerNowakCodyThompson
             // Create new EventList to hold search results
             EventList results = new EventList();
 
-            // Search for events
+           /* // Search for events
             try
             { list.Search(sType, sField, results); }
             catch (ArgumentException e)
             {
                 Console.WriteLine("The search failed.");
                 Console.WriteLine(e.Message + "\n");
-            }
+            }*/
 
             // Display the resulting events from the search, unless there were no results.
             if (results.Count() == 0)
