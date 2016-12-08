@@ -107,21 +107,23 @@ namespace P5_TylerNowakCodyThompson
                 case "EPISODE DESCRIPTION":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.EpisodeDesc.ToUpper().Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.EpisodeDesc != null)
+                            if (storm.EpisodeDesc.ToUpper().Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 case "EVENT DESCRIPTION":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.EventDesc.ToUpper().Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.EventDesc != null)
+                            if (storm.EventDesc.ToUpper().Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 case "TORNADO TYPE":
                     // Add property matches to searchResults
                     if (eType == "TORNADO")
                     {
                         foreach (var storm in correctEtypeList)
-                            if (storm is TornadoEvent)
+                            if (storm is TornadoEvent && ((TornadoEvent)storm).TornadoType != null)
                                 if (((TornadoEvent)storm).TornadoType.Contains(propValue.ToUpper()))
                                     searchResults.AddEvent(storm);
                     }
@@ -129,46 +131,53 @@ namespace P5_TylerNowakCodyThompson
                 case "STATE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.State.Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.location.State != null)
+                            if (storm.location.State.Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 case "COUNTY":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.County.Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.location.County != null)
+                            if (storm.location.County.Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 case "START AZIMUTH":
                     // Add property matches to searchResults
                     propValue = Console.ReadLine();
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.BeginAzimuth.Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.location.BeginAzimuth != null)
+                            if (storm.location.BeginAzimuth.Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 case "START LOCATION":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.BeginLocation.Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.location.BeginLocation != null)
+                            if (storm.location.BeginLocation.Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 case "END AZIMUTH":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.EndAzimuth.Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.location.EndAzimuth != null)
+                           if (storm.location.EndAzimuth.Contains(propValue.ToUpper()))
+                               searchResults.AddEvent(storm);
                     break;
                 case "END LOCATION":
                     // Add property matches to searchResults
                     propValue = Console.ReadLine();
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.EndLocation.Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.location.EndLocation != null)
+                            if (storm.location.EndLocation.Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 case "TIME ZONE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.Timezone.Contains(propValue.ToUpper()))
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.Timezone != null)
+                            if (storm.dateTime.Timezone.Contains(propValue.ToUpper()))
+                                searchResults.AddEvent(storm);
                     break;
                 default:
                     // Error if property entered is not a real property
@@ -221,15 +230,17 @@ namespace P5_TylerNowakCodyThompson
                 case "INJURIES":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.Injuries >= startRange &&
-                            storm.Injuries <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.Injuries != null)
+                            if (storm.Injuries >= startRange &&
+                                storm.Injuries <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "FATALITIES":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.Deaths >= startRange && storm.Deaths <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.Deaths != null)
+                            if (storm.Deaths >= startRange && storm.Deaths <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "WIND SPEED":
                     // Add property matches to searchResults
@@ -240,7 +251,7 @@ namespace P5_TylerNowakCodyThompson
                         eType == "STRONG WIND")
                     {
                         foreach (var storm in correctEtypeList)
-                            if (storm is WindEvent)
+                            if (storm is WindEvent && ((WindEvent)storm).Windspeed != null)
                                 if (((WindEvent)storm).Windspeed >= startRange &&
                                     ((WindEvent)storm).Windspeed <= endRange)
                                     searchResults.AddEvent(storm);
@@ -249,71 +260,82 @@ namespace P5_TylerNowakCodyThompson
                 case "START RANGE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.BeginRange >= startRange &&
-                            storm.location.BeginRange <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.location.BeginRange != null)
+                            if (storm.location.BeginRange >= startRange &&
+                                storm.location.BeginRange <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "END RANGE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.EndRange >= startRange &&
-                            storm.location.EndRange <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.location.EndRange != null)
+                            if (storm.location.EndRange >= startRange &&
+                                storm.location.EndRange <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "START YEAR":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.BeginYear >= startRange &&
-                            storm.dateTime.BeginYear <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.BeginYear != null)
+                            if (storm.dateTime.BeginYear >= startRange &&
+                                storm.dateTime.BeginYear <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "START MONTH":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.BeginMonth >= startRange &&
-                            storm.dateTime.BeginMonth <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.BeginMonth != null)
+                            if (storm.dateTime.BeginMonth >= startRange &&
+                                storm.dateTime.BeginMonth <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "START DAY":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.BeginDay >= startRange &&
-                            storm.dateTime.BeginDay <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.BeginDay != null)
+                            if (storm.dateTime.BeginDay >= startRange &&
+                                storm.dateTime.BeginDay <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "START TIME":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.BeginTime >= startRange &&
-                            storm.dateTime.BeginTime <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.BeginTime != null)
+                            if (storm.dateTime.BeginTime >= startRange &&
+                                storm.dateTime.BeginTime <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "END YEAR":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.EndYear >= startRange &&
-                            storm.dateTime.EndYear <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.EndYear != null)
+                            if (storm.dateTime.EndYear >= startRange &&
+                                storm.dateTime.EndYear <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "END MONTH":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.EndMonth >= startRange &&
-                            storm.dateTime.EndMonth <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.EndMonth != null)
+                            if (storm.dateTime.EndMonth >= startRange &&
+                                storm.dateTime.EndMonth <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "END DAY":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.EndDay >= startRange &&
-                            storm.dateTime.EndDay <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.EndDay != null)
+                            if (storm.dateTime.EndDay >= startRange &&
+                                storm.dateTime.EndDay <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "END TIME":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.dateTime.EndTime >= startRange && storm.dateTime.EndTime <= endRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.dateTime.EndTime != null)
+                            if (storm.dateTime.EndTime >= startRange &&
+                                storm.dateTime.EndTime <= endRange)
+                                searchResults.AddEvent(storm);
                     break;
                 default:
                     // Error if property entered is not a real property
@@ -368,7 +390,7 @@ namespace P5_TylerNowakCodyThompson
                     if (eType == "HAIL")
                     {
                         foreach (var storm in correctEtypeList)
-                            if (storm is HailEvent)
+                            if (storm is HailEvent && ((HailEvent)storm).HailSize != null)
                                 if (((HailEvent)storm).HailSize >= dStartRange &&
                                     ((HailEvent)storm).HailSize <= dEndRange)
                                     searchResults.AddEvent(storm);
@@ -379,7 +401,8 @@ namespace P5_TylerNowakCodyThompson
                     if (eType == "TORNADO")
                     {
                         foreach (var storm in correctEtypeList)
-                            if (storm is TornadoEvent)
+                            if (storm is TornadoEvent && 
+                                ((TornadoEvent)storm).TornadoLength != null)
                                 if (((TornadoEvent)storm).TornadoLength >= dStartRange &&
                                     ((TornadoEvent)storm).TornadoLength <= dEndRange)
                                     searchResults.AddEvent(storm);
@@ -390,7 +413,8 @@ namespace P5_TylerNowakCodyThompson
                     if (eType == "TORNADO")
                     {
                         foreach (var storm in correctEtypeList)
-                            if (storm is TornadoEvent)
+                            if (storm is TornadoEvent && 
+                                ((TornadoEvent)storm).TornadoWidth != null)
                                 if (((TornadoEvent)storm).TornadoWidth >= dStartRange &&
                                     ((TornadoEvent)storm).TornadoWidth <= dEndRange)
                                     searchResults.AddEvent(storm);
@@ -399,30 +423,34 @@ namespace P5_TylerNowakCodyThompson
                 case "START LATITUDE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.BeginLat >= dStartRange &&
-                            storm.location.BeginLat <= dEndRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.location.BeginLat != null)
+                            if (storm.location.BeginLat >= dStartRange &&
+                                storm.location.BeginLat <= dEndRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "START LONGITUDE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.BeginLong >= dStartRange &&
-                            storm.location.BeginLong <= dEndRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.location.BeginLong != null)
+                            if (storm.location.BeginLong >= dStartRange &&
+                                storm.location.BeginLong <= dEndRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "END LATITUDE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.EndLat >= dStartRange &&
-                            storm.location.EndLat <= dEndRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.location.EndLat != null)
+                            if (storm.location.EndLat >= dStartRange &&
+                                storm.location.EndLat <= dEndRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "END LONGITUDE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.location.EndLong >= dStartRange &&
-                            storm.location.EndLong <= dEndRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.location.EndLong != null)
+                            if (storm.location.EndLong >= dStartRange &&
+                                storm.location.EndLong <= dEndRange)
+                                searchResults.AddEvent(storm);
                     break;
                 default:
                     // Error if property entered is not a real property
@@ -475,16 +503,18 @@ namespace P5_TylerNowakCodyThompson
                 case "PROPERTY DAMAGE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.PropertyDamage >= decStartRange &&
-                            storm.PropertyDamage <= decEndRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.PropertyDamage != null)
+                            if (storm.PropertyDamage >= decStartRange &&
+                                storm.PropertyDamage <= decEndRange)
+                                searchResults.AddEvent(storm);
                     break;
                 case "CROP DAMAGE":
                     // Add property matches to searchResults
                     foreach (var storm in correctEtypeList)
-                        if (storm.CropDamage >= decStartRange &&
-                            storm.CropDamage <= decEndRange)
-                            searchResults.AddEvent(storm);
+                        if (storm.CropDamage != null)
+                            if (storm.CropDamage >= decStartRange &&
+                                storm.CropDamage <= decEndRange)
+                                searchResults.AddEvent(storm);
                     break;
                 default:
                     // Error if property entered is not a real property
