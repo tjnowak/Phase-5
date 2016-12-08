@@ -9,6 +9,8 @@ namespace P5_TylerNowakCodyThompson
 {
     public partial class Search : System.Web.UI.Page
     {
+        EventList theList = new EventList();
+
         protected void Page_Load(object sender, EventArgs e)
         {
             TornadoTypeQLabel.Visible = false;
@@ -195,6 +197,7 @@ namespace P5_TylerNowakCodyThompson
 
         protected void PropertyDropDown_SelectedIndexChanged(object sender, EventArgs e)
         {
+            // Show relevant questions for selected property
             switch (PropertyDropDown.SelectedValue)
             {
                 case "TORNADO TYPE":
@@ -361,6 +364,8 @@ namespace P5_TylerNowakCodyThompson
                     LowerCropDamageTextBox.Visible = true;
                     UpperCropDamageTextBox.Visible = true;
                     break;
+                case "PICK ONE":
+                    break;
                 default:
                     throw new ArgumentException("Property to search is invalid!");
             }
@@ -446,6 +451,164 @@ namespace P5_TylerNowakCodyThompson
 
         }
 
+        protected void SearchButton_Click(object sender, EventArgs e)
+        {
+            EventList results = new EventList();
 
+            // Pull stored EventList from session variable
+            theList = (EventList)Session["theList"];
+
+            //  Search in theList for events with a property value or range
+            switch (PropertyDropDown.SelectedValue)
+            {
+                case "TORNADO TYPE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   TornadoTypeDropDown.SelectedValue, results);
+                    break;
+                case "STATE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue, 
+                                   StateDropDown.SelectedValue, results);
+                    break;
+                case "COUNTY":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue, 
+                                   CountyTextBox.Text, results);
+                    break;
+                case "START AZIMUTH":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   StartAzimuthDropDown.SelectedValue, results);
+                    break;
+                case "START LOCATION":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   StartLocationTextBox.Text, results);
+                    break;
+                case "END AZIMUTH":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   EndAzimuthDropDown.SelectedValue, results);
+                    break;
+                case "END LOCATION":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   EndLocationTextBox.Text, results);
+                    break;
+                case "TIME ZONE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   TimeZoneDropDown.SelectedValue, results);
+                    break;
+                case "INJURIES":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerInjuriesTextBox.Text),
+                                   Convert.ToInt32(UpperInjuriesTextBox.Text), results);
+                    break;
+                case "FATALITIES":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerFatalitiesTextBox.Text),
+                                   Convert.ToInt32(UpperFatalitiesTextBox.Text), results);
+                    break;
+                case "WIND SPEED":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerWindSpeedsTextBox.Text),
+                                   Convert.ToInt32(UpperWindSpeedsTextBox.Text), results);
+                    break;
+                case "HAIL SIZE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDouble(LowerHailSizeTextBox.Text),
+                                   Convert.ToDouble(UpperHailSizeTextBox.Text), results);
+                    break;
+                case "START RANGE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerStartRangeTextBox.Text),
+                                   Convert.ToInt32(UpperStartRangeTextBox.Text), results);
+                    break;
+                case "END RANGE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerEndRangeTextBox.Text),
+                                   Convert.ToInt32(UpperEndRangeTextBox.Text), results);
+                    break;
+                case "START YEAR":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerStartYearTextBox.Text),
+                                   Convert.ToInt32(UpperStartYearTextBox.Text), results);
+                    break;
+                case "START MONTH":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerStartMonthTextBox.Text),
+                                   Convert.ToInt32(UpperStartMonthTextBox.Text), results);
+                    break;
+                case "START DAY":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerStartDayTextBox.Text),
+                                   Convert.ToInt32(UpperStartDayTextBox.Text), results);
+                    break;
+                case "START TIME":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerStartTimeTextBox.Text),
+                                   Convert.ToInt32(UpperStartTimeTextBox.Text), results);
+                    break;
+                case "END YEAR":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerEndYearTextBox.Text),
+                                   Convert.ToInt32(UpperEndYearTextBox.Text), results);
+                    break;
+                case "END MONTH":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerEndMonthTextBox.Text),
+                                   Convert.ToInt32(UpperEndMonthTextBox.Text), results);
+                    break;
+                case "END DAY":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerEndDayTextBox.Text),
+                                   Convert.ToInt32(UpperEndDayTextBox.Text), results);
+                    break;
+                case "END TIME":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToInt32(LowerEndTimeTextBox.Text),
+                                   Convert.ToInt32(UpperEndTimeTextBox.Text), results);
+                    break;
+                case "TORNADO LENGTH":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDouble(LowerTornadoLengthTextBox.Text),
+                                   Convert.ToDouble(UpperTornadoLengthTextBox.Text), results);
+                    break;
+                case "TORNADO WIDTH":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDouble(LowerTornadoWidthTextBox.Text),
+                                   Convert.ToDouble(UpperTornadoWidthTextBox.Text), results);
+                    break;
+                case "START LATITUDE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDouble(LowerStartLatitudeTextBox.Text),
+                                   Convert.ToDouble(UpperStartLatitudeTextBox.Text), results);
+                    break;
+                case "START LONGITUDE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDouble(LowerStartLongitudeTextBox.Text),
+                                   Convert.ToDouble(UpperStartLongitudeTextBox.Text), results);
+                    break;
+                case "END LATITUDE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDouble(LowerEndLatitudeTextBox.Text),
+                                   Convert.ToDouble(UpperEndLatitudeTextBox.Text), results);
+                    break;
+                case "END LONGITUDE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDouble(LowerEndLongitudeTextBox.Text),
+                                   Convert.ToDouble(UpperEndLongitudeTextBox.Text), results);
+                    break;
+                case "PROPERTY DAMAGE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDecimal(LowerPropertyDamageTextBox.Text),
+                                   Convert.ToDecimal(UpperPropertyDamageTextBox.Text), results);
+                    break;
+                case "CROP DAMAGE":
+                    theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
+                                   Convert.ToDecimal(LowerCropDamageTextBox.Text),
+                                   Convert.ToDecimal(UpperCropDamageTextBox.Text), results);
+                    break;
+                case "PICK ONE":
+                    break;
+                default:
+                    throw new ArgumentException("Property to search is invalid!");
+            }
+
+            // Display results
     }
 }

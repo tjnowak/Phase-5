@@ -73,8 +73,7 @@
                 <asp:Label ID="FieldNameLabel" runat="server" Text="Choose the field name you want to search:"></asp:Label>
                 &nbsp;
                 <asp:DropDownList ID="PropertyDropDown" runat="server" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" style="height: 22px" AutoPostBack="True">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
-                    <asp:ListItem Value="EVENT TYPE">Event Type</asp:ListItem>
+                    <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem Value="STATE">State</asp:ListItem>
                     <asp:ListItem Value="COUNTY">County</asp:ListItem>
                     <asp:ListItem Value="START AZIMUTH">Start Azimuth</asp:ListItem>
@@ -271,13 +270,13 @@
                 &nbsp;
                 <asp:TextBox ID="LowerFatalitiesTextBox" runat="server" OnTextChanged="LowerFatalitiesTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <asp:Label ID="WindSpeedQ1Label0" runat="server" Text="Enter the lower bound (integer) on the wind speeds (measured in knots) you are searching for:"></asp:Label>
+                <asp:Label ID="WindSpeedQ1Label" runat="server" Text="Enter the lower bound (integer) on the wind speeds (measured in knots) you are searching for:"></asp:Label>
                 &nbsp;
-                <asp:TextBox ID="LowerWindSpeedsTextBox0" runat="server" Width="97px" OnTextChanged="LowerWindSpeedsTextBox_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="LowerWindSpeedsTextBox" runat="server" Width="97px" OnTextChanged="LowerWindSpeedsTextBox_TextChanged"></asp:TextBox>
                 <br />
-                <asp:Label ID="HailSizeQ1Label0" runat="server" Text="Enter the lower bound (number in inches) on the hail sizes you are searching for:"></asp:Label>
+                <asp:Label ID="HailSizeQ1Label" runat="server" Text="Enter the lower bound (number in inches) on the hail sizes you are searching for:"></asp:Label>
                 &nbsp;
-                <asp:TextBox ID="LowerHailSizeTextBox0" runat="server" Width="97px" OnTextChanged="LowerHailSizeTextBox_TextChanged"></asp:TextBox>
+                <asp:TextBox ID="LowerHailSizeTextBox" runat="server" Width="97px" OnTextChanged="LowerHailSizeTextBox_TextChanged"></asp:TextBox>
                 <br />
                 <asp:Label ID="StartRangeQ1Label" runat="server" Text="Enter the lower bound of event start ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
@@ -302,22 +301,64 @@
                 <asp:Label ID="StartTimeQ1Label" runat="server" Text="Enter the lower bound (24 hour time with no ':', Ex: 1425) on the event start times you are searching for:"></asp:Label>
                 <asp:TextBox ID="LowerStartTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
+                <asp:Label ID="EndYearQ1Label" runat="server" Text="Enter the lower bound (as integer) on the event end years you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerEndYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="EndMonthQ1Label" runat="server" BorderStyle="None" Text="Enter the lower bound (as integer, 1-12) on the event end months you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerEndMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="EndDayQ1Label" runat="server" Text="Enter the lower bound (as integer, day of month) on the event end days you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerEndDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="EndTimeQ1Label" runat="server" Text="Enter the lower bound (24 hour time with no ':', Ex: 1425) on the event end times you are searching for:"></asp:Label>
+&nbsp;
+                <asp:TextBox ID="LowerEndTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="TornadoLengthQ1Label" runat="server" Text="Enter the lower bound (how far in miles) of tornado lengths (distance traveled) you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerTornadoLengthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="TornadoWidthQ1Label" runat="server" Text="Enter the lower bound (yards) on tornado widths (diameter accross) you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerTornadoWidthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="StartLatitudeQ1Label" runat="server" Text="Enter the lower bound (-90 to 90) on the event start latitudes you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerStartLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="StartLongitudeQ1Label" runat="server" Text="Enter the lower bound (-180 to 180) of the event start longitudes you are searching for:"></asp:Label>
+                &nbsp; <asp:TextBox ID="LowerStartLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="EndLatitudeQ1Label" runat="server" Text="Enter the lower bound (-90 to 90) on the event end latitudes you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerEndLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="EndLongitudeQ1Label" runat="server" Text="Enter the lower bound (-180 to 180) of the event end longitudes you are searching for:"></asp:Label>
+                &nbsp;
+                <asp:TextBox ID="LowerEndLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="PropertyDamageQ1Label" runat="server" Text="Enter the lower bound (as a number without '$') of property damage you are searching for:"></asp:Label>
+                &nbsp;&nbsp;<asp:TextBox ID="LowerPropertyDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
+                <asp:Label ID="CropDamageQ1Label" runat="server" Text="Enter the lower bound (as a number without '$') of crop damage you are searching for:"></asp:Label>
+&nbsp;&nbsp;<asp:TextBox ID="LowerCropDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <br />
                 <br />
                 <asp:Label ID="InjuriesQ2Label" runat="server" Text="Enter the upper bound (integer) on number of injuries you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="UpperInjuriesTextBox" runat="server" Width="97px" OnTextChanged="UpperInjuriesTextBox_TextChanged"></asp:TextBox>
                 <br />
                 <asp:Label ID="FatalitiesQ2Label" runat="server" Text="Enter the upper bound (integer) on the number of fatalities you are searching for:"></asp:Label>
-                &nbsp;
-                <asp:TextBox ID="UpperFatalitiesTextBox" runat="server" Width="97px" OnTextChanged="UpperFatalitiesTextBox_TextChanged"></asp:TextBox>
+                &nbsp;&nbsp;<asp:TextBox ID="UpperFatalitiesTextBox" runat="server" Width="97px" OnTextChanged="UpperFatalitiesTextBox_TextChanged"></asp:TextBox>
                 <br />
                 <asp:Label ID="WindSpeedQ2Label" runat="server" Text="Enter the upper bound (integer) on the wind speeds (measured in knots) you are searching for:"></asp:Label>
-                &nbsp;
-                <asp:TextBox ID="UpperWindSpeedsTextBox" runat="server" Width="97px" OnTextChanged="UpperWindSpeedsTextBox_TextChanged"></asp:TextBox>
+                &nbsp;&nbsp;<asp:TextBox ID="UpperWindSpeedsTextBox" runat="server" Width="97px" OnTextChanged="UpperWindSpeedsTextBox_TextChanged"></asp:TextBox>
                 <br />
                 <asp:Label ID="HailSizeQ2Label" runat="server" Text="Enter the upper bound (number in inches) on the hail sizes you are searching for:"></asp:Label>
-                &nbsp;
-                <asp:TextBox ID="UpperHailSizeTextBox" runat="server" Width="97px" OnTextChanged="UpperHailSizeTextBox_TextChanged"></asp:TextBox>
+                &nbsp;&nbsp;<asp:TextBox ID="UpperHailSizeTextBox" runat="server" Width="97px" OnTextChanged="UpperHailSizeTextBox_TextChanged"></asp:TextBox>
                 &nbsp;<br />
                 <asp:Label ID="StartRangeQ2Label" runat="server" Text="Enter the upper bound of event start ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
@@ -332,7 +373,7 @@
                 <asp:TextBox ID="UpperStartYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
                 <asp:Label ID="StartMonthQ2Label" runat="server" Text="Enter the upper bound (as integer, 1-12) on the event start months you are searching for:"></asp:Label>
-                &nbsp;&nbsp;<asp:TextBox ID="UpperStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+&nbsp;&nbsp;<asp:TextBox ID="UpperStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
                 <asp:Label ID="StartDayQ2Label" runat="server" Text="Enter the upper bound (as integer, day of month) on the event start days you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperStartDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
@@ -340,99 +381,38 @@
                 <asp:Label ID="StartTimeQ2Label" runat="server" Text="Enter the upper bound (24 hour time with no ':', Ex: 1425) on the event start times you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="EndYearQ1Label" runat="server" Text="Enter the lower bound (as integer) on the event end years you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerEndYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
                 <asp:Label ID="EndYearQ2Label" runat="server" Text="Enter the upper bound (as integer) on the event end years you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
-                <asp:Label ID="EndMonthQ1Label" runat="server" BorderStyle="None" Text="Enter the lower bound (as integer, 1-12) on the event end months you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerEndMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
                 <br />
                 <asp:Label ID="EndMonthQ2Label" runat="server" BorderStyle="None" Text="Enter the upper bound (as integer, 1-12) on the event end months you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="EndDayQ1Label" runat="server" Text="Enter the lower bound (as integer, day of month) on the event end days you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerEndDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
                 <asp:Label ID="EndDayQ2Label" runat="server" Text="Enter the upper bound (as integer, day of month) on the event end days you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
-                <asp:Label ID="EndTimeQ1Label" runat="server" Text="Enter the lower bound (24 hour time with no ':', Ex: 1425) on the event end times you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerEndTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
                 <br />
                 <asp:Label ID="EndTimeQ2Label" runat="server" Text="Enter the upper bound (24 hour time with no ':', Ex: 1425) on the event end times you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="TornadoLengthQ1Label" runat="server" Text="Enter the lower bound (how far in miles) of tornado lengths (distance traveled) you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerTornadoLengthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
                 <asp:Label ID="TornadoLengthQ2Label" runat="server" Text="Enter the upper bound (how far in miles) of tornado lengths (distance traveled) you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperTornadoLengthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="TornadoWidthQ1Label" runat="server" Text="Please enter the lower bound (yards) on tornado widths (diameter accross) you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerTornadoWidthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
-                <asp:Label ID="TornadoWidthQ2Label" runat="server" Text="Please enter the upper bound (yards) on tornado widths (diameter accross) you are searching for:"></asp:Label>
+                <asp:Label ID="TornadoWidthQ2Label" runat="server" Text="Enter the upper bound (yards) on tornado widths (diameter accross) you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperTornadoWidthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
-                <asp:Label ID="StartLatitudeQ1Label" runat="server" Text="Enter the lower bound (-90 to 90) on the event start latitudes you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerStartLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
                 <br />
                 <asp:Label ID="StartLatitudeQ2Label" runat="server" Text="Enter the upper bound (-90 to 90) on the event start latitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="StartLongitudeQ1Label" runat="server" Text="Enter the lower bound (-180 to 180) of the event start longitudes you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerStartLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
                 <asp:Label ID="StartLongitudeQ2Label" runat="server" Text="Enter the upper bound (-180 to 180) of the event start longitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
-                <asp:Label ID="EndLatitudeQ1Label" runat="server" Text="Enter the lower bound (-90 to 90) on the event end latitudes you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerEndLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
                 <br />
                 <asp:Label ID="EndLatitudeQ2Label" runat="server" Text="Enter the upper bound (-90 to 90) on the event end latitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="EndLongitudeQ1Label" runat="server" Text="Enter the lower bound (-180 to 180) of the event end longitudes you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerEndLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
                 <asp:Label ID="EndLongitudeQ2Label" runat="server" Text="Enter the upper bound (-180 to 180) of the event end longitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <br />
-                <br />
-                <asp:Label ID="PropertyDamageQ1Label" runat="server" Text="Enter the lower bound (as a number without '$') of property damage you are searching for:"></asp:Label>
-&nbsp;&nbsp;<asp:TextBox ID="LowerPropertyDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
                 <asp:Label ID="PropertyDamageQ2Label" runat="server" Text="Enter the upper bound (as a number without '$') of property damage you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperPropertyDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
-                <br />
-                <asp:Label ID="CropDamageQ1Label" runat="server" Text="Enter the lower bound (as a number without '$') of crop damage you are searching for:"></asp:Label>
-&nbsp;
-                <asp:TextBox ID="LowerCropDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
-                <br />
                 <br />
                 <asp:Label ID="CropDamageQ2Label" runat="server" Text="Enter the upper bound (as a number without '$') of crop damage you are searching for:"></asp:Label>
 &nbsp;
@@ -445,10 +425,14 @@
         <br />
         <br />
         <br />
+        <asp:ListBox ID="ResultsListBox" runat="server"></asp:ListBox>
+        <br />
+        <br />
         <br />
         <br />
         <br />
         <asp:Button ID="MainMenuButton" runat="server" OnClick="MainMenuButton_Click" Text="Main Menu" />
+        <asp:Button ID="SearchButton" runat="server" OnClick="SearchButton_Click" Text="Search" />
     </form>
 </body>
 </html>
