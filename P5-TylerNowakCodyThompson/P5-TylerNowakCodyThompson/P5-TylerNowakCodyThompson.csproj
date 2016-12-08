@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Add.aspx" />
+    <Content Include="AvgTorDamg.aspx" />
     <Content Include="Count.aspx" />
     <Content Include="DBviaEF.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -118,6 +119,7 @@
     </Content>
     <Content Include="DisplayStatistics.aspx" />
     <Content Include="ErrorRedirect.aspx" />
+    <Content Include="Fatalities.aspx" />
     <Content Include="Global.asax" />
     <Content Include="Main.aspx" />
     <Content Include="Modify.aspx" />
@@ -141,6 +143,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Search.aspx" />
+    <Content Include="TopThree.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -157,6 +160,13 @@
     </Compile>
     <Compile Include="Add.aspx.designer.cs">
       <DependentUpon>Add.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AvgTorDamg.aspx.cs">
+      <DependentUpon>AvgTorDamg.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AvgTorDamg.aspx.designer.cs">
+      <DependentUpon>AvgTorDamg.aspx</DependentUpon>
     </Compile>
     <Compile Include="Count.aspx.cs">
       <DependentUpon>Count.aspx</DependentUpon>
@@ -194,6 +204,13 @@
     <Compile Include="ErrorRedirect.aspx.designer.cs">
       <DependentUpon>ErrorRedirect.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Fatalities.aspx.cs">
+      <DependentUpon>Fatalities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Fatalities.aspx.designer.cs">
+      <DependentUpon>Fatalities.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -218,6 +235,13 @@
     </Compile>
     <Compile Include="Search.aspx.designer.cs">
       <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TopThree.aspx.cs">
+      <DependentUpon>TopThree.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TopThree.aspx.designer.cs">
+      <DependentUpon>TopThree.aspx</DependentUpon>
     </Compile>
     <Compile Include="WeatherEvent.cs">
       <DependentUpon>DBviaEF.tt</DependentUpon>
