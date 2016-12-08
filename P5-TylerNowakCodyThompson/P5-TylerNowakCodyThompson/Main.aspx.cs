@@ -19,12 +19,6 @@ namespace P5_TylerNowakCodyThompson
         {
             switch (ChoicesRadioButtonList.SelectedIndex)
             {
-                case 0:
-                    Response.Redirect("~/Add.aspx");
-                    break;
-                case 1:
-                    Response.Redirect("~/Modify.aspx");
-                    break;
                 case 2:
                     Response.Redirect("~/Search.aspx");
                     break;
