@@ -26,10 +26,12 @@
         <asp:RangeValidator ID="IndexRangeValidator" runat="server" ControlToValidate="IndexTextBox" ForeColor="Red" MaximumValue="10000000" MinimumValue="0">* Must be &gt;= 0</asp:RangeValidator>
         <asp:CompareValidator ID="IndexCompareValidator" runat="server" ControlToCompare="MaxIndexTextBox" ControlToValidate="IndexTextBox" ForeColor="Red" Operator="LessThanEqual">* Index too large</asp:CompareValidator>
         <br />
-        <br />
-        <asp:Label ID="EnterFieldQLabel" runat="server" Text="Enter field you would like to modify:"></asp:Label>
-&nbsp;
-                <asp:DropDownList ID="PropertyDropDown" runat="server" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" AutoPostBack="True" Width="135px">
+        <asp:ScriptManager ID="ScriptManager1" runat="server">
+        </asp:ScriptManager>
+        <asp:UpdatePanel ID="UpdatePanel3" runat="server">
+            <ContentTemplate>
+                <asp:Label ID="EnterFieldQLabel" runat="server" Text="Enter field you would like to modify:"></asp:Label>
+                <asp:DropDownList ID="PropertyDropDown" runat="server" AutoPostBack="True" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" Width="135px">
                     <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem Value="STATE">State</asp:ListItem>
                     <asp:ListItem Value="COUNTY">County</asp:ListItem>
@@ -57,9 +59,11 @@
                     <asp:ListItem Value="PROPERTY DAMAGE">Property Damage</asp:ListItem>
                     <asp:ListItem Value="CROP DAMAGE">Crop Damage</asp:ListItem>
                 </asp:DropDownList>
-                <br />
-        <asp:ScriptManager ID="ScriptManager1" runat="server">
-        </asp:ScriptManager>
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <br />
+&nbsp;
+        <br />
         <br />
         <asp:UpdatePanel ID="UpdatePanel1" runat="server">
             <ContentTemplate>
