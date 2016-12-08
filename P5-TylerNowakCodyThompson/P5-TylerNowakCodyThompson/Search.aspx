@@ -464,7 +464,7 @@
         <br />
         <br />
         <br />
-        <asp:ListBox ID="ResultsListBox" runat="server" Height="130px" Width="1500px"></asp:ListBox>
+        <asp:ListBox ID="ResultsListBox" runat="server" Height="130px" Width="4424px" style="margin-right: 0px"></asp:ListBox>
         <br />
         <br />
         <br />

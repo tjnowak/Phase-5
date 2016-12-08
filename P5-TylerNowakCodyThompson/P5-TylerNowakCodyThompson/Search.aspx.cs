@@ -174,6 +174,11 @@ namespace P5_TylerNowakCodyThompson
             UpperStartDayRequiredFieldValidator.Visible = false;
             UpperStartDayValidator.Visible = false;
             UpperStartDayCompareValidator.Visible = false;
+            LowerStartTimeRequiredFieldValidator.Visible = false;
+            LowerStartTimeValidator.Visible = false;
+            UpperStartTimeRequiredFieldValidator.Visible = false;
+            UpperStartTimeValidator.Visible = false;
+            UpperStartTimeCompareValidator.Visible = false;
             LowerEndYearRequiredFieldValidator.Visible = false;
             LowerEndYearValidator.Visible = false;
             UpperEndYearRequiredFieldValidator.Visible = false;
@@ -211,9 +216,9 @@ namespace P5_TylerNowakCodyThompson
             UpperStartLatitudeCompareValidator.Visible = false;
             LowerStartLongitudeRequiredFieldValidator.Visible = false;
             LowerStartLongitudeRangeValidator.Visible = false;
-            UpperStartLatitudeRequiredFieldValidator.Visible = false;
-            UpperStartLatitudeRangeValidator.Visible = false;
-            UpperStartLatitudeCompareValidator.Visible = false;
+            UpperStartLongitudeRequiredFieldValidator.Visible = false;
+            UpperStartLongitudeRangeValidator.Visible = false;
+            UpperStartLongitudeCompareValidator.Visible = false;
             LowerEndLatitudeRequiredFieldValidator.Visible = false;
             LowerEndLatitudeRangeValidator.Visible = false;
             UpperEndLatitudeRequiredFieldValidator.Visible = false;
@@ -551,9 +556,9 @@ namespace P5_TylerNowakCodyThompson
                     UpperStartLongitudeTextBox.Visible = true;
                     LowerStartLongitudeRequiredFieldValidator.Visible = true;
                     LowerStartLongitudeRangeValidator.Visible = true;
-                    UpperStartLatitudeRequiredFieldValidator.Visible = true;
-                    UpperStartLatitudeRangeValidator.Visible = true;
-                    UpperStartLatitudeCompareValidator.Visible = true;
+                    UpperStartLongitudeRequiredFieldValidator.Visible = true;
+                    UpperStartLongitudeRangeValidator.Visible = true;
+                    UpperStartLongitudeCompareValidator.Visible = true;
                     break;
                 case "END LATITUDE":
                     EndLatitudeQ1Label.Visible = true;
@@ -691,8 +696,7 @@ namespace P5_TylerNowakCodyThompson
             EventList results = new EventList();
 
             // Validate user input
-            if (IsPostBack)
-                Validate();
+            Validate();
 
             // Pull stored EventList from session variable
             theList = (EventList)Session["theList"];

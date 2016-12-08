@@ -56,12 +56,33 @@ namespace P5_TylerNowakCodyThompson
             foreach (var storm in stormList)
             {
                 Console.WriteLine("[Index: {0}]   {1}/{2}/{3}  {4, -26}   {5} COUNTY, {6}\n",
-                                  stormList.IndexOf(storm), storm.dateTime.BeginMonth, 
+                                  stormList.IndexOf(storm), storm.dateTime.BeginMonth,
                                   storm.dateTime.BeginDay, storm.dateTime.BeginYear,
-                                  storm.EventType, storm.location.County, 
+                                  storm.EventType, storm.location.County,
                                   storm.location.State);
             }
         }
+
+        // Return a string of all events in stormList
+        public List<string> ReturnEvents()
+        {
+            List<string> events = new List<string>();
+            string anEvent = "";
+
+            // Get list of storms as strings
+            foreach (var storm in stormList)
+            {
+                anEvent = String.Format("[Index: {0}]   {1}/{2}/{3}  {4, -26}   {5} COUNTY, {6}\n",
+                                        stormList.IndexOf(storm), storm.dateTime.BeginMonth,
+                                        storm.dateTime.BeginDay, storm.dateTime.BeginYear,
+                                        storm.EventType, storm.location.County,
+                                        storm.location.State);
+                events.Add(anEvent);
+            }
+            return events;
+        }
+
+
 
         // Search for events in the list by a particular event property
         public void Search(string eType, string property, string propValue, EventList searchResults)

@@ -522,7 +522,7 @@ namespace P5_TylerNowakCodyThompson
             list.AddEvent(anEvent);
 
             // Display the added event
-            list.DisplayEvents();
+            //list.DisplayEvents();
         }
 
         // Modify a field of an event in an EventList oject
@@ -532,7 +532,7 @@ namespace P5_TylerNowakCodyThompson
             int index;                            // holds the index of an event in a list
 
             // Display all the events in the list
-            list.DisplayEvents();
+           // list.DisplayEvents();
 
             // Ask user which event they want to modify
             do
@@ -566,47 +566,7 @@ namespace P5_TylerNowakCodyThompson
             Console.WriteLine(list.GetEventFromList(index) + "\n");
         }
 
-        // Search for events of an event-type in an EventList object by a particular field
-        public static void Search(EventList list)
-        {
-            // Display all possible event types; have user select a type to search for.
-            Console.Write("\n");
-            Event.DisplayStormTypes();
-            Console.WriteLine("Which storm type would you like to search? " +
-                              "(Please enter the whole type name)");
-            string sType = Console.ReadLine();
-            Console.Write("\n");
-
-            // Display all possible field names; have user select a type to search for.
-            Event.DisplayFieldNames();
-            Console.WriteLine("Which field name would you like to search? " +
-                              "(Please enter the whole field name)");
-            string sField = Console.ReadLine();
-            Console.Write("\n");
-
-            // Create new EventList to hold search results
-            EventList results = new EventList();
-
-           /* // Search for events
-            try
-            { list.Search(sType, sField, results); }
-            catch (ArgumentException e)
-            {
-                Console.WriteLine("The search failed.");
-                Console.WriteLine(e.Message + "\n");
-            }*/
-
-            // Display the resulting events from the search, unless there were no results.
-            if (results.Count() == 0)
-                Console.WriteLine("\nThe search returned no results.\n");
-            else
-                for (int index = 0; index < results.Count(); index++)
-                {
-                    Console.WriteLine("*****************************************" +
-                                      "*****************************************\n");
-                    Console.WriteLine(results.GetEventFromList(index));
-                }          
-        }
+        
 
         // Display storm event statistics to the user
         public static void DisplayStatistics(EventList list)
