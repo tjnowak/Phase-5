@@ -185,6 +185,7 @@
                 <asp:Label ID="CountyQLabel" runat="server" Text="Enter the full county name you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="CountyTextBox" runat="server" Width="193px" OnTextChanged="CountyTextBox_TextChanged"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="CountyRequiredFieldValidator" runat="server" ControlToValidate="CountyTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartAzimuthQlabel" runat="server" Text="Choose the starting azimuth (Compass direction) you are searching for:"></asp:Label>
                 &nbsp;
@@ -211,6 +212,7 @@
                 <asp:Label ID="StartLocationQlabel" runat="server" Text="Enter the full start location name (nearest city) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="StartLocationTextBox" runat="server" OnTextChanged="StartLocationTextBox_TextChanged" Width="197px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="StartLocationRequiredFieldValidator" runat="server" ControlToValidate="StartLocationTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndAzimuthQLabel" runat="server" Text="Choose the ending azimuth (Compass direction) you are searching for:"></asp:Label>
                 &nbsp;
@@ -237,6 +239,7 @@
                 <asp:Label ID="EndLocationQLabel" runat="server" Text="Enter the full end location name (nearest city) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="EndLocationTextBox" runat="server" OnTextChanged="StartLocationTextBox_TextChanged" Width="197px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="EndLocationRequiredFieldValidator" runat="server" ControlToValidate="EndLocationTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="TimeZoneQLabel" runat="server" Text="Choose the time zone you are searching for:"></asp:Label>
                 &nbsp;
@@ -265,86 +268,108 @@
                 <asp:Label ID="InjuriesQ1Label" runat="server" Text="Enter the lower bound (integer) on number of injuries you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerInjuriesTextBox" runat="server" Width="97px" OnTextChanged="LowerInjuriesTextBox_TextChanged"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerInjuriesRequiredFieldValidator" runat="server" ControlToValidate="LowerInjuriesTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="FatalitiesQ1Label" runat="server" Text="Enter the lower bound (integer) on the number of fatalities you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerFatalitiesTextBox" runat="server" OnTextChanged="LowerFatalitiesTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerFatalitiesRequiredFieldValidator" runat="server" ControlToValidate="LowerFatalitiesTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="WindSpeedQ1Label" runat="server" Text="Enter the lower bound (integer) on the wind speeds (measured in knots) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerWindSpeedsTextBox" runat="server" Width="97px" OnTextChanged="LowerWindSpeedsTextBox_TextChanged"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerWindSpeedsRequiredFieldValidator" runat="server" ControlToValidate="LowerWindSpeedsTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="HailSizeQ1Label" runat="server" Text="Enter the lower bound (number in inches) on the hail sizes you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerHailSizeTextBox" runat="server" Width="97px" OnTextChanged="LowerHailSizeTextBox_TextChanged"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerHailSizeRequiredFieldValidator" runat="server" ControlToValidate="LowerHailSizeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartRangeQ1Label" runat="server" Text="Enter the lower bound of event start ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerStartRangeRequiredFieldValidator" runat="server" ControlToValidate="LowerStartRangeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndRangeQ1Label" runat="server" Text="Enter the lower bound of event end ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerEndRangeRequiredFieldValidator" runat="server" ControlToValidate="LowerEndRangeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartYearQ1Label" runat="server" Text="Enter the lower bound (as integer) on the event start years you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerStartYearRequiredFieldValidator" runat="server" ControlToValidate="LowerStartYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartMonthQ1Label" runat="server" Text="Enter the lower bound (as integer, 1-12) on the event start months you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerStartMonthRequiredFieldValidator" runat="server" ControlToValidate="LowerStartMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartDayQ1Label" runat="server" Text="Enter the lower bound (as integer, day of month) on the event start days you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerStartDayRequiredFieldValidator" runat="server" ControlToValidate="LowerStartDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartTimeQ1Label" runat="server" Text="Enter the lower bound (24 hour time with no ':', Ex: 1425) on the event start times you are searching for:"></asp:Label>
                 <asp:TextBox ID="LowerStartTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerStartTimeRequiredFieldValidator" runat="server" ControlToValidate="LowerStartTimeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndYearQ1Label" runat="server" Text="Enter the lower bound (as integer) on the event end years you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerEndYearRequiredFieldValidator" runat="server" ControlToValidate="LowerEndYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndMonthQ1Label" runat="server" BorderStyle="None" Text="Enter the lower bound (as integer, 1-12) on the event end months you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerEndMonthRequiredFieldValidator" runat="server" ControlToValidate="LowerEndMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndDayQ1Label" runat="server" Text="Enter the lower bound (as integer, day of month) on the event end days you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerEndDayRequiredFieldValidator0" runat="server" ControlToValidate="LowerEndDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndTimeQ1Label" runat="server" Text="Enter the lower bound (24 hour time with no ':', Ex: 1425) on the event end times you are searching for:"></asp:Label>
 &nbsp;
                 <asp:TextBox ID="LowerEndTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerEndTimeRequiredFieldValidator" runat="server" ControlToValidate="LowerEndTimeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="TornadoLengthQ1Label" runat="server" Text="Enter the lower bound (how far in miles) of tornado lengths (distance traveled) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerTornadoLengthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerTornadoLengthRequiredFieldValidator" runat="server" ControlToValidate="LowerTornadoLengthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="TornadoWidthQ1Label" runat="server" Text="Enter the lower bound (yards) on tornado widths (diameter accross) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerTornadoWidthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerTornadoWidthRequiredFieldValidator" runat="server" ControlToValidate="LowerTornadoWidthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartLatitudeQ1Label" runat="server" Text="Enter the lower bound (-90 to 90) on the event start latitudes you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerStartLatitudeRequiredFieldValidator" runat="server" ControlToValidate="LowerStartLatitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="StartLongitudeQ1Label" runat="server" Text="Enter the lower bound (-180 to 180) of the event start longitudes you are searching for:"></asp:Label>
                 &nbsp; <asp:TextBox ID="LowerStartLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerStartLongitudeRequiredFieldValidator" runat="server" ControlToValidate="LowerStartLongitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndLatitudeQ1Label" runat="server" Text="Enter the lower bound (-90 to 90) on the event end latitudes you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerEndLatitudeRequiredFieldValidator" runat="server" ControlToValidate="LowerEndLatitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="EndLongitudeQ1Label" runat="server" Text="Enter the lower bound (-180 to 180) of the event end longitudes you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerEndLongitudeRequiredFieldValidator" runat="server" ControlToValidate="LowerEndLongitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="PropertyDamageQ1Label" runat="server" Text="Enter the lower bound (as a number without '$') of property damage you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="LowerPropertyDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerPropertyDamageRequiredFieldValidator" runat="server" ControlToValidate="LowerPropertyDamageTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <asp:Label ID="CropDamageQ1Label" runat="server" Text="Enter the lower bound (as a number without '$') of crop damage you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="LowerCropDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
+                <asp:RequiredFieldValidator ID="LowerCropDamageRequiredFieldValidator" runat="server" ControlToValidate="LowerCropDamageTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
                 <br />
                 <br />
                 <asp:Label ID="InjuriesQ2Label" runat="server" Text="Enter the upper bound (integer) on number of injuries you are searching for:"></asp:Label>
