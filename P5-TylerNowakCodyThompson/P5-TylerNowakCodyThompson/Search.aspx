@@ -72,7 +72,7 @@
             <ContentTemplate>
                 <asp:Label ID="FieldNameLabel" runat="server" Text="Choose the field name you want to search:"></asp:Label>
                 &nbsp;
-                <asp:DropDownList ID="PropertyDropDown" runat="server" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" style="height: 22px" AutoPostBack="True">
+                <asp:DropDownList ID="PropertyDropDown" runat="server" OnSelectedIndexChanged="PropertyDropDown_SelectedIndexChanged" AutoPostBack="True" Width="135px">
                     <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem Value="STATE">State</asp:ListItem>
                     <asp:ListItem Value="COUNTY">County</asp:ListItem>
@@ -113,7 +113,7 @@
                 <asp:Label ID="TornadoTypeQLabel" runat="server">Choose the tornado type you are searching for:</asp:Label>
                 &nbsp;
                 <asp:DropDownList ID="TornadoTypeDropDown" runat="server" OnSelectedIndexChanged="TornadoTypeDropDown_SelectedIndexChanged">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem>EF0</asp:ListItem>
                     <asp:ListItem>EF1</asp:ListItem>
                     <asp:ListItem>EF2</asp:ListItem>
@@ -121,11 +121,12 @@
                     <asp:ListItem>EF4</asp:ListItem>
                     <asp:ListItem>EF5</asp:ListItem>
                 </asp:DropDownList>
+                <asp:CompareValidator ID="TornadoTypeCompareValidator" runat="server" ControlToValidate="TornadoTypeDropDown" ErrorMessage="* Pick One" ForeColor="Red" Operator="NotEqual" ValueToCompare="&quot;PICK ONE&quot;"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="StateQLabel" runat="server">Choose the state you are searching for:</asp:Label>
                 &nbsp;
-                <asp:DropDownList ID="StateDropDown" runat="server" OnSelectedIndexChanged="StateDropDown_SelectedIndexChanged">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                <asp:DropDownList ID="StateDropDown" runat="server" OnSelectedIndexChanged="StateDropDown_SelectedIndexChanged" Height="16px" Width="132px">
+                    <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem Value="ALABAMA">Alabama</asp:ListItem>
                     <asp:ListItem Value="ALASKA">Alaska</asp:ListItem>
                     <asp:ListItem Value="ARIZONA">Arizona</asp:ListItem>
@@ -181,6 +182,7 @@
                     <asp:ListItem Value="WISCONSIN">Wisconsin</asp:ListItem>
                     <asp:ListItem Value="WYOMING">Wyoming</asp:ListItem>
                 </asp:DropDownList>
+                <asp:CompareValidator ID="StateCompareValidator" runat="server" ControlToValidate="StateDropDown" ErrorMessage="* Pick One" ForeColor="Red" Operator="NotEqual" ValueToCompare="&quot;PICK ONE&quot;"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="CountyQLabel" runat="server" Text="Enter the full county name you are searching for:"></asp:Label>
                 &nbsp;
@@ -190,7 +192,7 @@
                 <asp:Label ID="StartAzimuthQlabel" runat="server" Text="Choose the starting azimuth (Compass direction) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:DropDownList ID="StartAzimuthDropDown" runat="server" OnSelectedIndexChanged="StartAzimuthDropDown_SelectedIndexChanged">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem>E</asp:ListItem>
                     <asp:ListItem>ENE</asp:ListItem>
                     <asp:ListItem>ESE</asp:ListItem>
@@ -208,6 +210,7 @@
                     <asp:ListItem>WNW</asp:ListItem>
                     <asp:ListItem>WSW</asp:ListItem>
                 </asp:DropDownList>
+                <asp:CompareValidator ID="StartAzimuthCompareValidator" runat="server" ControlToValidate="StartAzimuthDropDown" ErrorMessage="* Pick One" ForeColor="Red" Operator="NotEqual" ValueToCompare="&quot;PICK ONE&quot;"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="StartLocationQlabel" runat="server" Text="Enter the full start location name (nearest city) you are searching for:"></asp:Label>
                 &nbsp;
@@ -217,7 +220,7 @@
                 <asp:Label ID="EndAzimuthQLabel" runat="server" Text="Choose the ending azimuth (Compass direction) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:DropDownList ID="EndAzimuthDropDown" runat="server" OnSelectedIndexChanged="EndAzimuthDropDown_SelectedIndexChanged">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem>E</asp:ListItem>
                     <asp:ListItem>ENE</asp:ListItem>
                     <asp:ListItem>ESE</asp:ListItem>
@@ -235,6 +238,7 @@
                     <asp:ListItem>WNW</asp:ListItem>
                     <asp:ListItem>WSW</asp:ListItem>
                 </asp:DropDownList>
+                <asp:CompareValidator ID="EndAzimuthCompareValidator" runat="server" ControlToValidate="EndAzimuthDropDown" ErrorMessage="* Pick One" ForeColor="Red" Operator="NotEqual" ValueToCompare="&quot;PICK ONE&quot;"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="EndLocationQLabel" runat="server" Text="Enter the full end location name (nearest city) you are searching for:"></asp:Label>
                 &nbsp;
@@ -244,7 +248,7 @@
                 <asp:Label ID="TimeZoneQLabel" runat="server" Text="Choose the time zone you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:DropDownList ID="TimeZoneDropDown" runat="server" OnSelectedIndexChanged="TimeZoneDropDown_SelectedIndexChanged">
-                    <asp:ListItem Value="&quot; &quot;">Pick One</asp:ListItem>
+                    <asp:ListItem Value="PICK ONE">Pick One</asp:ListItem>
                     <asp:ListItem>AKST</asp:ListItem>
                     <asp:ListItem>AKDT</asp:ListItem>
                     <asp:ListItem>AST</asp:ListItem>
@@ -264,6 +268,7 @@
                     <asp:ListItem>HAST</asp:ListItem>
                     <asp:ListItem>HADT</asp:ListItem>
                 </asp:DropDownList>
+                <asp:CompareValidator ID="TimeZoneCompareValidator" runat="server" ControlToValidate="TimeZoneDropDown" ErrorMessage="* Pick One" ForeColor="Red" Operator="NotEqual" ValueToCompare="&quot;PICK ONE&quot;"></asp:CompareValidator>
                 <br />
                 <asp:Label ID="InjuriesQ1Label" runat="server" Text="Enter the lower bound (integer) on number of injuries you are searching for:"></asp:Label>
                 &nbsp;
@@ -516,7 +521,7 @@
         <br />
         <br />
         <br />
-        <asp:ListBox ID="ResultsListBox" runat="server"></asp:ListBox>
+        <asp:ListBox ID="ResultsListBox" runat="server" Height="130px" Width="441px"></asp:ListBox>
         <br />
         <br />
         <br />

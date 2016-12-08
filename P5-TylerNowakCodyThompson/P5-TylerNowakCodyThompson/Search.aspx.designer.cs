@@ -112,6 +112,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.DropDownList TornadoTypeDropDown;
         
         /// <summary>
+        /// TornadoTypeCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator TornadoTypeCompareValidator;
+        
+        /// <summary>
         /// StateQLabel control.
         /// </summary>
         /// <remarks>
@@ -128,6 +137,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList StateDropDown;
+        
+        /// <summary>
+        /// StateCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator StateCompareValidator;
         
         /// <summary>
         /// CountyQLabel control.
@@ -175,6 +193,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.DropDownList StartAzimuthDropDown;
         
         /// <summary>
+        /// StartAzimuthCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator StartAzimuthCompareValidator;
+        
+        /// <summary>
         /// StartLocationQlabel control.
         /// </summary>
         /// <remarks>
@@ -220,6 +247,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.DropDownList EndAzimuthDropDown;
         
         /// <summary>
+        /// EndAzimuthCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator EndAzimuthCompareValidator;
+        
+        /// <summary>
         /// EndLocationQLabel control.
         /// </summary>
         /// <remarks>
@@ -263,6 +299,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList TimeZoneDropDown;
+        
+        /// <summary>
+        /// TimeZoneCompareValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CompareValidator TimeZoneCompareValidator;
         
         /// <summary>
         /// InjuriesQ1Label control.
