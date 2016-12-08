@@ -760,6 +760,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerEndTimeRequiredFieldValidator;
         
         /// <summary>
+        /// LowerEndTimeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerEndTimeValidator;
+        
+        /// <summary>
         /// TornadoLengthQ1Label control.
         /// </summary>
         /// <remarks>
@@ -785,6 +794,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerTornadoLengthRequiredFieldValidator;
+        
+        /// <summary>
+        /// LowerTornadoLengthRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerTornadoLengthRangeValidator;
         
         /// <summary>
         /// TornadoWidthQ1Label control.
@@ -814,6 +832,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerTornadoWidthRequiredFieldValidator;
         
         /// <summary>
+        /// LowerTornadoWidthRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerTornadoWidthRangeValidator;
+        
+        /// <summary>
         /// StartLatitudeQ1Label control.
         /// </summary>
         /// <remarks>
@@ -839,6 +866,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerStartLatitudeRequiredFieldValidator;
+        
+        /// <summary>
+        /// LowerStartLatitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerStartLatitudeRangeValidator;
         
         /// <summary>
         /// StartLongitudeQ1Label control.
@@ -868,6 +904,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerStartLongitudeRequiredFieldValidator;
         
         /// <summary>
+        /// LowerStartLongitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerStartLongitudeRangeValidator;
+        
+        /// <summary>
         /// EndLatitudeQ1Label control.
         /// </summary>
         /// <remarks>
@@ -893,6 +938,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerEndLatitudeRequiredFieldValidator;
+        
+        /// <summary>
+        /// LowerEndLatitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerEndLatitudeRangeValidator;
         
         /// <summary>
         /// EndLongitudeQ1Label control.
@@ -922,6 +976,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerEndLongitudeRequiredFieldValidator;
         
         /// <summary>
+        /// LowerEndLongitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerEndLongitudeRangeValidator;
+        
+        /// <summary>
         /// PropertyDamageQ1Label control.
         /// </summary>
         /// <remarks>
@@ -949,6 +1012,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerPropertyDamageRequiredFieldValidator;
         
         /// <summary>
+        /// LowerPropertyDamageRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerPropertyDamageRangeValidator;
+        
+        /// <summary>
         /// CropDamageQ1Label control.
         /// </summary>
         /// <remarks>
@@ -974,6 +1046,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerCropDamageRequiredFieldValidator;
+        
+        /// <summary>
+        /// LowerCropDamageRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator LowerCropDamageRangeValidator;
         
         /// <summary>
         /// InjuriesQ2Label control.
