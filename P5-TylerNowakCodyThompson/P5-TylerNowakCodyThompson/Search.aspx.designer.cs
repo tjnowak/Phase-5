@@ -976,13 +976,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerEndLongitudeRequiredFieldValidator;
         
         /// <summary>
-        /// LowerEndLongitudeRangeValidator control.
+        /// LowerEndLongitudeRangeValidator0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator LowerEndLongitudeRangeValidator;
+        protected global::System.Web.UI.WebControls.RangeValidator LowerEndLongitudeRangeValidator0;
         
         /// <summary>
         /// PropertyDamageQ1Label control.
@@ -1084,6 +1084,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperInjuriesRequiredFieldValidator;
         
         /// <summary>
+        /// UpperInjuriesRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperInjuriesRangeValidator;
+        
+        /// <summary>
         /// FatalitiesQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1109,6 +1118,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperFatalitiesRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperFatalitiesRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperFatalitiesRangeValidator;
         
         /// <summary>
         /// WindSpeedQ2Label control.
@@ -1138,6 +1156,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperWindSpeedsRequiredFieldValidator;
         
         /// <summary>
+        /// UpperWindSpeedRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperWindSpeedRangeValidator;
+        
+        /// <summary>
         /// HailSizeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1163,6 +1190,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperHailSizeRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperHailSizeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperHailSizeRangeValidator;
         
         /// <summary>
         /// StartRangeQ2Label control.
@@ -1192,6 +1228,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperStartRangeRequiredFieldValidator;
         
         /// <summary>
+        /// UpperStartRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperStartRangeValidator;
+        
+        /// <summary>
         /// EndRangeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1217,6 +1262,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperEndRangeRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperEndRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperEndRangeValidator;
         
         /// <summary>
         /// StartYearQ2Label control.
@@ -1246,6 +1300,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperStartYearRequiredFieldValidator;
         
         /// <summary>
+        /// UpperStartYearValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperStartYearValidator;
+        
+        /// <summary>
         /// StartMonthQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1271,6 +1334,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperStartMonthRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperStartMonthValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperStartMonthValidator;
         
         /// <summary>
         /// StartDayQ2Label control.
@@ -1300,6 +1372,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperStartDayRequiredFieldValidator;
         
         /// <summary>
+        /// UpperStartDayValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperStartDayValidator;
+        
+        /// <summary>
         /// StartTimeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1325,6 +1406,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperStartTimeRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperStartTimeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperStartTimeValidator;
         
         /// <summary>
         /// EndYearQ2Label control.
@@ -1354,6 +1444,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperEndYearRequiredFieldValidator;
         
         /// <summary>
+        /// UpperEndYearValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperEndYearValidator;
+        
+        /// <summary>
         /// EndMonthQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1379,6 +1478,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperEndMonthRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperEndMonthValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperEndMonthValidator;
         
         /// <summary>
         /// EndDayQ2Label control.
@@ -1408,6 +1516,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperEndDayRequiredFieldValidator;
         
         /// <summary>
+        /// UpperEndDayValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperEndDayValidator;
+        
+        /// <summary>
         /// EndTimeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1433,6 +1550,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperEndTimeRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperEndTimeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperEndTimeValidator;
         
         /// <summary>
         /// TornadoLengthQ2Label control.
@@ -1462,6 +1588,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperTornadoLengthRequiredFieldValidator;
         
         /// <summary>
+        /// UpperTornadoLengthRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperTornadoLengthRangeValidator;
+        
+        /// <summary>
         /// TornadoWidthQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1487,6 +1622,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperTornadoWidthRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperTornadoWidthRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperTornadoWidthRangeValidator;
         
         /// <summary>
         /// StartLatitudeQ2Label control.
@@ -1516,6 +1660,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperStartLatitudeRequiredFieldValidator;
         
         /// <summary>
+        /// UpperStartLatitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperStartLatitudeRangeValidator;
+        
+        /// <summary>
         /// StartLongitudeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1541,6 +1694,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperStartLongitudeRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperStartLongitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperStartLongitudeRangeValidator;
         
         /// <summary>
         /// EndLatitudeQ2Label control.
@@ -1570,6 +1732,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperEndLatitudeRequiredFieldValidator;
         
         /// <summary>
+        /// UpperEndLatitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperEndLatitudeRangeValidator;
+        
+        /// <summary>
         /// EndLongitudeQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1595,6 +1766,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperEndLongitudeRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperEndLongitudeRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperEndLongitudeRangeValidator;
         
         /// <summary>
         /// PropertyDamageQ2Label control.
@@ -1624,6 +1804,15 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperPropertyDamageRequiredFieldValidator0;
         
         /// <summary>
+        /// UpperPropertyDamageRangeValidator control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperPropertyDamageRangeValidator;
+        
+        /// <summary>
         /// CropDamageQ2Label control.
         /// </summary>
         /// <remarks>
@@ -1649,6 +1838,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperCropDamageRequiredFieldValidator;
+        
+        /// <summary>
+        /// UpperCropDamageRangeValidator0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator UpperCropDamageRangeValidator0;
         
         /// <summary>
         /// ResultsListBox control.

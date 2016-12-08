@@ -381,7 +381,7 @@
                 &nbsp;
                 <asp:TextBox ID="LowerEndLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerEndLongitudeRequiredFieldValidator" runat="server" ControlToValidate="LowerEndLongitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RangeValidator ID="LowerEndLongitudeRangeValidator" runat="server" ControlToValidate="LowerEndLongitudeTextBox" ErrorMessage="* Must be double -180 to 180" ForeColor="Red" MaximumValue="180" MinimumValue="-180" Type="Double"></asp:RangeValidator>
+                <asp:RangeValidator ID="LowerEndLongitudeRangeValidator0" runat="server" ControlToValidate="LowerEndLongitudeTextBox" ErrorMessage="* Must be double -180 to 180" ForeColor="Red" MaximumValue="180" MinimumValue="-180" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="PropertyDamageQ1Label" runat="server" Text="Enter the lower bound (as a number without '$' or commas) of property damage you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="LowerPropertyDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
@@ -398,94 +398,116 @@
                 &nbsp;
                 <asp:TextBox ID="UpperInjuriesTextBox" runat="server" Width="97px" OnTextChanged="UpperInjuriesTextBox_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperInjuriesRequiredFieldValidator" runat="server" ControlToValidate="UpperInjuriesTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperInjuriesRangeValidator" runat="server" ControlToValidate="UpperInjuriesTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="FatalitiesQ2Label" runat="server" Text="Enter the upper bound (integer) on the number of fatalities you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperFatalitiesTextBox" runat="server" Width="97px" OnTextChanged="UpperFatalitiesTextBox_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperFatalitiesRequiredFieldValidator" runat="server" ControlToValidate="UpperFatalitiesTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperFatalitiesRangeValidator" runat="server" ControlToValidate="UpperFatalitiesTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="WindSpeedQ2Label" runat="server" Text="Enter the upper bound (integer) on the wind speeds (measured in knots) you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperWindSpeedsTextBox" runat="server" Width="97px" OnTextChanged="UpperWindSpeedsTextBox_TextChanged"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperWindSpeedsRequiredFieldValidator" runat="server" ControlToValidate="UpperWindSpeedsTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperWindSpeedRangeValidator" runat="server" ControlToValidate="UpperWindSpeedsTextBox" ErrorMessage="* Must be int &gt; =0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="HailSizeQ2Label" runat="server" Text="Enter the upper bound (number in inches) on the hail sizes you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperHailSizeTextBox" runat="server" Width="97px" OnTextChanged="UpperHailSizeTextBox_TextChanged"></asp:TextBox>
                 &nbsp;<asp:RequiredFieldValidator ID="UpperHailSizeRequiredFieldValidator" runat="server" ControlToValidate="UpperHailSizeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperHailSizeRangeValidator" runat="server" ControlToValidate="UpperHailSizeTextBox" ErrorMessage="* Must be double &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartRangeQ2Label" runat="server" Text="Enter the upper bound of event start ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="UpperStartRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartRangeRequiredFieldValidator" runat="server" ControlToValidate="UpperStartRangeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperStartRangeValidator" runat="server" ControlToValidate="UpperStartRangeTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndRangeQ2Label" runat="server" Text="Enter the upper bound of event end ranges (miles from nearest city as integer) you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="UpperEndRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndRangeRequiredFieldValidator" runat="server" ControlToValidate="UpperEndRangeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperEndRangeValidator" runat="server" ControlToValidate="UpperEndRangeTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartYearQ2Label" runat="server" Text="Enter the upper bound (as integer) on the event start years you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="UpperStartYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartYearRequiredFieldValidator" runat="server" ControlToValidate="UpperStartYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperStartYearValidator" runat="server" ControlToValidate="UpperStartYearTextBox" ErrorMessage="* Must be int 1951-2016" ForeColor="Red" MaximumValue="2016" MinimumValue="1951" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartMonthQ2Label" runat="server" Text="Enter the upper bound (as integer, 1-12) on the event start months you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartMonthRequiredFieldValidator" runat="server" ControlToValidate="UpperStartMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperStartMonthValidator" runat="server" ControlToValidate="UpperStartMonthTextBox" ErrorMessage="* Must be int 1-12" ForeColor="Red" MaximumValue="12" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartDayQ2Label" runat="server" Text="Enter the upper bound (as integer, day of month) on the event start days you are searching for:"></asp:Label>
                 &nbsp;&nbsp;<asp:TextBox ID="UpperStartDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartDayRequiredFieldValidator" runat="server" ControlToValidate="UpperStartDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperStartDayValidator" runat="server" ControlToValidate="UpperStartDayTextBox" ErrorMessage="* Must be int 1-31" ForeColor="Red" MaximumValue="31" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartTimeQ2Label" runat="server" Text="Enter the upper bound (24 hour time with no ':', Ex: 1425) on the event start times you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartTimeRequiredFieldValidator" runat="server" ControlToValidate="UpperStartTimeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperStartTimeValidator" runat="server" ControlToValidate="UpperStartTimeTextBox" ErrorMessage="* Must be int 0-2359" ForeColor="Red" MaximumValue="2359" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndYearQ2Label" runat="server" Text="Enter the upper bound (as integer) on the event end years you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndYearRequiredFieldValidator" runat="server" ControlToValidate="UpperEndYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperEndYearValidator" runat="server" ControlToValidate="UpperEndYearTextBox" ErrorMessage="* Must be int 1951-2016" ForeColor="Red" MaximumValue="2016" MinimumValue="1951" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndMonthQ2Label" runat="server" BorderStyle="None" Text="Enter the upper bound (as integer, 1-12) on the event end months you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndMonthRequiredFieldValidator" runat="server" ControlToValidate="UpperEndMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperEndMonthValidator" runat="server" ControlToValidate="UpperEndMonthTextBox" ErrorMessage="* Must be int 1-12" ForeColor="Red" MaximumValue="12" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndDayQ2Label" runat="server" Text="Enter the upper bound (as integer, day of month) on the event end days you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndDayRequiredFieldValidator" runat="server" ControlToValidate="UpperEndDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperEndDayValidator" runat="server" ControlToValidate="UpperEndDayTextBox" ErrorMessage="* Must be int 1-31" ForeColor="Red" MaximumValue="31" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndTimeQ2Label" runat="server" Text="Enter the upper bound (24 hour time with no ':', Ex: 1425) on the event end times you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndTimeRequiredFieldValidator" runat="server" ControlToValidate="UpperEndTimeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperEndTimeValidator" runat="server" ControlToValidate="UpperEndTimeTextBox" ErrorMessage="* Must be int 0-2359" ForeColor="Red" MaximumValue="2359" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="TornadoLengthQ2Label" runat="server" Text="Enter the upper bound (how far in miles) of tornado lengths (distance traveled) you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperTornadoLengthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperTornadoLengthRequiredFieldValidator" runat="server" ControlToValidate="UpperTornadoLengthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperTornadoLengthRangeValidator" runat="server" ControlToValidate="UpperTornadoLengthTextBox" ErrorMessage="* Must be double &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="TornadoWidthQ2Label" runat="server" Text="Enter the upper bound (yards) on tornado widths (diameter accross) you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperTornadoWidthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperTornadoWidthRequiredFieldValidator" runat="server" ControlToValidate="UpperTornadoWidthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperTornadoWidthRangeValidator" runat="server" ControlToValidate="UpperTornadoWidthTextBox" ErrorMessage="* Must be double &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartLatitudeQ2Label" runat="server" Text="Enter the upper bound (-90 to 90) on the event start latitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartLatitudeRequiredFieldValidator" runat="server" ControlToValidate="UpperStartLatitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperStartLatitudeRangeValidator" runat="server" ControlToValidate="UpperStartLatitudeTextBox" ErrorMessage="* Must be double -90 to 90" ForeColor="Red" MaximumValue="90" MinimumValue="-90" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartLongitudeQ2Label" runat="server" Text="Enter the upper bound (-180 to 180) of the event start longitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperStartLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperStartLongitudeRequiredFieldValidator" runat="server" ControlToValidate="UpperStartLongitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperStartLongitudeRangeValidator" runat="server" ControlToValidate="UpperStartLongitudeTextBox" ErrorMessage="* Must be double -180 to 180" ForeColor="Red" MaximumValue="180" MinimumValue="-180" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndLatitudeQ2Label" runat="server" Text="Enter the upper bound (-90 to 90) on the event end latitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndLatitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndLatitudeRequiredFieldValidator" runat="server" ControlToValidate="UpperEndLatitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperEndLatitudeRangeValidator" runat="server" ControlToValidate="UpperEndLatitudeTextBox" ErrorMessage="* Must be double -90 to 90" ForeColor="Red" MaximumValue="90" MinimumValue="-90" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndLongitudeQ2Label" runat="server" Text="Enter the upper bound (-180 to 180) of the event end longitudes you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperEndLongitudeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperEndLongitudeRequiredFieldValidator" runat="server" ControlToValidate="UpperEndLongitudeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperEndLongitudeRangeValidator" runat="server" ControlToValidate="UpperEndLongitudeTextBox" ErrorMessage="* Must be double -180 to 180" ForeColor="Red" MaximumValue="180" MinimumValue="-180" Type="Double"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="PropertyDamageQ2Label" runat="server" Text="Enter the upper bound (as a number without '$' or commas) of property damage you are searching for:"></asp:Label>
 &nbsp;&nbsp;<asp:TextBox ID="UpperPropertyDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperPropertyDamageRequiredFieldValidator0" runat="server" ControlToValidate="UpperPropertyDamageTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperPropertyDamageRangeValidator" runat="server" ControlToValidate="UpperPropertyDamageTextBox" ErrorMessage="* Must be &gt;= 0 w/o commas" ForeColor="Red" MinimumValue="0" Type="Currency"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="CropDamageQ2Label" runat="server" Text="Enter the upper bound (as a number without '$' or commas) of crop damage you are searching for:"></asp:Label>
 &nbsp;
                 <asp:TextBox ID="UpperCropDamageTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="UpperCropDamageRequiredFieldValidator" runat="server" ControlToValidate="UpperCropDamageTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="UpperCropDamageRangeValidator0" runat="server" ControlToValidate="UpperCropDamageTextBox" ErrorMessage="* Must be &gt;= 0 w/o commas" ForeColor="Red" MinimumValue="0" Type="Currency"></asp:RangeValidator>
             </ContentTemplate>
             <Triggers>
                 <asp:AsyncPostBackTrigger ControlID="PropertyDropDown" />
