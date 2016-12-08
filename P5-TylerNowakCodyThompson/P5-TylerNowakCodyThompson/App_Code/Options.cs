@@ -636,7 +636,7 @@ namespace P5_TylerNowakCodyThompson
                     break;
                 case 2:
                     // Calc average tornado damage per state
-                    Statistics.showMeanCostPerState(list);
+                   // Statistics.showMeanCostPerState(list);
                     break;
                 default:
                     // Go back to main menu

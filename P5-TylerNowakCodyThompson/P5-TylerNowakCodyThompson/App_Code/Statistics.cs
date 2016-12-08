@@ -140,7 +140,7 @@ namespace P5_TylerNowakCodyThompson
                               fatalities, eType, state);
         }
 
-        // Display the average damage caused by tornadoes by state 
+       /* // Display the average damage caused by tornadoes by state 
         public static void showMeanCostPerState(EventList list,)
         {
             List<string> damage = new List<string>();             // list of avg tornado damage
@@ -154,6 +154,6 @@ namespace P5_TylerNowakCodyThompson
                               " historical tornado records are shown\n");
             foreach (var item in damage)
                 Console.WriteLine(item);
-        }
+        }*/
     }
 }

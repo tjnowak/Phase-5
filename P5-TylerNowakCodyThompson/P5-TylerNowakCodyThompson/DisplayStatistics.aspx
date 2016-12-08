@@ -22,7 +22,7 @@
         <br />
         <asp:Label ID="NoneSelected" runat="server" Text="Please select an option" Visible="False"></asp:Label>
         <br />
-        <asp:Button ID="DisplatStatsButton" runat="server" OnClick="Button1_Click" Text="Go" />
+        <asp:Button ID="DisplayStatsButton" runat="server" OnClick="DisplayStatsButton_Click" Text="Go" />
         <br />
     </form>
 </body>

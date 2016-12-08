@@ -70,5 +70,10 @@ namespace P5_TylerNowakCodyThompson
         {
             Response.Redirect("~/DisplayStatistics.aspx");
         }
+
+        protected void StormTypeDropDown_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
