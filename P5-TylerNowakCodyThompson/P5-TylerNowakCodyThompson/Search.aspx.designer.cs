@@ -256,24 +256,6 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.TextBox LowerInjuriesTextBox;
         
         /// <summary>
-        /// InjuriesQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label InjuriesQ2Label;
-        
-        /// <summary>
-        /// UpperInjuriesTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperInjuriesTextBox;
-        
-        /// <summary>
         /// FatalitiesQ1Label control.
         /// </summary>
         /// <remarks>
@@ -292,94 +274,40 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.TextBox LowerFatalitiesTextBox;
         
         /// <summary>
-        /// FatalitiesQ2Label control.
+        /// WindSpeedQ1Label0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label FatalitiesQ2Label;
+        protected global::System.Web.UI.WebControls.Label WindSpeedQ1Label0;
         
         /// <summary>
-        /// UpperFatalitiesTextBox control.
+        /// LowerWindSpeedsTextBox0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperFatalitiesTextBox;
+        protected global::System.Web.UI.WebControls.TextBox LowerWindSpeedsTextBox0;
         
         /// <summary>
-        /// WindSpeedQ1Label control.
+        /// HailSizeQ1Label0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label WindSpeedQ1Label;
+        protected global::System.Web.UI.WebControls.Label HailSizeQ1Label0;
         
         /// <summary>
-        /// LowerWindSpeedsTextBox control.
+        /// LowerHailSizeTextBox0 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LowerWindSpeedsTextBox;
-        
-        /// <summary>
-        /// WindSpeedQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label WindSpeedQ2Label;
-        
-        /// <summary>
-        /// UpperWindSpeedsTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperWindSpeedsTextBox;
-        
-        /// <summary>
-        /// HailSizeQ1Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label HailSizeQ1Label;
-        
-        /// <summary>
-        /// LowerHailSizeTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox LowerHailSizeTextBox;
-        
-        /// <summary>
-        /// HailSizeQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label HailSizeQ2Label;
-        
-        /// <summary>
-        /// UpperHailSizeTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperHailSizeTextBox;
+        protected global::System.Web.UI.WebControls.TextBox LowerHailSizeTextBox0;
         
         /// <summary>
         /// StartRangeQ1Label control.
@@ -400,24 +328,6 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.TextBox LowerStartRangeTextBox;
         
         /// <summary>
-        /// StartRangeQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label StartRangeQ2Label;
-        
-        /// <summary>
-        /// UpperStartRangeTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperStartRangeTextBox;
-        
-        /// <summary>
         /// EndRangeQ1Label control.
         /// </summary>
         /// <remarks>
@@ -434,24 +344,6 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LowerEndRangeTextBox;
-        
-        /// <summary>
-        /// EndRangeQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label EndRangeQ2Label;
-        
-        /// <summary>
-        /// UpperEndRangeTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperEndRangeTextBox;
         
         /// <summary>
         /// StartYearQ1Label control.
@@ -472,24 +364,6 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.TextBox LowerStartYearTextBox;
         
         /// <summary>
-        /// StartYearQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label StartYearQ2Label;
-        
-        /// <summary>
-        /// UpperStartYearTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperStartYearTextBox;
-        
-        /// <summary>
         /// StartMonthQ1Label control.
         /// </summary>
         /// <remarks>
@@ -506,24 +380,6 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LowerStartMonthTextBox;
-        
-        /// <summary>
-        /// StartMonthQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label StartMonthQ2Label;
-        
-        /// <summary>
-        /// UpperStartMonthTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperStartMonthTextBox;
         
         /// <summary>
         /// StartDayQ1Label control.
@@ -544,24 +400,6 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.TextBox LowerStartDayTextBox;
         
         /// <summary>
-        /// StartDayQ2Label control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label StartDayQ2Label;
-        
-        /// <summary>
-        /// UpperStartDayTextBox control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UpperStartDayTextBox;
-        
-        /// <summary>
         /// StartTimeQ1Label control.
         /// </summary>
         /// <remarks>
@@ -578,6 +416,168 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox LowerStartTimeTextBox;
+        
+        /// <summary>
+        /// InjuriesQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label InjuriesQ2Label;
+        
+        /// <summary>
+        /// UpperInjuriesTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperInjuriesTextBox;
+        
+        /// <summary>
+        /// FatalitiesQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label FatalitiesQ2Label;
+        
+        /// <summary>
+        /// UpperFatalitiesTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperFatalitiesTextBox;
+        
+        /// <summary>
+        /// WindSpeedQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label WindSpeedQ2Label;
+        
+        /// <summary>
+        /// UpperWindSpeedsTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperWindSpeedsTextBox;
+        
+        /// <summary>
+        /// HailSizeQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label HailSizeQ2Label;
+        
+        /// <summary>
+        /// UpperHailSizeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperHailSizeTextBox;
+        
+        /// <summary>
+        /// StartRangeQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StartRangeQ2Label;
+        
+        /// <summary>
+        /// UpperStartRangeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperStartRangeTextBox;
+        
+        /// <summary>
+        /// EndRangeQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EndRangeQ2Label;
+        
+        /// <summary>
+        /// UpperEndRangeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperEndRangeTextBox;
+        
+        /// <summary>
+        /// StartYearQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StartYearQ2Label;
+        
+        /// <summary>
+        /// UpperStartYearTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperStartYearTextBox;
+        
+        /// <summary>
+        /// StartMonthQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StartMonthQ2Label;
+        
+        /// <summary>
+        /// UpperStartMonthTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperStartMonthTextBox;
+        
+        /// <summary>
+        /// StartDayQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StartDayQ2Label;
+        
+        /// <summary>
+        /// UpperStartDayTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperStartDayTextBox;
         
         /// <summary>
         /// StartTimeQ2Label control.
@@ -848,6 +848,186 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox UpperStartLatitudeTextBox;
+        
+        /// <summary>
+        /// StartLongitudeQ1Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StartLongitudeQ1Label;
+        
+        /// <summary>
+        /// LowerStartLongitudeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LowerStartLongitudeTextBox;
+        
+        /// <summary>
+        /// StartLongitudeQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label StartLongitudeQ2Label;
+        
+        /// <summary>
+        /// UpperStartLongitudeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperStartLongitudeTextBox;
+        
+        /// <summary>
+        /// EndLatitudeQ1Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EndLatitudeQ1Label;
+        
+        /// <summary>
+        /// LowerEndLatitudeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LowerEndLatitudeTextBox;
+        
+        /// <summary>
+        /// EndLatitudeQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EndLatitudeQ2Label;
+        
+        /// <summary>
+        /// UpperEndLatitudeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperEndLatitudeTextBox;
+        
+        /// <summary>
+        /// EndLongitudeQ1Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EndLongitudeQ1Label;
+        
+        /// <summary>
+        /// LowerEndLongitudeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LowerEndLongitudeTextBox;
+        
+        /// <summary>
+        /// EndLongitudeQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label EndLongitudeQ2Label;
+        
+        /// <summary>
+        /// UpperEndLongitudeTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperEndLongitudeTextBox;
+        
+        /// <summary>
+        /// PropertyDamageQ1Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PropertyDamageQ1Label;
+        
+        /// <summary>
+        /// LowerPropertyDamageTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LowerPropertyDamageTextBox;
+        
+        /// <summary>
+        /// PropertyDamageQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label PropertyDamageQ2Label;
+        
+        /// <summary>
+        /// UpperPropertyDamageTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperPropertyDamageTextBox;
+        
+        /// <summary>
+        /// CropDamageQ1Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CropDamageQ1Label;
+        
+        /// <summary>
+        /// LowerCropDamageTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox LowerCropDamageTextBox;
+        
+        /// <summary>
+        /// CropDamageQ2Label control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label CropDamageQ2Label;
+        
+        /// <summary>
+        /// UpperCropDamageTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox UpperCropDamageTextBox;
         
         /// <summary>
         /// MainMenuButton control.
