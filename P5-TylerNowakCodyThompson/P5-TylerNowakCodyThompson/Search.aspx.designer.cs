@@ -778,13 +778,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.TextBox LowerEndDayTextBox;
         
         /// <summary>
-        /// LowerEndDayRequiredFieldValidator0 control.
+        /// LowerEndDayRequiredFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerEndDayRequiredFieldValidator0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerEndDayRequiredFieldValidator;
         
         /// <summary>
         /// LowerEndDayValidator control.
@@ -1039,13 +1039,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator LowerEndLongitudeRequiredFieldValidator;
         
         /// <summary>
-        /// LowerEndLongitudeRangeValidator0 control.
+        /// LowerEndLongitudeRangeValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator LowerEndLongitudeRangeValidator0;
+        protected global::System.Web.UI.WebControls.RangeValidator LowerEndLongitudeRangeValidator;
         
         /// <summary>
         /// PropertyDamageQ1Label control.
@@ -1291,13 +1291,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperHailSizeRangeValidator;
         
         /// <summary>
-        /// UpperHailSizeCompareValidator0 control.
+        /// UpperHailSizeCompareValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator UpperHailSizeCompareValidator0;
+        protected global::System.Web.UI.WebControls.CompareValidator UpperHailSizeCompareValidator;
         
         /// <summary>
         /// StartRangeQ2Label control.
@@ -1471,13 +1471,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RangeValidator UpperStartMonthValidator;
         
         /// <summary>
-        /// UpperStartMonthCompareValidator0 control.
+        /// UpperStartMonthCompareValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CompareValidator UpperStartMonthCompareValidator0;
+        protected global::System.Web.UI.WebControls.CompareValidator UpperStartMonthCompareValidator;
         
         /// <summary>
         /// StartDayQ2Label control.
@@ -2038,13 +2038,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.TextBox UpperPropertyDamageTextBox;
         
         /// <summary>
-        /// UpperPropertyDamageRequiredFieldValidator0 control.
+        /// UpperPropertyDamageRequiredFieldValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperPropertyDamageRequiredFieldValidator0;
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperPropertyDamageRequiredFieldValidator;
         
         /// <summary>
         /// UpperPropertyDamageRangeValidator control.
@@ -2092,13 +2092,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator UpperCropDamageRequiredFieldValidator;
         
         /// <summary>
-        /// UpperCropDamageRangeValidator0 control.
+        /// UpperCropDamageRangeValidator control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RangeValidator UpperCropDamageRangeValidator0;
+        protected global::System.Web.UI.WebControls.RangeValidator UpperCropDamageRangeValidator;
         
         /// <summary>
         /// UpperCropDamageCompareValidator control.

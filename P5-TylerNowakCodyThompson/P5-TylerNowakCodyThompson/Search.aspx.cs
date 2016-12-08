@@ -14,8 +14,6 @@ namespace P5_TylerNowakCodyThompson
         protected void Page_Load(object sender, EventArgs e)
         {
             UnobtrusiveValidationMode = System.Web.UI.UnobtrusiveValidationMode.None;
-           // if (IsPostBack)
-             //   Validate();
 
             TornadoTypeQLabel.Visible = false;
             TornadoTypeDropDown.Visible = false;
@@ -121,6 +119,120 @@ namespace P5_TylerNowakCodyThompson
             CropDamageQ2Label.Visible = false;
             LowerCropDamageTextBox.Visible = false;
             UpperCropDamageTextBox.Visible = false;
+
+            TornadoTypeCompareValidator.Visible = false;
+            StateCompareValidator.Visible = false;
+            CountyRequiredFieldValidator.Visible = false;
+            StartAzimuthCompareValidator.Visible = false;
+            StartLocationRequiredFieldValidator.Visible = false;
+            EndAzimuthCompareValidator.Visible = false;
+            EndLocationRequiredFieldValidator.Visible = false;
+            TimeZoneCompareValidator.Visible = false;
+            LowerInjuriesRequiredFieldValidator.Visible = false;
+            LowerInjuriesRangeValidator.Visible = false;
+            UpperInjuriesRequiredFieldValidator.Visible = false;
+            UpperInjuriesRangeValidator.Visible = false;
+            UpperInjuriesCompareValidator.Visible = false;
+            LowerFatalitiesRequiredFieldValidator.Visible = false;
+            LowerFatalitiesRangeValidator.Visible = false;
+            UpperFatalitiesRequiredFieldValidator.Visible = false;
+            UpperFatalitiesRangeValidator.Visible = false;
+            UpperFatalitiesCompareValidator.Visible = false;
+            LowerWindSpeedsRequiredFieldValidator.Visible = false;
+            LowerWindSpeedRangeValidator.Visible = false;
+            UpperWindSpeedsRequiredFieldValidator.Visible = false;
+            UpperWindSpeedRangeValidator.Visible = false;
+            UpperWindSpeedCompareValidator.Visible = false;
+            LowerHailSizeRequiredFieldValidator.Visible = false;
+            LowerHailSizeRangeValidator.Visible = false;
+            UpperHailSizeRequiredFieldValidator.Visible = false;
+            UpperHailSizeRangeValidator.Visible = false;
+            UpperHailSizeCompareValidator.Visible = false;
+            LowerStartRangeRequiredFieldValidator.Visible = false;
+            LowerStartRangeValidator.Visible = false;
+            UpperStartRangeRequiredFieldValidator.Visible = false;
+            UpperStartRangeValidator.Visible = false;
+            UpperStartRangeCompareValidator.Visible = false;
+            LowerEndRangeRequiredFieldValidator.Visible = false;
+            LowerEndRangeValidator.Visible = false;
+            UpperEndRangeRequiredFieldValidator.Visible = false;
+            UpperEndRangeValidator.Visible = false;
+            UpperEndRangeCompareValidator.Visible = false;
+            LowerStartYearRequiredFieldValidator.Visible = false;
+            LowerStartYearValidator.Visible = false;
+            UpperStartYearRequiredFieldValidator.Visible = false;
+            UpperStartYearValidator.Visible = false;
+            UpperStartYearCompareValidator.Visible = false;
+            LowerStartMonthRequiredFieldValidator.Visible = false;
+            LowerStartMonthValidator.Visible = false;
+            UpperStartMonthRequiredFieldValidator.Visible = false;
+            UpperStartMonthValidator.Visible = false;
+            UpperStartMonthCompareValidator.Visible = false;
+            LowerStartDayRequiredFieldValidator.Visible = false;
+            LowerStartDayValidator.Visible = false;
+            UpperStartDayRequiredFieldValidator.Visible = false;
+            UpperStartDayValidator.Visible = false;
+            UpperStartDayCompareValidator.Visible = false;
+            LowerEndYearRequiredFieldValidator.Visible = false;
+            LowerEndYearValidator.Visible = false;
+            UpperEndYearRequiredFieldValidator.Visible = false;
+            UpperEndYearValidator.Visible = false;
+            UpperEndYearCompareValidator.Visible = false;
+            LowerEndMonthRequiredFieldValidator.Visible = false;
+            LowerEndMonthValidator.Visible = false;
+            UpperEndMonthRequiredFieldValidator.Visible = false;
+            UpperEndMonthValidator.Visible = false;
+            UpperEndMonthCompareValidator.Visible = false;
+            LowerEndDayRequiredFieldValidator.Visible = false;
+            LowerEndDayValidator.Visible = false;
+            UpperEndDayRequiredFieldValidator.Visible = false;
+            UpperEndDayValidator.Visible = false;
+            UpperEndDayCompareValidator.Visible = false;
+            LowerEndTimeRequiredFieldValidator.Visible = false;
+            LowerEndTimeValidator.Visible = false;
+            UpperEndTimeRequiredFieldValidator.Visible = false;
+            UpperEndTimeValidator.Visible = false;
+            UpperEndTimeCompareValidator.Visible = false;
+            LowerTornadoLengthRequiredFieldValidator.Visible = false;
+            LowerTornadoLengthRangeValidator.Visible = false;
+            UpperTornadoLengthRequiredFieldValidator.Visible = false;
+            UpperTornadoLengthRangeValidator.Visible = false;
+            UpperTornadoLengthCompareValidator.Visible = false;
+            LowerTornadoWidthRequiredFieldValidator.Visible = false;
+            LowerTornadoWidthRangeValidator.Visible = false;
+            UpperTornadoWidthRequiredFieldValidator.Visible = false;
+            UpperTornadoWidthRangeValidator.Visible = false;
+            UpperTornadoWidthCompareValidator.Visible = false;
+            LowerStartLatitudeRequiredFieldValidator.Visible = false;
+            LowerStartLatitudeRangeValidator.Visible = false;
+            UpperStartLatitudeRequiredFieldValidator.Visible = false;
+            UpperStartLatitudeRangeValidator.Visible = false;
+            UpperStartLatitudeCompareValidator.Visible = false;
+            LowerStartLongitudeRequiredFieldValidator.Visible = false;
+            LowerStartLongitudeRangeValidator.Visible = false;
+            UpperStartLatitudeRequiredFieldValidator.Visible = false;
+            UpperStartLatitudeRangeValidator.Visible = false;
+            UpperStartLatitudeCompareValidator.Visible = false;
+            LowerEndLatitudeRequiredFieldValidator.Visible = false;
+            LowerEndLatitudeRangeValidator.Visible = false;
+            UpperEndLatitudeRequiredFieldValidator.Visible = false;
+            UpperEndLatitudeRangeValidator.Visible = false;
+            UpperEndLatitudeCompareValidator.Visible = false;
+            LowerEndLongitudeRequiredFieldValidator.Visible = false;
+            LowerEndLongitudeRangeValidator.Visible = false;
+            UpperEndLongitudeRequiredFieldValidator.Visible = false;
+            UpperEndLongitudeRangeValidator.Visible = false;
+            UpperEndLongitudeCompareValidator.Visible = false;
+            LowerPropertyDamageRequiredFieldValidator.Visible = false;
+            LowerPropertyDamageRangeValidator.Visible = false;
+            UpperPropertyDamageRequiredFieldValidator.Visible = false;
+            UpperPropertyDamageRangeValidator.Visible = false;
+            UpperPropertyDamageCompareValidator.Visible = false;
+            LowerCropDamageRequiredFieldValidator.Visible = false;
+            LowerCropDamageRangeValidator.Visible = false;
+            UpperCropDamageRequiredFieldValidator.Visible = false;
+            UpperCropDamageRangeValidator.Visible = false;
+            UpperCropDamageCompareValidator.Visible = false;
         }
 
         protected void StormTypeDropDown_SelectedIndexChanged(object sender, EventArgs e)
@@ -207,166 +319,284 @@ namespace P5_TylerNowakCodyThompson
                 case "TORNADO TYPE":
                     TornadoTypeQLabel.Visible = true;
                     TornadoTypeDropDown.Visible = true;
+                    TornadoTypeCompareValidator.Visible = true;
                     break;
                 case "STATE":
                     StateQLabel.Visible = true;
                     StateDropDown.Visible = true;
+                    StateCompareValidator.Visible = true;
                     break;
                 case "COUNTY":
                     CountyQLabel.Visible = true;
                     CountyTextBox.Visible = true;
+                    CountyRequiredFieldValidator.Visible = true;
                     break;
                 case "START AZIMUTH":
                     StartAzimuthQlabel.Visible = true;
                     StartAzimuthDropDown.Visible = true;
+                    StartAzimuthCompareValidator.Visible = true;
                     break;
                 case "START LOCATION":
                     StartLocationQlabel.Visible = true;
                     StartLocationTextBox.Visible = true;
+                    StartLocationRequiredFieldValidator.Visible = true;
                     break;
                 case "END AZIMUTH":
                     EndAzimuthQLabel.Visible = true;
                     EndAzimuthDropDown.Visible = true;
+                    EndAzimuthCompareValidator.Visible = true;
                     break;
                 case "END LOCATION":
                     EndLocationQLabel.Visible = true;
                     EndLocationTextBox.Visible = true;
+                    EndLocationRequiredFieldValidator.Visible = true;
                     break;
                 case "TIME ZONE":
                     TimeZoneQLabel.Visible = true;
                     TimeZoneDropDown.Visible = true;
+                    TimeZoneCompareValidator.Visible = true;
                     break;
                 case "INJURIES":
                     InjuriesQ1Label.Visible = true;
                     InjuriesQ2Label.Visible = true;
                     LowerInjuriesTextBox.Visible = true;
                     UpperInjuriesTextBox.Visible = true;
+                    LowerInjuriesRequiredFieldValidator.Visible = true;
+                    LowerInjuriesRangeValidator.Visible = true;
+                    UpperInjuriesRequiredFieldValidator.Visible = true;
+                    UpperInjuriesRangeValidator.Visible = true;
+                    UpperInjuriesCompareValidator.Visible = true;
                     break;
                 case "FATALITIES":
                     FatalitiesQ1Label.Visible = true;
                     FatalitiesQ2Label.Visible = true;
                     LowerFatalitiesTextBox.Visible = true;
                     UpperFatalitiesTextBox.Visible = true;
+                    LowerFatalitiesRequiredFieldValidator.Visible = true;
+                    LowerFatalitiesRangeValidator.Visible = true;
+                    UpperFatalitiesRequiredFieldValidator.Visible = true;
+                    UpperFatalitiesRangeValidator.Visible = true;
+                    UpperFatalitiesCompareValidator.Visible = true;
                     break;
                 case "WIND SPEED":
                     WindSpeedQ1Label.Visible = true;
                     WindSpeedQ2Label.Visible = true;
                     LowerWindSpeedsTextBox.Visible = true;
                     UpperWindSpeedsTextBox.Visible = true;
+                    LowerWindSpeedsRequiredFieldValidator.Visible = true;
+                    LowerWindSpeedRangeValidator.Visible = true;
+                    UpperWindSpeedsRequiredFieldValidator.Visible = true;
+                    UpperWindSpeedRangeValidator.Visible = true;
+                    UpperWindSpeedCompareValidator.Visible = true;
                     break;
                 case "HAIL SIZE":
                     HailSizeQ1Label.Visible = true;
                     HailSizeQ2Label.Visible = true;
                     LowerHailSizeTextBox.Visible = true;
                     UpperHailSizeTextBox.Visible = true;
+                    LowerHailSizeRequiredFieldValidator.Visible = true;
+                    LowerHailSizeRangeValidator.Visible = true;
+                    UpperHailSizeRequiredFieldValidator.Visible = true;
+                    UpperHailSizeRangeValidator.Visible = true;
+                    UpperHailSizeCompareValidator.Visible = true;
                     break;
                 case "START RANGE":
                     StartRangeQ1Label.Visible = true;
                     StartRangeQ2Label.Visible = true;
                     LowerStartRangeTextBox.Visible = true;
                     UpperStartRangeTextBox.Visible = true;
+                    LowerStartRangeRequiredFieldValidator.Visible = true;
+                    LowerStartRangeValidator.Visible = true;
+                    UpperStartRangeRequiredFieldValidator.Visible = true;
+                    UpperStartRangeValidator.Visible = true;
+                    UpperStartRangeCompareValidator.Visible = true;
                     break;
                 case "END RANGE":
                     EndRangeQ1Label.Visible = true;
                     EndRangeQ2Label.Visible = true;
                     LowerEndRangeTextBox.Visible = true;
                     UpperEndRangeTextBox.Visible = true;
+                    LowerEndRangeRequiredFieldValidator.Visible = true;
+                    LowerEndRangeValidator.Visible = true;
+                    UpperEndRangeRequiredFieldValidator.Visible = true;
+                    UpperEndRangeValidator.Visible = true;
+                    UpperEndRangeCompareValidator.Visible = true;
                     break;
                 case "START YEAR":
                     StartYearQ1Label.Visible = true;
                     StartYearQ2Label.Visible = true;
                     LowerStartYearTextBox.Visible = true;
                     UpperStartYearTextBox.Visible = true;
+                    LowerStartYearRequiredFieldValidator.Visible = true;
+                    LowerStartYearValidator.Visible = true;
+                    UpperStartYearRequiredFieldValidator.Visible = true;
+                    UpperStartYearValidator.Visible = true;
+                    UpperStartYearCompareValidator.Visible = true;
                     break;
                 case "START MONTH":
                     StartMonthQ1Label.Visible = true;
                     StartMonthQ2Label.Visible = true;
                     LowerStartMonthTextBox.Visible = true;
                     UpperStartMonthTextBox.Visible = true;
+                    LowerStartMonthRequiredFieldValidator.Visible = true;
+                    LowerStartMonthValidator.Visible = true;
+                    UpperStartMonthRequiredFieldValidator.Visible = true;
+                    UpperStartMonthValidator.Visible = true;
+                    UpperStartMonthCompareValidator.Visible = true;
                     break;
                 case "START DAY":
                     StartDayQ1Label.Visible = true;
                     StartDayQ2Label.Visible = true;
                     LowerStartDayTextBox.Visible = true;
                     UpperStartDayTextBox.Visible = true;
+                    LowerStartDayRequiredFieldValidator.Visible = true;
+                    LowerStartDayValidator.Visible = true;
+                    UpperStartDayRequiredFieldValidator.Visible = true;
+                    UpperStartDayValidator.Visible = true;
+                    UpperStartDayCompareValidator.Visible = true;
                     break;
                 case "START TIME":
                     StartTimeQ1Label.Visible = true;
                     StartTimeQ2Label.Visible = true;
                     LowerStartTimeTextBox.Visible = true;
                     UpperStartTimeTextBox.Visible = true;
+                    LowerStartTimeRequiredFieldValidator.Visible = true;
+                    LowerStartTimeValidator.Visible = true;
+                    UpperStartTimeRequiredFieldValidator.Visible = true;
+                    UpperStartTimeValidator.Visible = true;
+                    UpperStartTimeCompareValidator.Visible = true;
                     break;
                 case "END YEAR":
                     EndYearQ1Label.Visible = true;
                     EndYearQ2Label.Visible = true;
                     LowerEndYearTextBox.Visible = true;
                     UpperEndYearTextBox.Visible = true;
+                    LowerEndYearRequiredFieldValidator.Visible = true;
+                    LowerEndYearValidator.Visible = true;
+                    UpperEndYearRequiredFieldValidator.Visible = true;
+                    UpperEndYearValidator.Visible = true;
+                    UpperEndYearCompareValidator.Visible = true;
                     break;
                 case "END MONTH":
                     EndMonthQ1Label.Visible = true;
                     EndMonthQ2Label.Visible = true;
                     LowerEndMonthTextBox.Visible = true;
                     UpperEndMonthTextBox.Visible = true;
+                    LowerEndMonthRequiredFieldValidator.Visible = true;
+                    LowerEndMonthValidator.Visible = true;
+                    UpperEndMonthRequiredFieldValidator.Visible = true;
+                    UpperEndMonthValidator.Visible = true;
+                    UpperEndMonthCompareValidator.Visible = true;
                     break;
                 case "END DAY":
                     EndDayQ1Label.Visible = true;
                     EndDayQ2Label.Visible = true;
                     LowerEndDayTextBox.Visible = true;
                     UpperEndDayTextBox.Visible = true;
+                    LowerEndDayRequiredFieldValidator.Visible = true;
+                    LowerEndDayValidator.Visible = true;
+                    UpperEndDayRequiredFieldValidator.Visible = true;
+                    UpperEndDayValidator.Visible = true;
+                    UpperEndDayCompareValidator.Visible = true;
                     break;
                 case "END TIME":
                     EndTimeQ1Label.Visible = true;
                     EndTimeQ2Label.Visible = true;
                     LowerEndTimeTextBox.Visible = true;
                     UpperEndTimeTextBox.Visible = true;
+                    LowerEndTimeRequiredFieldValidator.Visible = true;
+                    LowerEndTimeValidator.Visible = true;
+                    UpperEndTimeRequiredFieldValidator.Visible = true;
+                    UpperEndTimeValidator.Visible = true;
+                    UpperEndTimeCompareValidator.Visible = true;
                     break;
                 case "TORNADO LENGTH":
                     TornadoLengthQ1Label.Visible = true;
                     TornadoLengthQ2Label.Visible = true;
                     LowerTornadoLengthTextBox.Visible = true;
                     UpperTornadoLengthTextBox.Visible = true;
+                    LowerTornadoLengthRequiredFieldValidator.Visible = true;
+                    LowerTornadoLengthRangeValidator.Visible = true;
+                    UpperTornadoLengthRequiredFieldValidator.Visible = true;
+                    UpperTornadoLengthRangeValidator.Visible = true;
+                    UpperTornadoLengthCompareValidator.Visible = true;
                     break;
                 case "TORNADO WIDTH":
                     TornadoWidthQ1Label.Visible = true;
                     TornadoWidthQ2Label.Visible = true;
                     LowerTornadoWidthTextBox.Visible = true;
                     UpperTornadoWidthTextBox.Visible = true;
+                    LowerTornadoWidthRequiredFieldValidator.Visible = true;
+                    LowerTornadoWidthRangeValidator.Visible = true;
+                    UpperTornadoWidthRequiredFieldValidator.Visible = true;
+                    UpperTornadoWidthRangeValidator.Visible = true;
+                    UpperTornadoWidthCompareValidator.Visible = true;
                     break;
                 case "START LATITUDE":
                     StartLatitudeQ1Label.Visible = true;
                     StartLatitudeQ2Label.Visible = true;
                     LowerStartLatitudeTextBox.Visible = true;
                     UpperStartLatitudeTextBox.Visible = true;
+                    LowerStartLatitudeRequiredFieldValidator.Visible = true;
+                    LowerStartLatitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeRequiredFieldValidator.Visible = true;
+                    UpperStartLatitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeCompareValidator.Visible = true;
                     break;
                 case "START LONGITUDE":
                     StartLongitudeQ1Label.Visible = true;
                     StartLongitudeQ2Label.Visible = true;
                     LowerStartLongitudeTextBox.Visible = true;
                     UpperStartLongitudeTextBox.Visible = true;
+                    LowerStartLongitudeRequiredFieldValidator.Visible = true;
+                    LowerStartLongitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeRequiredFieldValidator.Visible = true;
+                    UpperStartLatitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeCompareValidator.Visible = true;
                     break;
                 case "END LATITUDE":
                     EndLatitudeQ1Label.Visible = true;
                     EndLatitudeQ2Label.Visible = true;
                     LowerEndLatitudeTextBox.Visible = true;
                     UpperEndLatitudeTextBox.Visible = true;
+                    LowerEndLatitudeRequiredFieldValidator.Visible = true;
+                    LowerEndLatitudeRangeValidator.Visible = true;
+                    UpperEndLatitudeRequiredFieldValidator.Visible = true;
+                    UpperEndLatitudeRangeValidator.Visible = true;
+                    UpperEndLatitudeCompareValidator.Visible = true;
                     break;
                 case "END LONGITUDE":
                     EndLongitudeQ1Label.Visible = true;
                     EndLongitudeQ2Label.Visible = true;
                     LowerEndLongitudeTextBox.Visible = true;
                     UpperEndLongitudeTextBox.Visible = true;
+                    LowerEndLongitudeRequiredFieldValidator.Visible = true;
+                    LowerEndLongitudeRangeValidator.Visible = true;
+                    UpperEndLongitudeRequiredFieldValidator.Visible = true;
+                    UpperEndLongitudeRangeValidator.Visible = true;
+                    UpperEndLongitudeCompareValidator.Visible = true;
                     break;
                 case "PROPERTY DAMAGE":
                     PropertyDamageQ1Label.Visible = true;
                     PropertyDamageQ2Label.Visible = true;
                     LowerPropertyDamageTextBox.Visible = true;
                     UpperPropertyDamageTextBox.Visible = true;
+                    LowerPropertyDamageRequiredFieldValidator.Visible = true;
+                    LowerPropertyDamageRangeValidator.Visible = true;
+                    UpperPropertyDamageRequiredFieldValidator.Visible = true;
+                    UpperPropertyDamageRangeValidator.Visible = true;
+                    UpperPropertyDamageCompareValidator.Visible = true;
                     break;
                 case "CROP DAMAGE":
                     CropDamageQ1Label.Visible = true;
                     CropDamageQ2Label.Visible = true;
                     LowerCropDamageTextBox.Visible = true;
                     UpperCropDamageTextBox.Visible = true;
+                    LowerCropDamageRequiredFieldValidator.Visible = true;
+                    LowerCropDamageRangeValidator.Visible = true;
+                    UpperCropDamageRequiredFieldValidator.Visible = true;
+                    UpperCropDamageRangeValidator.Visible = true;
+                    UpperCropDamageCompareValidator.Visible = true;
                     break;
                 case "PICK ONE":
                     break;
@@ -459,6 +689,10 @@ namespace P5_TylerNowakCodyThompson
         {
             EventList results = new EventList();
 
+            // Validate user input
+            if (IsPostBack)
+                Validate();
+
             // Pull stored EventList from session variable
             theList = (EventList)Session["theList"];
 
@@ -466,143 +700,365 @@ namespace P5_TylerNowakCodyThompson
             switch (PropertyDropDown.SelectedValue)
             {
                 case "TORNADO TYPE":
+                    TornadoTypeQLabel.Visible = true;
+                    TornadoTypeDropDown.Visible = true;
+                    TornadoTypeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    TornadoTypeDropDown.SelectedValue, results);
                     break;
                 case "STATE":
+                    StateQLabel.Visible = true;
+                    StateDropDown.Visible = true;
+                    StateCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    StateDropDown.SelectedValue, results);
                     break;
                 case "COUNTY":
+                    CountyQLabel.Visible = true;
+                    CountyTextBox.Visible = true;
+                    CountyRequiredFieldValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    CountyTextBox.Text, results);
                     break;
                 case "START AZIMUTH":
+                    StartAzimuthQlabel.Visible = true;
+                    StartAzimuthDropDown.Visible = true;
+                    StartAzimuthCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    StartAzimuthDropDown.SelectedValue, results);
                     break;
                 case "START LOCATION":
+                    StartLocationQlabel.Visible = true;
+                    StartLocationTextBox.Visible = true;
+                    StartLocationRequiredFieldValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    StartLocationTextBox.Text, results);
                     break;
                 case "END AZIMUTH":
+                    EndAzimuthQLabel.Visible = true;
+                    EndAzimuthDropDown.Visible = true;
+                    EndAzimuthCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    EndAzimuthDropDown.SelectedValue, results);
                     break;
                 case "END LOCATION":
+                    EndLocationQLabel.Visible = true;
+                    EndLocationTextBox.Visible = true;
+                    EndLocationRequiredFieldValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    EndLocationTextBox.Text, results);
                     break;
                 case "TIME ZONE":
+                    TimeZoneQLabel.Visible = true;
+                    TimeZoneDropDown.Visible = true;
+                    TimeZoneCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    TimeZoneDropDown.SelectedValue, results);
                     break;
                 case "INJURIES":
+                    InjuriesQ1Label.Visible = true;
+                    InjuriesQ2Label.Visible = true;
+                    LowerInjuriesTextBox.Visible = true;
+                    UpperInjuriesTextBox.Visible = true;
+                    LowerInjuriesRequiredFieldValidator.Visible = true;
+                    LowerInjuriesRangeValidator.Visible = true;
+                    UpperInjuriesRequiredFieldValidator.Visible = true;
+                    UpperInjuriesRangeValidator.Visible = true;
+                    UpperInjuriesCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerInjuriesTextBox.Text),
                                    Convert.ToInt32(UpperInjuriesTextBox.Text), results);
                     break;
                 case "FATALITIES":
+                    FatalitiesQ1Label.Visible = true;
+                    FatalitiesQ2Label.Visible = true;
+                    LowerFatalitiesTextBox.Visible = true;
+                    UpperFatalitiesTextBox.Visible = true;
+                    LowerFatalitiesRequiredFieldValidator.Visible = true;
+                    LowerFatalitiesRangeValidator.Visible = true;
+                    UpperFatalitiesRequiredFieldValidator.Visible = true;
+                    UpperFatalitiesRangeValidator.Visible = true;
+                    UpperFatalitiesCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerFatalitiesTextBox.Text),
                                    Convert.ToInt32(UpperFatalitiesTextBox.Text), results);
                     break;
                 case "WIND SPEED":
+                    WindSpeedQ1Label.Visible = true;
+                    WindSpeedQ2Label.Visible = true;
+                    LowerWindSpeedsTextBox.Visible = true;
+                    UpperWindSpeedsTextBox.Visible = true;
+                    LowerWindSpeedsRequiredFieldValidator.Visible = true;
+                    LowerWindSpeedRangeValidator.Visible = true;
+                    UpperWindSpeedsRequiredFieldValidator.Visible = true;
+                    UpperWindSpeedRangeValidator.Visible = true;
+                    UpperWindSpeedCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerWindSpeedsTextBox.Text),
                                    Convert.ToInt32(UpperWindSpeedsTextBox.Text), results);
                     break;
                 case "HAIL SIZE":
+                    HailSizeQ1Label.Visible = true;
+                    HailSizeQ2Label.Visible = true;
+                    LowerHailSizeTextBox.Visible = true;
+                    UpperHailSizeTextBox.Visible = true;
+                    LowerHailSizeRequiredFieldValidator.Visible = true;
+                    LowerHailSizeRangeValidator.Visible = true;
+                    UpperHailSizeRequiredFieldValidator.Visible = true;
+                    UpperHailSizeRangeValidator.Visible = true;
+                    UpperHailSizeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDouble(LowerHailSizeTextBox.Text),
                                    Convert.ToDouble(UpperHailSizeTextBox.Text), results);
                     break;
                 case "START RANGE":
+                    StartRangeQ1Label.Visible = true;
+                    StartRangeQ2Label.Visible = true;
+                    LowerStartRangeTextBox.Visible = true;
+                    UpperStartRangeTextBox.Visible = true;
+                    LowerStartRangeRequiredFieldValidator.Visible = true;
+                    LowerStartRangeValidator.Visible = true;
+                    UpperStartRangeRequiredFieldValidator.Visible = true;
+                    UpperStartRangeValidator.Visible = true;
+                    UpperStartRangeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerStartRangeTextBox.Text),
                                    Convert.ToInt32(UpperStartRangeTextBox.Text), results);
                     break;
                 case "END RANGE":
+                    EndRangeQ1Label.Visible = true;
+                    EndRangeQ2Label.Visible = true;
+                    LowerEndRangeTextBox.Visible = true;
+                    UpperEndRangeTextBox.Visible = true;
+                    LowerEndRangeRequiredFieldValidator.Visible = true;
+                    LowerEndRangeValidator.Visible = true;
+                    UpperEndRangeRequiredFieldValidator.Visible = true;
+                    UpperEndRangeValidator.Visible = true;
+                    UpperEndRangeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerEndRangeTextBox.Text),
                                    Convert.ToInt32(UpperEndRangeTextBox.Text), results);
                     break;
                 case "START YEAR":
+                    StartTimeQ1Label.Visible = true;
+                    StartTimeQ2Label.Visible = true;
+                    LowerStartTimeTextBox.Visible = true;
+                    UpperStartTimeTextBox.Visible = true;
+                    LowerStartTimeRequiredFieldValidator.Visible = true;
+                    LowerStartTimeValidator.Visible = true;
+                    UpperStartTimeRequiredFieldValidator.Visible = true;
+                    UpperStartTimeValidator.Visible = true;
+                    UpperStartTimeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerStartYearTextBox.Text),
                                    Convert.ToInt32(UpperStartYearTextBox.Text), results);
                     break;
                 case "START MONTH":
+                    StartMonthQ1Label.Visible = true;
+                    StartMonthQ2Label.Visible = true;
+                    LowerStartMonthTextBox.Visible = true;
+                    UpperStartMonthTextBox.Visible = true;
+                    LowerStartMonthRequiredFieldValidator.Visible = true;
+                    LowerStartMonthValidator.Visible = true;
+                    UpperStartMonthRequiredFieldValidator.Visible = true;
+                    UpperStartMonthValidator.Visible = true;
+                    UpperStartMonthCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerStartMonthTextBox.Text),
                                    Convert.ToInt32(UpperStartMonthTextBox.Text), results);
                     break;
                 case "START DAY":
+                    StartDayQ1Label.Visible = true;
+                    StartDayQ2Label.Visible = true;
+                    LowerStartDayTextBox.Visible = true;
+                    UpperStartDayTextBox.Visible = true;
+                    LowerStartDayRequiredFieldValidator.Visible = true;
+                    LowerStartDayValidator.Visible = true;
+                    UpperStartDayRequiredFieldValidator.Visible = true;
+                    UpperStartDayValidator.Visible = true;
+                    UpperStartDayCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerStartDayTextBox.Text),
                                    Convert.ToInt32(UpperStartDayTextBox.Text), results);
                     break;
                 case "START TIME":
+                    StartTimeQ1Label.Visible = true;
+                    StartTimeQ2Label.Visible = true;
+                    LowerStartTimeTextBox.Visible = true;
+                    UpperStartTimeTextBox.Visible = true;
+                    LowerStartTimeRequiredFieldValidator.Visible = true;
+                    LowerStartTimeValidator.Visible = true;
+                    UpperStartTimeRequiredFieldValidator.Visible = true;
+                    UpperStartTimeValidator.Visible = true;
+                    UpperStartTimeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerStartTimeTextBox.Text),
                                    Convert.ToInt32(UpperStartTimeTextBox.Text), results);
                     break;
                 case "END YEAR":
+                    EndYearQ1Label.Visible = true;
+                    EndYearQ2Label.Visible = true;
+                    LowerEndYearTextBox.Visible = true;
+                    UpperEndYearTextBox.Visible = true;
+                    LowerEndYearRequiredFieldValidator.Visible = true;
+                    LowerEndYearValidator.Visible = true;
+                    UpperEndYearRequiredFieldValidator.Visible = true;
+                    UpperEndYearValidator.Visible = true;
+                    UpperEndYearCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerEndYearTextBox.Text),
                                    Convert.ToInt32(UpperEndYearTextBox.Text), results);
                     break;
                 case "END MONTH":
+                    EndMonthQ1Label.Visible = true;
+                    EndMonthQ2Label.Visible = true;
+                    LowerEndMonthTextBox.Visible = true;
+                    UpperEndMonthTextBox.Visible = true;
+                    LowerEndMonthRequiredFieldValidator.Visible = true;
+                    LowerEndMonthValidator.Visible = true;
+                    UpperEndMonthRequiredFieldValidator.Visible = true;
+                    UpperEndMonthValidator.Visible = true;
+                    UpperEndMonthCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerEndMonthTextBox.Text),
                                    Convert.ToInt32(UpperEndMonthTextBox.Text), results);
                     break;
                 case "END DAY":
+                    EndDayQ1Label.Visible = true;
+                    EndDayQ2Label.Visible = true;
+                    LowerEndDayTextBox.Visible = true;
+                    UpperEndDayTextBox.Visible = true;
+                    LowerEndDayRequiredFieldValidator.Visible = true;
+                    LowerEndDayValidator.Visible = true;
+                    UpperEndDayRequiredFieldValidator.Visible = true;
+                    UpperEndDayValidator.Visible = true;
+                    UpperEndDayCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerEndDayTextBox.Text),
                                    Convert.ToInt32(UpperEndDayTextBox.Text), results);
                     break;
                 case "END TIME":
+                    EndTimeQ1Label.Visible = true;
+                    EndTimeQ2Label.Visible = true;
+                    LowerEndTimeTextBox.Visible = true;
+                    UpperEndTimeTextBox.Visible = true;
+                    LowerEndTimeRequiredFieldValidator.Visible = true;
+                    LowerEndTimeValidator.Visible = true;
+                    UpperEndTimeRequiredFieldValidator.Visible = true;
+                    UpperEndTimeValidator.Visible = true;
+                    UpperEndTimeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToInt32(LowerEndTimeTextBox.Text),
                                    Convert.ToInt32(UpperEndTimeTextBox.Text), results);
                     break;
                 case "TORNADO LENGTH":
+                    TornadoLengthQ1Label.Visible = true;
+                    TornadoLengthQ2Label.Visible = true;
+                    LowerTornadoLengthTextBox.Visible = true;
+                    UpperTornadoLengthTextBox.Visible = true;
+                    LowerTornadoLengthRequiredFieldValidator.Visible = true;
+                    LowerTornadoLengthRangeValidator.Visible = true;
+                    UpperTornadoLengthRequiredFieldValidator.Visible = true;
+                    UpperTornadoLengthRangeValidator.Visible = true;
+                    UpperTornadoLengthCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDouble(LowerTornadoLengthTextBox.Text),
                                    Convert.ToDouble(UpperTornadoLengthTextBox.Text), results);
                     break;
                 case "TORNADO WIDTH":
+                    TornadoWidthQ1Label.Visible = true;
+                    TornadoWidthQ2Label.Visible = true;
+                    LowerTornadoWidthTextBox.Visible = true;
+                    UpperTornadoWidthTextBox.Visible = true;
+                    LowerTornadoWidthRequiredFieldValidator.Visible = true;
+                    LowerTornadoWidthRangeValidator.Visible = true;
+                    UpperTornadoWidthRequiredFieldValidator.Visible = true;
+                    UpperTornadoWidthRangeValidator.Visible = true;
+                    UpperTornadoWidthCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDouble(LowerTornadoWidthTextBox.Text),
                                    Convert.ToDouble(UpperTornadoWidthTextBox.Text), results);
                     break;
                 case "START LATITUDE":
+                    StartLatitudeQ1Label.Visible = true;
+                    StartLatitudeQ2Label.Visible = true;
+                    LowerStartLatitudeTextBox.Visible = true;
+                    UpperStartLatitudeTextBox.Visible = true;
+                    LowerStartLatitudeRequiredFieldValidator.Visible = true;
+                    LowerStartLatitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeRequiredFieldValidator.Visible = true;
+                    UpperStartLatitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDouble(LowerStartLatitudeTextBox.Text),
                                    Convert.ToDouble(UpperStartLatitudeTextBox.Text), results);
                     break;
                 case "START LONGITUDE":
+                    StartLongitudeQ1Label.Visible = true;
+                    StartLongitudeQ2Label.Visible = true;
+                    LowerStartLongitudeTextBox.Visible = true;
+                    UpperStartLongitudeTextBox.Visible = true;
+                    LowerStartLongitudeRequiredFieldValidator.Visible = true;
+                    LowerStartLongitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeRequiredFieldValidator.Visible = true;
+                    UpperStartLatitudeRangeValidator.Visible = true;
+                    UpperStartLatitudeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDouble(LowerStartLongitudeTextBox.Text),
                                    Convert.ToDouble(UpperStartLongitudeTextBox.Text), results);
                     break;
                 case "END LATITUDE":
+                    EndLatitudeQ1Label.Visible = true;
+                    EndLatitudeQ2Label.Visible = true;
+                    LowerEndLatitudeTextBox.Visible = true;
+                    UpperEndLatitudeTextBox.Visible = true;
+                    LowerEndLatitudeRequiredFieldValidator.Visible = true;
+                    LowerEndLatitudeRangeValidator.Visible = true;
+                    UpperEndLatitudeRequiredFieldValidator.Visible = true;
+                    UpperEndLatitudeRangeValidator.Visible = true;
+                    UpperEndLatitudeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDouble(LowerEndLatitudeTextBox.Text),
                                    Convert.ToDouble(UpperEndLatitudeTextBox.Text), results);
                     break;
                 case "END LONGITUDE":
+                    EndLongitudeQ1Label.Visible = true;
+                    EndLongitudeQ2Label.Visible = true;
+                    LowerEndLongitudeTextBox.Visible = true;
+                    UpperEndLongitudeTextBox.Visible = true;
+                    LowerEndLongitudeRequiredFieldValidator.Visible = true;
+                    LowerEndLongitudeRangeValidator.Visible = true;
+                    UpperEndLongitudeRequiredFieldValidator.Visible = true;
+                    UpperEndLongitudeRangeValidator.Visible = true;
+                    UpperEndLongitudeCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDouble(LowerEndLongitudeTextBox.Text),
                                    Convert.ToDouble(UpperEndLongitudeTextBox.Text), results);
                     break;
                 case "PROPERTY DAMAGE":
+                    PropertyDamageQ1Label.Visible = true;
+                    PropertyDamageQ2Label.Visible = true;
+                    LowerPropertyDamageTextBox.Visible = true;
+                    UpperPropertyDamageTextBox.Visible = true;
+                    LowerPropertyDamageRequiredFieldValidator.Visible = true;
+                    LowerPropertyDamageRangeValidator.Visible = true;
+                    UpperPropertyDamageRequiredFieldValidator.Visible = true;
+                    UpperPropertyDamageRangeValidator.Visible = true;
+                    UpperPropertyDamageCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDecimal(LowerPropertyDamageTextBox.Text),
                                    Convert.ToDecimal(UpperPropertyDamageTextBox.Text), results);
                     break;
                 case "CROP DAMAGE":
+                    CropDamageQ1Label.Visible = true;
+                    CropDamageQ2Label.Visible = true;
+                    LowerCropDamageTextBox.Visible = true;
+                    UpperCropDamageTextBox.Visible = true;
+                    LowerCropDamageRequiredFieldValidator.Visible = true;
+                    LowerCropDamageRangeValidator.Visible = true;
+                    UpperCropDamageRequiredFieldValidator.Visible = true;
+                    UpperCropDamageRangeValidator.Visible = true;
+                    UpperCropDamageCompareValidator.Visible = true;
                     theList.Search(StormTypeDropDown.SelectedValue, PropertyDropDown.SelectedValue,
                                    Convert.ToDecimal(LowerCropDamageTextBox.Text),
                                    Convert.ToDecimal(UpperCropDamageTextBox.Text), results);
