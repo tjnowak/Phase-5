@@ -71,7 +71,75 @@
     </div>
         <asp:Label ID="StartYearLabel" runat="server" Text="Enter event start year (Ex: 1976):"></asp:Label>
 &nbsp;
-        <asp:TextBox ID="StartYearTextBox" runat="server" OnTextChanged="TextBox1_TextChanged"></asp:TextBox>
+        <asp:DropDownList ID="StartYearDropDownList" runat="server" OnSelectedIndexChanged="StartYearDropDown_SelectedIndexChanged">
+            <asp:ListItem>Pick One</asp:ListItem>
+            <asp:ListItem>1951</asp:ListItem>
+            <asp:ListItem>1952</asp:ListItem>
+            <asp:ListItem>1953</asp:ListItem>
+            <asp:ListItem>1954</asp:ListItem>
+            <asp:ListItem>1955</asp:ListItem>
+            <asp:ListItem>1956</asp:ListItem>
+            <asp:ListItem>1957</asp:ListItem>
+            <asp:ListItem>1958</asp:ListItem>
+            <asp:ListItem>1959</asp:ListItem>
+            <asp:ListItem>1960</asp:ListItem>
+            <asp:ListItem>1961</asp:ListItem>
+            <asp:ListItem>1962</asp:ListItem>
+            <asp:ListItem>1963</asp:ListItem>
+            <asp:ListItem>1964</asp:ListItem>
+            <asp:ListItem>1965</asp:ListItem>
+            <asp:ListItem>1966</asp:ListItem>
+            <asp:ListItem>1967</asp:ListItem>
+            <asp:ListItem>1968</asp:ListItem>
+            <asp:ListItem>1969</asp:ListItem>
+            <asp:ListItem>1970</asp:ListItem>
+            <asp:ListItem>1971</asp:ListItem>
+            <asp:ListItem>1972</asp:ListItem>
+            <asp:ListItem>1973</asp:ListItem>
+            <asp:ListItem>1974</asp:ListItem>
+            <asp:ListItem>1975</asp:ListItem>
+            <asp:ListItem>1976</asp:ListItem>
+            <asp:ListItem>1977</asp:ListItem>
+            <asp:ListItem>1978</asp:ListItem>
+            <asp:ListItem>1979</asp:ListItem>
+            <asp:ListItem>1980</asp:ListItem>
+            <asp:ListItem>1981</asp:ListItem>
+            <asp:ListItem>1982</asp:ListItem>
+            <asp:ListItem>1983</asp:ListItem>
+            <asp:ListItem>1984</asp:ListItem>
+            <asp:ListItem>1985</asp:ListItem>
+            <asp:ListItem>1986</asp:ListItem>
+            <asp:ListItem>1987</asp:ListItem>
+            <asp:ListItem>1988</asp:ListItem>
+            <asp:ListItem>1989</asp:ListItem>
+            <asp:ListItem>1990</asp:ListItem>
+            <asp:ListItem>1991</asp:ListItem>
+            <asp:ListItem>1992</asp:ListItem>
+            <asp:ListItem>1993</asp:ListItem>
+            <asp:ListItem>1994</asp:ListItem>
+            <asp:ListItem>1995</asp:ListItem>
+            <asp:ListItem>1996</asp:ListItem>
+            <asp:ListItem>1997</asp:ListItem>
+            <asp:ListItem>1998</asp:ListItem>
+            <asp:ListItem>1999</asp:ListItem>
+            <asp:ListItem>2000</asp:ListItem>
+            <asp:ListItem>2001</asp:ListItem>
+            <asp:ListItem>2002</asp:ListItem>
+            <asp:ListItem>2003</asp:ListItem>
+            <asp:ListItem>2004</asp:ListItem>
+            <asp:ListItem>2005</asp:ListItem>
+            <asp:ListItem>2006</asp:ListItem>
+            <asp:ListItem>2007</asp:ListItem>
+            <asp:ListItem>2008</asp:ListItem>
+            <asp:ListItem>2009</asp:ListItem>
+            <asp:ListItem>2010</asp:ListItem>
+            <asp:ListItem>2011</asp:ListItem>
+            <asp:ListItem>2012</asp:ListItem>
+            <asp:ListItem>2013</asp:ListItem>
+            <asp:ListItem>2014</asp:ListItem>
+            <asp:ListItem>2015</asp:ListItem>
+            <asp:ListItem>2016</asp:ListItem>
+        </asp:DropDownList>
 &nbsp;&nbsp;&nbsp;&nbsp;
         <asp:Label ID="StartYearError" runat="server" ForeColor="Red" Text="*"></asp:Label>
         <br />
@@ -94,7 +162,40 @@
         <br />
         <br />
         <asp:Label ID="StartDayLabel" runat="server" Text="Enter the start day (day of month):"></asp:Label>
-        <asp:TextBox ID="StartDayTextBox" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="StartDayDropDown" runat="server">
+            <asp:ListItem>Pick One</asp:ListItem>
+            <asp:ListItem>1</asp:ListItem>
+            <asp:ListItem>2</asp:ListItem>
+            <asp:ListItem>3</asp:ListItem>
+            <asp:ListItem>4</asp:ListItem>
+            <asp:ListItem>5</asp:ListItem>
+            <asp:ListItem>6</asp:ListItem>
+            <asp:ListItem>7</asp:ListItem>
+            <asp:ListItem>8</asp:ListItem>
+            <asp:ListItem>9</asp:ListItem>
+            <asp:ListItem>10</asp:ListItem>
+            <asp:ListItem>11</asp:ListItem>
+            <asp:ListItem>12</asp:ListItem>
+            <asp:ListItem>13</asp:ListItem>
+            <asp:ListItem>14</asp:ListItem>
+            <asp:ListItem>15</asp:ListItem>
+            <asp:ListItem>16</asp:ListItem>
+            <asp:ListItem>17</asp:ListItem>
+            <asp:ListItem>18</asp:ListItem>
+            <asp:ListItem>19</asp:ListItem>
+            <asp:ListItem>20</asp:ListItem>
+            <asp:ListItem>21</asp:ListItem>
+            <asp:ListItem>22</asp:ListItem>
+            <asp:ListItem>23</asp:ListItem>
+            <asp:ListItem>24</asp:ListItem>
+            <asp:ListItem>25</asp:ListItem>
+            <asp:ListItem>26</asp:ListItem>
+            <asp:ListItem>27</asp:ListItem>
+            <asp:ListItem>28</asp:ListItem>
+            <asp:ListItem>29</asp:ListItem>
+            <asp:ListItem>30</asp:ListItem>
+            <asp:ListItem>31</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br />
         <asp:Label ID="StartTimeLabel" runat="server" Text="Enter the time (24-hr time with no ':' ) the storm began:"></asp:Label>
@@ -102,7 +203,75 @@
         <br />
         <br />
         <asp:Label ID="EndYearLabel" runat="server" Text="Enter event end year (Ex: 1976):"></asp:Label>
-        <asp:TextBox ID="EndYearTextBox" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="EndYearDropDownList" runat="server" OnSelectedIndexChanged="StartYearDropDown_SelectedIndexChanged">
+            <asp:ListItem>Pick One</asp:ListItem>
+            <asp:ListItem>1951</asp:ListItem>
+            <asp:ListItem>1952</asp:ListItem>
+            <asp:ListItem>1953</asp:ListItem>
+            <asp:ListItem>1954</asp:ListItem>
+            <asp:ListItem>1955</asp:ListItem>
+            <asp:ListItem>1956</asp:ListItem>
+            <asp:ListItem>1957</asp:ListItem>
+            <asp:ListItem>1958</asp:ListItem>
+            <asp:ListItem>1959</asp:ListItem>
+            <asp:ListItem>1960</asp:ListItem>
+            <asp:ListItem>1961</asp:ListItem>
+            <asp:ListItem>1962</asp:ListItem>
+            <asp:ListItem>1963</asp:ListItem>
+            <asp:ListItem>1964</asp:ListItem>
+            <asp:ListItem>1965</asp:ListItem>
+            <asp:ListItem>1966</asp:ListItem>
+            <asp:ListItem>1967</asp:ListItem>
+            <asp:ListItem>1968</asp:ListItem>
+            <asp:ListItem>1969</asp:ListItem>
+            <asp:ListItem>1970</asp:ListItem>
+            <asp:ListItem>1971</asp:ListItem>
+            <asp:ListItem>1972</asp:ListItem>
+            <asp:ListItem>1973</asp:ListItem>
+            <asp:ListItem>1974</asp:ListItem>
+            <asp:ListItem>1975</asp:ListItem>
+            <asp:ListItem>1976</asp:ListItem>
+            <asp:ListItem>1977</asp:ListItem>
+            <asp:ListItem>1978</asp:ListItem>
+            <asp:ListItem>1979</asp:ListItem>
+            <asp:ListItem>1980</asp:ListItem>
+            <asp:ListItem>1981</asp:ListItem>
+            <asp:ListItem>1982</asp:ListItem>
+            <asp:ListItem>1983</asp:ListItem>
+            <asp:ListItem>1984</asp:ListItem>
+            <asp:ListItem>1985</asp:ListItem>
+            <asp:ListItem>1986</asp:ListItem>
+            <asp:ListItem>1987</asp:ListItem>
+            <asp:ListItem>1988</asp:ListItem>
+            <asp:ListItem>1989</asp:ListItem>
+            <asp:ListItem>1990</asp:ListItem>
+            <asp:ListItem>1991</asp:ListItem>
+            <asp:ListItem>1992</asp:ListItem>
+            <asp:ListItem>1993</asp:ListItem>
+            <asp:ListItem>1994</asp:ListItem>
+            <asp:ListItem>1995</asp:ListItem>
+            <asp:ListItem>1996</asp:ListItem>
+            <asp:ListItem>1997</asp:ListItem>
+            <asp:ListItem>1998</asp:ListItem>
+            <asp:ListItem>1999</asp:ListItem>
+            <asp:ListItem>2000</asp:ListItem>
+            <asp:ListItem>2001</asp:ListItem>
+            <asp:ListItem>2002</asp:ListItem>
+            <asp:ListItem>2003</asp:ListItem>
+            <asp:ListItem>2004</asp:ListItem>
+            <asp:ListItem>2005</asp:ListItem>
+            <asp:ListItem>2006</asp:ListItem>
+            <asp:ListItem>2007</asp:ListItem>
+            <asp:ListItem>2008</asp:ListItem>
+            <asp:ListItem>2009</asp:ListItem>
+            <asp:ListItem>2010</asp:ListItem>
+            <asp:ListItem>2011</asp:ListItem>
+            <asp:ListItem>2012</asp:ListItem>
+            <asp:ListItem>2013</asp:ListItem>
+            <asp:ListItem>2014</asp:ListItem>
+            <asp:ListItem>2015</asp:ListItem>
+            <asp:ListItem>2016</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br />
         <asp:Label ID="EndMonthLabel" runat="server" Text="Choose event end month:  "></asp:Label>
@@ -123,7 +292,40 @@
         <br />
         <br />
         <asp:Label ID="EndDayLabel" runat="server" Text="Enter the end day (day of month):"></asp:Label>
-        <asp:TextBox ID="EndDayTextBox" runat="server"></asp:TextBox>
+        <asp:DropDownList ID="EndDayDropDown" runat="server">
+            <asp:ListItem>Pick One</asp:ListItem>
+            <asp:ListItem>1</asp:ListItem>
+            <asp:ListItem>2</asp:ListItem>
+            <asp:ListItem>3</asp:ListItem>
+            <asp:ListItem>4</asp:ListItem>
+            <asp:ListItem>5</asp:ListItem>
+            <asp:ListItem>6</asp:ListItem>
+            <asp:ListItem>7</asp:ListItem>
+            <asp:ListItem>8</asp:ListItem>
+            <asp:ListItem>9</asp:ListItem>
+            <asp:ListItem>10</asp:ListItem>
+            <asp:ListItem>11</asp:ListItem>
+            <asp:ListItem>12</asp:ListItem>
+            <asp:ListItem>13</asp:ListItem>
+            <asp:ListItem>14</asp:ListItem>
+            <asp:ListItem>15</asp:ListItem>
+            <asp:ListItem>16</asp:ListItem>
+            <asp:ListItem>17</asp:ListItem>
+            <asp:ListItem>18</asp:ListItem>
+            <asp:ListItem>19</asp:ListItem>
+            <asp:ListItem>20</asp:ListItem>
+            <asp:ListItem>21</asp:ListItem>
+            <asp:ListItem>22</asp:ListItem>
+            <asp:ListItem>23</asp:ListItem>
+            <asp:ListItem>24</asp:ListItem>
+            <asp:ListItem>25</asp:ListItem>
+            <asp:ListItem>26</asp:ListItem>
+            <asp:ListItem>27</asp:ListItem>
+            <asp:ListItem>28</asp:ListItem>
+            <asp:ListItem>29</asp:ListItem>
+            <asp:ListItem>30</asp:ListItem>
+            <asp:ListItem>31</asp:ListItem>
+        </asp:DropDownList>
         <br />
         <br />
         <asp:Label ID="EndTimeLabel" runat="server" Text="Enter the time (24-hr time with no ':' ) the storm ended:"></asp:Label>
@@ -207,17 +409,17 @@
         <br />
         <br />
         <asp:Label ID="TimeZoneLabel" runat="server" Text="Choose the time zone the event took place in:"></asp:Label>
-        <asp:DropDownList ID="DropDownList1" runat="server">
-            <asp:ListItem>Atlantic Standard Time (AST)</asp:ListItem>
-            <asp:ListItem>Eastern Standard Time (EST)</asp:ListItem>
-            <asp:ListItem>Central Standard Time (CST)</asp:ListItem>
-            <asp:ListItem>Eastern Daylight Time (EDT)</asp:ListItem>
-            <asp:ListItem>Mountain Standard Time (MST)</asp:ListItem>
-            <asp:ListItem>Pacific Standard Time (PST)</asp:ListItem>
-            <asp:ListItem>Alaskan Standard Time (AKST)</asp:ListItem>
-            <asp:ListItem>Hawaii-Aleutian Standard Time (HST)</asp:ListItem>
-            <asp:ListItem>Samoa standard time (UTC-11)</asp:ListItem>
-            <asp:ListItem>Chamorro Standard Time (UTC+10)</asp:ListItem>
+        <asp:DropDownList ID="TimeZoneDropDown" runat="server">
+            <asp:ListItem>AST</asp:ListItem>
+            <asp:ListItem>EST</asp:ListItem>
+            <asp:ListItem>CST</asp:ListItem>
+            <asp:ListItem>EDT</asp:ListItem>
+            <asp:ListItem>MST</asp:ListItem>
+            <asp:ListItem>PST</asp:ListItem>
+            <asp:ListItem>AKST</asp:ListItem>
+            <asp:ListItem>HST</asp:ListItem>
+            <asp:ListItem>UTC-11</asp:ListItem>
+            <asp:ListItem>UCT+10</asp:ListItem>
         </asp:DropDownList>
         <br />
         <br />
@@ -227,6 +429,12 @@
         <br />
         <asp:Label ID="DeathsLabel" runat="server" Text="Enter the number of fatalities due to the storm:"></asp:Label>
         <asp:TextBox ID="DeathsTextBox" runat="server"></asp:TextBox>
+        <br />
+        <br />
+        <br />
+        <br />
+        <asp:Button ID="AddButton" runat="server" OnClick="AddButton_Click" Text="Add Event" />
+        <br />
         <br />
         <br />
         <asp:Button ID="MainMenuButton" runat="server" OnClick="Button1_Click" Text="Main Menu" />

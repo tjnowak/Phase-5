@@ -58,13 +58,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label StartYearLabel;
         
         /// <summary>
-        /// StartYearTextBox control.
+        /// StartYearDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StartYearTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList StartYearDropDownList;
         
         /// <summary>
         /// StartYearError control.
@@ -103,13 +103,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label StartDayLabel;
         
         /// <summary>
-        /// StartDayTextBox control.
+        /// StartDayDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StartDayTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList StartDayDropDown;
         
         /// <summary>
         /// StartTimeLabel control.
@@ -139,13 +139,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label EndYearLabel;
         
         /// <summary>
-        /// EndYearTextBox control.
+        /// EndYearDropDownList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EndYearTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList EndYearDropDownList;
         
         /// <summary>
         /// EndMonthLabel control.
@@ -175,13 +175,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label EndDayLabel;
         
         /// <summary>
-        /// EndDayTextBox control.
+        /// EndDayDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EndDayTextBox;
+        protected global::System.Web.UI.WebControls.DropDownList EndDayDropDown;
         
         /// <summary>
         /// EndTimeLabel control.
@@ -247,13 +247,13 @@ namespace P5_TylerNowakCodyThompson {
         protected global::System.Web.UI.WebControls.Label TimeZoneLabel;
         
         /// <summary>
-        /// DropDownList1 control.
+        /// TimeZoneDropDown control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
+        protected global::System.Web.UI.WebControls.DropDownList TimeZoneDropDown;
         
         /// <summary>
         /// InjuriesLabel control.
@@ -290,6 +290,15 @@ namespace P5_TylerNowakCodyThompson {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox DeathsTextBox;
+        
+        /// <summary>
+        /// AddButton control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button AddButton;
         
         /// <summary>
         /// MainMenuButton control.
