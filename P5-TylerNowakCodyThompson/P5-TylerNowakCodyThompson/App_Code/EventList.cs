@@ -944,13 +944,14 @@ namespace P5_TylerNowakCodyThompson
         }
 
         // Display the average damage caused by tornadoes per state
-        public List<string> CalculateMeanDamagePerState()
+        public List<string> CalculateMeanDamagePerState(int startYear, int endYear)
         {
             List<string> tornadoDamage = new List<string>();       // holds mean damage by state
 
             // Find average crop damage grouped by state
             var MeanDamageCrop = from s in stormList
-                                 where s.EventType == "TORNADO"
+                                 where s.EventType == "TORNADO" && s.dateTime.BeginYear > startYear
+                                                                && s.dateTime.BeginYear < endYear
                                  group s by s.location.State into stateGroup
                                  select new
                                  {
@@ -960,7 +961,8 @@ namespace P5_TylerNowakCodyThompson
 
             // Find average property damage grouped by state
             var MeanDamageProp = from c in stormList
-                                 where c.EventType == "TORNADO"
+                                 where c.EventType == "TORNADO" && c.dateTime.BeginYear > startYear
+                                                                && c.dateTime.BeginYear < endYear
                                  group c by c.location.State into stateGroup
                                  select new
                                  {

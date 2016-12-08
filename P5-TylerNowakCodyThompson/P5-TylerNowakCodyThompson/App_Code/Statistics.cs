@@ -141,7 +141,7 @@ namespace P5_TylerNowakCodyThompson
         }
 
         // Display the average damage caused by tornadoes by state 
-        public static void showMeanCostPerState(EventList list)
+        public static void showMeanCostPerState(EventList list,)
         {
             List<string> damage = new List<string>();             // list of avg tornado damage
 
