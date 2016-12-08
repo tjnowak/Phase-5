@@ -33,7 +33,7 @@ namespace P5_TylerNowakCodyThompson
             {
                 Label4.Text = "Please select a year after " + StartYearDropDown.SelectedValue;
                 Label4.Visible = true;
-                EndYearDropDown.SelectedValue = "Pick One";
+                EndYearDropDown.SelectedIndex = 0;
             }
             else
             {
@@ -58,8 +58,8 @@ namespace P5_TylerNowakCodyThompson
 
         protected void TryAgain1_Click(object sender, EventArgs e)
         {
-            StartYearDropDown.SelectedValue = "Pick One";
-            EndYearDropDown.SelectedValue = "Pick One";
+            StartYearDropDown.SelectedIndex = 0;
+            EndYearDropDown.SelectedIndex = 0;
             EndYearDropDown.Visible = false;
             CalcDamage.Visible = false;
             DisplayDmgStats.Items.Clear();

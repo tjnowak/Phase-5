@@ -40,8 +40,8 @@ namespace P5_TylerNowakCodyThompson
 
         protected void TryAgain1_Click(object sender, EventArgs e)
         {
-            StateDropDown0.SelectedValue = "Pick One";
-            StormTypeDropDown2.SelectedValue = "Pick One";
+            StateDropDown0.SelectedIndex = 0;
+            StormTypeDropDown2.SelectedIndex = 0;
             Label4.Text = "";
             Label4.Visible = false;
             Label5.Visible = false;

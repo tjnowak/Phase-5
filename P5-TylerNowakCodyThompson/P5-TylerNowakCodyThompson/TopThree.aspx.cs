@@ -52,7 +52,7 @@ namespace P5_TylerNowakCodyThompson
         protected void TryAgain_Click(object sender, EventArgs e)
         {
             results = null;
-            StormTypeDropDown1.SelectedValue = "Pick One";
+            StormTypeDropDown1.SelectedIndex = 0;
             Label2.Text = "";
             DisplayResults.Items.Clear();
             Label2.Visible = false;
