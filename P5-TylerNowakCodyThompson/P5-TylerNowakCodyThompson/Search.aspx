@@ -299,40 +299,48 @@
                 &nbsp;
                 <asp:TextBox ID="LowerEndRangeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerEndRangeRequiredFieldValidator" runat="server" ControlToValidate="LowerEndRangeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerEndRangeValidator" runat="server" ControlToValidate="LowerEndRangeTextBox" ErrorMessage="* Must be int &gt;= 0" ForeColor="Red" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartYearQ1Label" runat="server" Text="Enter the lower bound (as integer) on the event start years you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerStartYearRequiredFieldValidator" runat="server" ControlToValidate="LowerStartYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerStartYearValidator" runat="server" ControlToValidate="LowerStartYearTextBox" ErrorMessage="* Must be int 1951-2016" ForeColor="Red" MaximumValue="2016" MinimumValue="1951" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartMonthQ1Label" runat="server" Text="Enter the lower bound (as integer, 1-12) on the event start months you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerStartMonthRequiredFieldValidator" runat="server" ControlToValidate="LowerStartMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerStartMonthValidator" runat="server" ControlToValidate="LowerStartMonthTextBox" ErrorMessage="* Must be int 1-12" ForeColor="Red" MaximumValue="12" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartDayQ1Label" runat="server" Text="Enter the lower bound (as integer, day of month) on the event start days you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerStartDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerStartDayRequiredFieldValidator" runat="server" ControlToValidate="LowerStartDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerStartDayValidator" runat="server" ControlToValidate="LowerStartDayTextBox" ErrorMessage="* Must be int 1-31" ForeColor="Red" MaximumValue="31" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="StartTimeQ1Label" runat="server" Text="Enter the lower bound (24 hour time with no ':', Ex: 1425) on the event start times you are searching for:"></asp:Label>
                 <asp:TextBox ID="LowerStartTimeTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerStartTimeRequiredFieldValidator" runat="server" ControlToValidate="LowerStartTimeTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerStartTimeValidator" runat="server" ControlToValidate="LowerStartTimeTextBox" ErrorMessage="* Must be int 0-2359" ForeColor="Red" MaximumValue="2359" MinimumValue="0" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndYearQ1Label" runat="server" Text="Enter the lower bound (as integer) on the event end years you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndYearTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerEndYearRequiredFieldValidator" runat="server" ControlToValidate="LowerEndYearTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerEndYearValidator" runat="server" ControlToValidate="LowerEndYearTextBox" ErrorMessage="* Must be int 1951-2016" ForeColor="Red" MaximumValue="2016" MinimumValue="1951" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndMonthQ1Label" runat="server" BorderStyle="None" Text="Enter the lower bound (as integer, 1-12) on the event end months you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndMonthTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerEndMonthRequiredFieldValidator" runat="server" ControlToValidate="LowerEndMonthTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerEndMonthValidator" runat="server" ControlToValidate="LowerEndMonthTextBox" ErrorMessage="* Must be int 1-12" ForeColor="Red" MaximumValue="12" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndDayQ1Label" runat="server" Text="Enter the lower bound (as integer, day of month) on the event end days you are searching for:"></asp:Label>
                 &nbsp;
                 <asp:TextBox ID="LowerEndDayTextBox" runat="server" OnTextChanged="LowerStartRangeTextBox_TextChanged" Width="97px"></asp:TextBox>
                 <asp:RequiredFieldValidator ID="LowerEndDayRequiredFieldValidator0" runat="server" ControlToValidate="LowerEndDayTextBox" ErrorMessage="* Required Field" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RangeValidator ID="LowerEndDayValidator" runat="server" ControlToValidate="LowerEndDayTextBox" ErrorMessage="* Must be int 1-31" ForeColor="Red" MaximumValue="31" MinimumValue="1" Type="Integer"></asp:RangeValidator>
                 <br />
                 <asp:Label ID="EndTimeQ1Label" runat="server" Text="Enter the lower bound (24 hour time with no ':', Ex: 1425) on the event end times you are searching for:"></asp:Label>
 &nbsp;
